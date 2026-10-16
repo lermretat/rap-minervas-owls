@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<meta name="past-owl-webhook" content="">
+<title>Noticias del pasado — Viernes 16 de octubre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+/* per-story "Importante" mark button */
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+.foot .mark-btn{margin-left:auto}
+.mark-row{margin:2px 0 8px}
+.mark-row.after{margin:8px 0 0}
+.mark-btn{font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.01em;
+  line-height:1.2;padding:4px 10px;border-radius:6px;cursor:pointer;
+  background:transparent;color:var(--accent);border:1px solid var(--accent-soft);
+  opacity:.8;transition:background .15s,color .15s,border-color .15s,opacity .15s}
+.mark-btn:hover,.mark-btn:focus-visible{opacity:1;border-color:var(--accent);outline:none}
+.mark-btn:focus-visible{box-shadow:0 0 0 3px var(--accent-soft)}
+.mark-btn[aria-pressed="true"]{background:var(--accent);color:var(--card);border-color:var(--accent);opacity:1}
+.mark-btn[aria-pressed="true"]:hover{opacity:.85}
+.mark-btn[aria-busy="true"]{cursor:progress;opacity:.55}
+.story.is-marked,.item.is-marked{border-color:var(--accent)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,12px);z-index:50;max-width:min(92vw,460px);
+  font-family:var(--sans);font-size:.85rem;line-height:1.35;padding:10px 16px;border-radius:10px;
+  background:var(--ink);color:var(--paper);box-shadow:var(--shadow);opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.err{background:var(--accent);color:#fff}
+@media (prefers-reduced-motion:reduce){.toast,.mark-btn{transition:none}}
+@media print{
+  .toc,.section-head .top,.mark-btn,.mark-row,.toast{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill,.mark-btn{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.mark-btn{opacity:1;border-color:var(--accent)}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.foot .mark-btn,.mark-btn{opacity:1;border:1.5px solid var(--accent);background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.mark-btn[aria-pressed="true"]{background:var(--accent);color:var(--card)}
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 16 de octubre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>8 noticias</span><span>4 épocas</span><span>17 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="2 noticias">2</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">mid-September 2026 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The U.S. House votes again to limit the Iran war as costs pass $38 billion</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 15, the House voted 220–204 to pull U.S. forces out of fighting against Iran, except to defend American or allied bases. The Congressional Budget Office put the Pentagon&#x27;s costs at about $38 billion through Aug. 1, plus $2–3 billion more each month. It also warned that stocks of air-defense interceptors are running low.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On Sept. 24 the Senate rejected a similar measure 50–49, so the war continues without new approval from Congress. Iran keeps hitting ships near Hormuz, and Trump has signaled no major new U.S. strikes before the Nov. 3 midterms.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.theguardian.com/world/2026/sep/15/iran-war-cost-cbo-report" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian on the cost estimate</a></li><li><a href="https://apnews.com/article/iran-war-powers-resolution-8519dae8197214b4edf2192e174c82f4" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP on the House vote</a></li><li><a href="https://www.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk" target="_blank" rel="noopener noreferrer" class="pill" title="cnn.com">CNN on the Hormuz attacks</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 1 mes|n1" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 1 mes&quot;, &quot;number&quot;: 1, &quot;title&quot;: &quot;The U.S. House votes again to limit the Iran war as costs pass $38 billion&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;Guardian on the cost estimate&quot;, &quot;url&quot;: &quot;https://www.theguardian.com/world/2026/sep/15/iran-war-cost-cbo-report&quot;}, {&quot;name&quot;: &quot;AP on the House vote&quot;, &quot;url&quot;: &quot;https://apnews.com/article/iran-war-powers-resolution-8519dae8197214b4edf2192e174c82f4&quot;}, {&quot;name&quot;: &quot;CNN on the Hormuz attacks&quot;, &quot;url&quot;: &quot;https://www.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk&quot;}], &quot;section_ref&quot;: &quot;About 1 month ago (mid-September 2026)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>NATO jets shoot down a Russian-made drone over Lithuania</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 15, Italian Eurofighters shot down a drone that crossed in from Belarus, and it was carrying explosives. Lithuania&#x27;s president said it was a Russian Gerbera drone, probably headed for Ukraine and knocked off course by Ukrainian signal jamming.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>NATO chief Mark Rutte held it up as collective defence working, and he&#x27;s pushing allies toward cheaper anti-drone systems so they stop sending expensive fighter jets after cheap drones. Everyone involved is still in the same job.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.reuters.com/business/aerospace-defense/nato-fighter-shoots-down-drone-lithuania-2026-09-14/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters on the shoot-down</a></li><li><a href="https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania" target="_blank" rel="noopener noreferrer" class="pill" title="nato.int">NATO press conference, Sept. 29</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 1 mes|n2" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 1 mes&quot;, &quot;number&quot;: 2, &quot;title&quot;: &quot;NATO jets shoot down a Russian-made drone over Lithuania&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;Reuters on the shoot-down&quot;, &quot;url&quot;: &quot;https://www.reuters.com/business/aerospace-defense/nato-fighter-shoots-down-drone-lithuania-2026-09-14/&quot;}, {&quot;name&quot;: &quot;NATO press conference, Sept. 29&quot;, &quot;url&quot;: &quot;https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania&quot;}], &quot;section_ref&quot;: &quot;About 1 month ago (mid-September 2026)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">mid-October 2025 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The last 20 living Israeli hostages are freed</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 13, 2025, Hamas released them in exchange for nearly 2,000 Palestinian prisoners, and Trump called it a &quot;new dawn.&quot;</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The hostages did come home, but talk of the war being over turned out to be premature. Israeli strikes have continued, with more than 1,400 deaths reported since the ceasefire. Israel now controls about two-thirds of Gaza, Hamas hasn&#x27;t disarmed, and rebuilding has barely started. Netanyahu faces an election on Oct. 27.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://apnews.com/article/gaza-israel-hamas-hostages-ceasefire-10-13-2025-9e4921406e846189c90144609c1a9530" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP on the release</a></li><li><a href="https://www.arabnews.com/middle-east/one-year-on-trumps-gaza-plan-has-not-stopped-israeli-fire-or-disarmed-hamas-3004986" target="_blank" rel="noopener noreferrer" class="pill" title="arabnews.com">Arab News, one year on</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 1 año|n1" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 1 año&quot;, &quot;number&quot;: 1, &quot;title&quot;: &quot;The last 20 living Israeli hostages are freed&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;AP on the release&quot;, &quot;url&quot;: &quot;https://apnews.com/article/gaza-israel-hamas-hostages-ceasefire-10-13-2025-9e4921406e846189c90144609c1a9530&quot;}, {&quot;name&quot;: &quot;Arab News, one year on&quot;, &quot;url&quot;: &quot;https://www.arabnews.com/middle-east/one-year-on-trumps-gaza-plan-has-not-stopped-israeli-fire-or-disarmed-hamas-3004986&quot;}], &quot;section_ref&quot;: &quot;About 1 year ago (mid-October 2025)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The U.S. government shutdown heads for a record</h3>
+<p class="summary-label">Qué pasó</p>
+<p>The shutdown began Oct. 1, 2025, and the main fight was over health-insurance subsidies under the Affordable Care Act.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>It lasted 42 days and ended Nov. 12. Federal workers got back pay, but the subsidies expired at the end of 2025. Congress&#x27;s research service estimated a lasting economic loss of about $11 billion, and there were more funding gaps in 2026.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.cnn.com/2025/10/13/us/5-things-to-know-for-oct-13-hostage-release-government-shutdown-cdc-firings-severe-weather-spacex-launch" target="_blank" rel="noopener noreferrer" class="pill" title="cnn.com">CNN roundup, Oct. 13, 2025</a></li><li><a href="https://www.everycrsreport.com/reports/R48832.html" target="_blank" rel="noopener noreferrer" class="pill" title="everycrsreport.com">Congressional Research Service summary</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 1 año|n2" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 1 año&quot;, &quot;number&quot;: 2, &quot;title&quot;: &quot;The U.S. government shutdown heads for a record&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;CNN roundup, Oct. 13, 2025&quot;, &quot;url&quot;: &quot;https://www.cnn.com/2025/10/13/us/5-things-to-know-for-oct-13-hostage-release-government-shutdown-cdc-firings-severe-weather-spacex-launch&quot;}, {&quot;name&quot;: &quot;Congressional Research Service summary&quot;, &quot;url&quot;: &quot;https://www.everycrsreport.com/reports/R48832.html&quot;}], &quot;section_ref&quot;: &quot;About 1 year ago (mid-October 2025)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">mid-October 2021 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Facebook&#x27;s worst week: Frances Haugen comes forward and the site goes down worldwide</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Haugen revealed herself as the whistleblower on Oct. 3. The next day Facebook, Instagram and WhatsApp were down for about six hours because of a bad network setting, not a hack, and she testified to the Senate on Oct. 5.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>What she said held up, but hopes for quick federal child-safety laws didn&#x27;t. In 2026 Meta settled with most U.S. states for up to about $18 billion. Haugen lives in Puerto Rico, runs a nonprofit called Beyond the Screen, and is still campaigning.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.co.uk/news/technology-58844496" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.co.uk">BBC on Facebook&#x27;s worst week</a></li><li><a href="https://english.elpais.com/science-tech/2026-06-07/frances-haugen-we-are-worse-off-today-than-when-i-leaked-the-facebook-documents.html" target="_blank" rel="noopener noreferrer" class="pill" title="english.elpais.com">El País interview with Haugen, 2026</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 5 años|n1" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 5 años&quot;, &quot;number&quot;: 1, &quot;title&quot;: &quot;Facebook&#x27;s worst week: Frances Haugen comes forward and the site goes down worldwide&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;BBC on Facebook&#x27;s worst week&quot;, &quot;url&quot;: &quot;https://www.bbc.co.uk/news/technology-58844496&quot;}, {&quot;name&quot;: &quot;El País interview with Haugen, 2026&quot;, &quot;url&quot;: &quot;https://english.elpais.com/science-tech/2026-06-07/frances-haugen-we-are-worse-off-today-than-when-i-leaked-the-facebook-documents.html&quot;}], &quot;section_ref&quot;: &quot;About 5 years ago (mid-October 2021)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Southeast Asian leaders shut Myanmar&#x27;s coup leader out of their summit</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 16, 2021, ASEAN (the regional bloc of Southeast Asian countries) banned Gen. Min Aung Hlaing from its leaders&#x27; summit, which it had never done to a member&#x27;s leader before.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The civil war goes on. After disputed elections, he became president in April 2026, and neighbouring countries are starting to welcome him back. Aung San Suu Kyi is still detained, and the Red Cross confirmed in August that she&#x27;s alive.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-asia-58938489" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the ban</a></li><li><a href="https://www.aljazeera.com/news/2026/10/16/as-war-rages-myanmars-coup-leader-turned-president-wins-back-neighbours" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera, Oct. 16, 2026</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 5 años|n2" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 5 años&quot;, &quot;number&quot;: 2, &quot;title&quot;: &quot;Southeast Asian leaders shut Myanmar&#x27;s coup leader out of their summit&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;BBC on the ban&quot;, &quot;url&quot;: &quot;https://www.bbc.com/news/world-asia-58938489&quot;}, {&quot;name&quot;: &quot;Al Jazeera, Oct. 16, 2026&quot;, &quot;url&quot;: &quot;https://www.aljazeera.com/news/2026/10/16/as-war-rages-myanmars-coup-leader-turned-president-wins-back-neighbours&quot;}], &quot;section_ref&quot;: &quot;About 5 years ago (mid-October 2021)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">mid-October 2016 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Iraq launches the battle for Mosul against ISIS</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 16, 2016, Iraqi forces began the assault on the city where ISIS had declared its &quot;caliphate.&quot;</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The battle took nine months, and the UN estimated about 10,000 civilians were killed. ISIS leader al-Baghdadi was killed in 2019. In 2025, UNESCO finished restoring Mosul&#x27;s al-Nouri Mosque, but recovery across the city is still uneven.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.washingtonpost.com/world/middle_east/iraqi-forces-ready-for-zero-hour-in-assault-on-mosul/2016/10/16/e899f83c-9246-11e6-bc00-1a9756d4111b_story.html" target="_blank" rel="noopener noreferrer" class="pill" title="washingtonpost.com">Washington Post, Oct. 16, 2016</a></li><li><a href="https://www.unesco.org/en/articles/milestone-mosul-iraq-inaugurates-iconic-landmarks-rehabilitated-unesco" target="_blank" rel="noopener noreferrer" class="pill" title="unesco.org">UNESCO on the restored Mosul landmarks</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 10 años|n1" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 10 años&quot;, &quot;number&quot;: 1, &quot;title&quot;: &quot;Iraq launches the battle for Mosul against ISIS&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;Washington Post, Oct. 16, 2016&quot;, &quot;url&quot;: &quot;https://www.washingtonpost.com/world/middle_east/iraqi-forces-ready-for-zero-hour-in-assault-on-mosul/2016/10/16/e899f83c-9246-11e6-bc00-1a9756d4111b_story.html&quot;}, {&quot;name&quot;: &quot;UNESCO on the restored Mosul landmarks&quot;, &quot;url&quot;: &quot;https://www.unesco.org/en/articles/milestone-mosul-iraq-inaugurates-iconic-landmarks-rehabilitated-unesco&quot;}], &quot;section_ref&quot;: &quot;About 10 years ago (mid-October 2016)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The siege of eastern Aleppo peaks</h3>
+<p class="summary-label">Qué pasó</p>
+<p>About 250,000 civilians were trapped, and the &quot;humanitarian pauses&quot; Russia announced did little. The rebel-held east fell in December 2016.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Taking Aleppo didn&#x27;t end the war. Assad fell in December 2024 and now lives in exile, and Ahmed al-Sharaa leads Syria&#x27;s transitional government. People returning to Aleppo are finding much of the city still in ruins.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-middle-east-37710850" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the pause</a></li><li><a href="https://www.aljazeera.com/features/2026/2/10/what-will-it-take-for-syrians-to-return-to-aleppo-after-years-of-war" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera on returning to Aleppo, 2026</a></li></ul><button type="button" class="mark-btn" aria-pressed="false" data-key="2026-10-16|Hace 10 años|n2" data-story="{&quot;date&quot;: &quot;2026-10-16&quot;, &quot;section&quot;: &quot;Hace 10 años&quot;, &quot;number&quot;: 2, &quot;title&quot;: &quot;The siege of eastern Aleppo peaks&quot;, &quot;original_date&quot;: null, &quot;sources&quot;: [{&quot;name&quot;: &quot;BBC on the pause&quot;, &quot;url&quot;: &quot;https://www.bbc.com/news/world-middle-east-37710850&quot;}, {&quot;name&quot;: &quot;Al Jazeera on returning to Aleppo, 2026&quot;, &quot;url&quot;: &quot;https://www.aljazeera.com/features/2026/2/10/what-will-it-take-for-syrians-to-return-to-aleppo-after-years-of-war&quot;}], &quot;section_ref&quot;: &quot;About 10 years ago (mid-October 2016)&quot;}" title="Marcar como importante y avisar a Past Minerva&#x27;s owl">Importante</button></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-10-16.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 16 de octubre de 2026, 12:55 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+
+  // Per-story "Importante" button. The visible label always stays "Importante";
+  // the marked state is shown through aria-pressed + styling.
+  var WEBHOOK_URL='';  // fallback constant; the meta tag (from webhook-url.txt) wins
+  var meta=document.querySelector('meta[name="past-owl-webhook"]');
+  var url=((meta&&meta.getAttribute('content'))||WEBHOOK_URL||'').trim();
+  var km=document.querySelector('meta[name="past-owl-webhook-key"]');
+  var wkey=((km&&km.getAttribute('content'))||'').trim();
+  var PREFIX='past-owl:importante:';
+  function store(k,v){try{if(v)localStorage.setItem(PREFIX+k,v);else localStorage.removeItem(PREFIX+k);}catch(_){}}
+  function stored(k){try{return localStorage.getItem(PREFIX+k);}catch(_){return null;}}
+
+  var toastEl=document.getElementById('toast'),toastT;
+  function toast(msg,err){
+    if(!toastEl)return;
+    toastEl.textContent=msg;
+    toastEl.className='toast show'+(err?' err':'');
+    clearTimeout(toastT);
+    toastT=setTimeout(function(){toastEl.className='toast'+(err?' err':'');},err?4500:2800);
+  }
+  function setMarked(btn,on){
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    btn.title=on?'Marcada como importante (clic para desmarcar)':"Marcar como importante y avisar a Past Minerva's owl";
+    var card=btn.closest('article');
+    if(card)card.classList.toggle('is-marked',on);
+  }
+  var btns=document.querySelectorAll('button.mark-btn');
+  for(var i=0;i<btns.length;i++){if(stored(btns[i].getAttribute('data-key')))setMarked(btns[i],true);}
+
+  function notify(btn,payload){
+    if(!url){toast('Marcada. Falta configurar el aviso automático.');return;}
+    if(!window.fetch){toast('Marcada, pero no pude avisar: navegador sin soporte.',true);return;}
+    btn.setAttribute('aria-busy','true');btn.disabled=true;
+    fetch(url,{method:'POST',headers:(function(){var h={'Content-Type':'application/json'};if(wkey)h['Authorization']='Bearer '+wkey;return h;})(),body:JSON.stringify(payload)})
+      .then(function(r){
+        if(r.ok)toast("Avisé a Past Minerva's owl");
+        else toast('Marcada, pero el aviso falló (error '+r.status+').',true);
+      },function(){toast('Marcada, pero no pude enviar el aviso (error de red).',true);})
+      .then(function(){btn.removeAttribute('aria-busy');btn.disabled=false;});
+  }
+
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest&&e.target.closest('button.mark-btn');
+    if(!btn||btn.getAttribute('aria-busy')==='true')return;
+    var key=btn.getAttribute('data-key');
+    if(btn.getAttribute('aria-pressed')==='true'){   // unmark: local only, no webhook
+      setMarked(btn,false);store(key,null);toast('Desmarcada.');
+      return;
+    }
+    var payload;
+    try{payload=JSON.parse(btn.getAttribute('data-story'));}catch(_){payload=null;}
+    setMarked(btn,true);store(key,new Date().toISOString());
+    if(payload)notify(btn,payload);else toast('Marcada.');
+  });
+})();
+</script>
+</body>
+</html>

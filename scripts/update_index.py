@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Regenerates index.html from the HTML files in noticias/.
+Regenerates index.html from the HTML files in noticias/ (daily news) and
+pasado/ (weekly "Noticias del pasado" digests).
 
 Usage:
     python scripts/update_index.py
 
-Run this script after adding new date files to noticias/.
+Run this script after adding new date files to noticias/ or pasado/.
 """
 
 import os
@@ -112,6 +113,17 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
             transform: scale(0.98);
         }}
 
+        .list-title {{
+            max-width: 600px;
+            margin: 2.5rem auto 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }}
+
+        .list-title:first-child {{
+            margin-top: 0;
+        }}
+
         .date-label {{
             font-weight: 500;
         }}
@@ -143,9 +155,7 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
     </header>
 
     <main>
-        <ul class="news-list">
-{list_items}
-        </ul>
+{sections}
     </main>
 
     <footer>
@@ -171,26 +181,37 @@ def find_news_files(noticias_dir: Path) -> list[str]:
     """Find all YYYY-MM-DD.html files and return dates sorted newest first."""
     pattern = re.compile(r"^\d{4}-\d{2}-\d{2}\.html$")
     dates = []
+    if not noticias_dir.is_dir():
+        return dates
     for f in noticias_dir.iterdir():
         if f.is_file() and pattern.match(f.name):
             dates.append(f.stem)
     return sorted(dates, reverse=True)
 
 
-def generate_list_items(dates: list[str]) -> str:
-    """Generate HTML list items for all dates."""
+def generate_list_items(dates: list[str], folder: str = "noticias") -> str:
+    """Generate HTML list items for all dates in the given folder."""
     items = []
     for date in dates:
         label = format_date_spanish(date)
-        item = f'            <li><a href="noticias/{date}.html"><span class="date-label">{label}</span></a></li>'
+        item = f'            <li><a href="{folder}/{date}.html"><span class="date-label">{label}</span></a></li>'
         items.append(item)
     return "\n".join(items)
+
+
+def generate_section(title: str, dates: list[str], folder: str) -> str:
+    """One titled list (same .news-list style). The daily list keeps its old
+    untitled markup when there are no past digests, so index.html is unchanged."""
+    head = f'        <h2 class="list-title">{title}</h2>\n' if title else ""
+    return (f"{head}        <ul class=\"news-list\">\n"
+            f"{generate_list_items(dates, folder)}\n        </ul>")
 
 
 def main():
     script_dir = Path(__file__).resolve().parent
     repo_root = script_dir.parent
     noticias_dir = repo_root / "noticias"
+    pasado_dir = repo_root / "pasado"
     index_path = repo_root / "index.html"
 
     if not noticias_dir.is_dir():
@@ -202,11 +223,19 @@ def main():
         print("Warning: No news files found in noticias/")
         return 1
 
-    list_items = generate_list_items(dates)
-    html = INDEX_TEMPLATE.format(list_items=list_items)
+    past_dates = find_news_files(pasado_dir)  # empty if pasado/ is missing
+
+    sections = []
+    if past_dates:
+        sections.append(generate_section("Noticias del día", dates, "noticias"))
+        sections.append(generate_section("Noticias del pasado", past_dates, "pasado"))
+    else:
+        sections.append(generate_section("", dates, "noticias"))
+    html = INDEX_TEMPLATE.format(sections="\n\n".join(sections))
 
     index_path.write_text(html, encoding="utf-8")
-    print(f"Updated {index_path} with {len(dates)} news entries.")
+    print(f"Updated {index_path} with {len(dates)} news entries"
+          f" and {len(past_dates)} past-news entries.")
     return 0
 
 

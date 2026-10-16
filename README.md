@@ -5,6 +5,7 @@ Sitio de resúmenes diarios de noticias, desplegado automáticamente en GitHub P
 ## Estructura
 
 - `noticias/` — Páginas HTML de noticias diarias (formato `YYYY-MM-DD.html`)
+- `pasado/` — Páginas HTML de noticias históricas o del pasado
 - `index.html` — Página principal con enlaces a todas las noticias
 - `scripts/update_index.py` — Script para regenerar el índice
 

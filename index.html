@@ -92,6 +92,17 @@
             transform: scale(0.98);
         }
 
+        .list-title {
+            max-width: 600px;
+            margin: 2.5rem auto 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .list-title:first-child {
+            margin-top: 0;
+        }
+
         .date-label {
             font-weight: 500;
         }
@@ -123,6 +134,7 @@
     </header>
 
     <main>
+        <h2 class="list-title">Noticias del día</h2>
         <ul class="news-list">
             <li><a href="noticias/2026-10-15.html"><span class="date-label">15 de octubre de 2026</span></a></li>
             <li><a href="noticias/2026-10-14.html"><span class="date-label">14 de octubre de 2026</span></a></li>
@@ -138,6 +150,11 @@
             <li><a href="noticias/2026-10-04.html"><span class="date-label">4 de octubre de 2026</span></a></li>
             <li><a href="noticias/2026-10-03.html"><span class="date-label">3 de octubre de 2026</span></a></li>
             <li><a href="noticias/2026-10-02.html"><span class="date-label">2 de octubre de 2026</span></a></li>
+        </ul>
+
+        <h2 class="list-title">Noticias del pasado</h2>
+        <ul class="news-list">
+            <li><a href="pasado/2026-10-16.html"><span class="date-label">16 de octubre de 2026</span></a></li>
         </ul>
     </main>
 
