@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias de Minerva's owl</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --link-color: #0066cc;
+            --link-hover: #004499;
+            --border-color: #e0e0e0;
+            --card-bg: #f8f8f8;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e8e8e8;
+                --link-color: #66b3ff;
+                --link-hover: #99ccff;
+                --border-color: #333333;
+                --card-bg: #252525;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 1rem;
+            padding-bottom: env(safe-area-inset-bottom, 1rem);
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .news-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .news-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .news-list a {
+            display: block;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .news-list a:hover,
+        .news-list a:focus {
+            color: var(--link-hover);
+            transform: translateX(4px);
+        }
+
+        .news-list a:active {
+            transform: scale(0.98);
+        }
+
+        .date-label {
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noticias de Minerva's owl</h1>
+        <p class="subtitle">Resumen diario de noticias</p>
+    </header>
+
+    <main>
+        <ul class="news-list">
+            <li><a href="noticias/2026-10-15.html"><span class="date-label">15 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-14.html"><span class="date-label">14 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-13.html"><span class="date-label">13 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-12.html"><span class="date-label">12 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-11.html"><span class="date-label">11 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-10.html"><span class="date-label">10 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-09.html"><span class="date-label">9 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-08.html"><span class="date-label">8 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-07.html"><span class="date-label">7 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-06.html"><span class="date-label">6 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-05.html"><span class="date-label">5 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-04.html"><span class="date-label">4 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-03.html"><span class="date-label">3 de octubre de 2026</span></a></li>
+            <li><a href="noticias/2026-10-02.html"><span class="date-label">2 de octubre de 2026</span></a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>© 2026 Minerva's owl</p>
+    </footer>
+</body>
+</html>
