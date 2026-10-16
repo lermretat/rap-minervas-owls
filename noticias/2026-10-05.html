@@ -136,6 +136,26 @@ footer code{font-size:.95em}
   .story.lead .num{font-size:2.1rem}
   .story.lead h3{font-size:1.28rem}
 }
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill,.mark-btn{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.mark-btn{opacity:1;border-color:var(--accent)}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
 /* per-story "Importante" mark button */
 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
 .foot .sources{margin:0}
@@ -281,7 +301,7 @@ footer code{font-size:.95em}
 <footer>
 <div class="wrap">
 Fuente: <code>/workspace/news-owl/daily/2026-10-05.md</code><br>
-Generado el 14 de octubre de 2026, 00:25 (hora de Bogotá, UTC−5) · Los textos de las noticias se muestran en su idioma original.<br><small class="map-credit">Mapas: contornos de Natural Earth (dominio público); nombres de lugares de GeoNames (CC BY 4.0, geonames.org).</small>
+Generado el 16 de octubre de 2026, 10:35 (hora de Bogotá, UTC−5) · Los textos de las noticias se muestran en su idioma original.<br><small class="map-credit">Mapas: contornos de Natural Earth (dominio público); nombres de lugares de GeoNames (CC BY 4.0, geonames.org).</small>
 </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
