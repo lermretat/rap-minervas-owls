@@ -22,3 +22,4 @@ Sitio de resúmenes diarios de noticias, desplegado automáticamente en GitHub P
 ## Licencia
 
 MIT
+
