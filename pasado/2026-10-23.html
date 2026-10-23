@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 23 de octubre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 23 de octubre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>8 noticias</span><span>4 épocas</span><span>29 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="2 noticias">2</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="2 noticias">2</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">Sept. 22–25, 2026 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The U.S., Denmark and Greenland sign a defence deal instead of a takeover</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 22, at the UN General Assembly in New York, Trump, Danish Prime Minister Mette Frederiksen and Greenland&#x27;s premier Jens-Frederik Nielsen signed an update to the 1951 agreement on defending Greenland. The U.S. gets to expand Pituffik Space Base and set up new defence areas at Narsarsuaq in the south and Mestersvig in the east. It also gets broad rights to move forces around the island. In return, the U.S. recognises Danish sovereignty and Greenlanders&#x27; right to decide their own future. It came after more than a year of Trump pushing for the U.S. to take control of the island.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The deal isn&#x27;t in force yet, because both parliaments have to approve it. Greenland&#x27;s parliament held its first debate in mid-October. No party opposed it outright, but the opposition party Naleraq wants a referendum, and no date has been set for the final vote. On Oct. 22, Denmark sent the deal to its parliament, which will debate it on Nov. 12 and vote on Nov. 19. Frederiksen, Nielsen and Trump all still hold the same jobs.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://stm.dk/en/press/press-releases/agreement-between-greenland-denmark-and-the-united-states/" target="_blank" rel="noopener noreferrer" class="pill" title="stm.dk">Danish PM&#x27;s office on the signing</a></li><li><a href="https://www.bbc.com/news/articles/c9dr74g32g8go" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the new bases</a></li><li><a href="https://www.arctictoday.com/our-country-has-been-under-threat-greenlands-foreign-minister-says-as-defense-deal-advances/" target="_blank" rel="noopener noreferrer" class="pill" title="arctictoday.com">ArcticToday on Greenland&#x27;s debate</a></li><li><a href="https://cphpost.dk/2026-10-23/news/round-up/danish-parliament-to-debate-greenland-us-defense-agreement-in-november/" target="_blank" rel="noopener noreferrer" class="pill" title="cphpost.dk">Copenhagen Post, Oct. 23, 2026</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.dw.com/en/whats-really-in-the-greenland-deal/video-79385734" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW: &quot;What&#x27;s really in the Greenland deal?&quot; (explainer, 2026)</span><span class="vhost">dw.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/newshour/world/watch-trump-signs-agreement-with-leaders-of-denmark-and-greenland" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: the signing ceremony (original footage, 2026)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Xi Jinping&#x27;s state visit to Washington buys time but solves little</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Xi&#x27;s three-day state visit, the first by a Chinese leader in more than a decade, ended on Sept. 25. The concrete results were modest. They extended the trade truce reached in Busan in 2025 by two months, to Jan. 10, 2027. Each side agreed to lower tariffs on $30 billion of &quot;non-sensitive&quot; goods, and China agreed to buy at least 10 million tonnes of U.S. coal a year in 2027 and 2028. They also set up a channel to talk about AI risks. The U.S. said Xi had promised to stop helping Iran. There was no joint statement.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The harder issues still aren&#x27;t settled. Rare-earth supplies to U.S. industry are still short, chip export controls haven&#x27;t changed, and Taiwan wasn&#x27;t resolved. Negotiators are now trying to firm up deals before Trump goes to the APEC summit in Shenzhen in November. Xi is due at the G20 in Miami in December.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/articles/cxp84g2ly1mjo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on what the summit did and didn&#x27;t settle</a></li><li><a href="https://www.rferl.org/a/us-china-critical-minerals-shortfall-trump-xi-summit/33879296.html" target="_blank" rel="noopener noreferrer" class="pill" title="rferl.org">RFE/RL on the rare-earth shortfall</a></li><li><a href="https://www.scmp.com/news/china/diplomacy/article/3371413/us-china-negotiators-race-nail-down-concrete-deals-shenzhen-apec-looms" target="_blank" rel="noopener noreferrer" class="pill" title="scmp.com">SCMP on the run-up to APEC</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://asiasociety.org/video/substance-or-signal-reading-trump-xi-summit" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Asia Society: &quot;Substance or Signal? Reading the Trump-Xi Summit&quot; (in-depth expert panel, 2026)</span><span class="vhost">asiasociety.org</span></span></a></li><li><a class="vchip" href="https://www.dw.com/en/trump-xi-summit-results-or-just-symbolism/video-79430377" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW: &quot;Trump-Xi summit: Results or just symbolism?&quot; (analysis, 2026)</span><span class="vhost">dw.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/trump-the-press-dis-1790286224/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: experts on what&#x27;s at stake (analysis, 2026)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">Oct. 19–21, 2025 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Thieves steal France&#x27;s crown jewels from the Louvre in broad daylight</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 19, 2025, four men used a truck-mounted lift to reach a balcony of the Louvre&#x27;s Apollo Gallery. They cut through a window, smashed two display cases and escaped on scooters in a matter of minutes. They took eight pieces worth about €88 million, including jewels that had belonged to Empress Eugénie and Empress Marie-Louise. Eugénie&#x27;s crown was dropped as they fled and recovered damaged.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>All four main suspects were arrested within weeks and are in jail awaiting trial. One was denied release again on Oct. 22, 2026. The jewels are still missing, and investigators fear they may have been broken up and recut. Louvre director Laurence des Cars resigned in February 2026 after admitting the outside CCTV was weak. Christophe Leribault, previously head of Versailles, replaced her. A parliamentary inquiry found &quot;systemic failures.&quot;</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/articles/c78z53v43g1o" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC, the day of the raid</a></li><li><a href="https://www.bbc.com/news/articles/ce3gj7jjl7jo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the director&#x27;s resignation</a></li><li><a href="https://www.france24.com/en/france/20261019-louvre-100-million-crown-jewels-one-year-heist" target="_blank" rel="noopener noreferrer" class="pill" title="france24.com">France 24, one year on</a></li><li><a href="https://www.lejsl.com/faits-divers-justice/2026/10/22/casse-du-louvre-un-membre-presume-du-commando-reste-en-detention-provisoire" target="_blank" rel="noopener noreferrer" class="pill" title="lejsl.com">Le JSL on the Oct. 22 ruling (French)</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=SASDkIQjouI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WSJ: how the thieves did it (visual investigation, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=CzMtfwQA-gk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Discovery UK: &quot;The Louvre Heist Minute by Minute&quot; (documentary excerpt, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Sanae Takaichi becomes Japan&#x27;s first female prime minister</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 21, 2025, Japan&#x27;s parliament elected Takaichi, a hard-line conservative, as prime minister. She replaced Shigeru Ishiba. Just before the vote, the Komeito party ended its 26-year coalition with her Liberal Democratic Party (LDP), so she made a new deal with the Japan Innovation Party.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>She&#x27;s still in office a year later. In February 2026 she called a snap election and won it by a landslide, giving her coalition more than two-thirds of the lower house. Her government passed several conservative laws, including one punishing desecration of the national flag. Relations with China have stayed tense since November 2025, when she said Japan could respond militarily if Taiwan were attacked. A scandal that forced out her farm minister has pushed her approval rating to a record low of about 49%. She&#x27;s now trying to pass a cut to the food sales tax.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://japan.kantei.go.jp/104/actions/202510/21shimei.html" target="_blank" rel="noopener noreferrer" class="pill" title="japan.kantei.go.jp">Prime Minister&#x27;s Office on her election</a></li><li><a href="https://english.kyodonews.net/articles/-/88877" target="_blank" rel="noopener noreferrer" class="pill" title="english.kyodonews.net">Kyodo, one year on</a></li><li><a href="https://www3.nhk.or.jp/nhkworld/news/20261021de62860/" target="_blank" rel="noopener noreferrer" class="pill" title="www3.nhk.or.jp">NHK, one year on</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=0T8lN4ZOwQw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Nikkei Asia: how Takaichi became PM (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2025/10/21/video-who-is-sanae-takaichi-japans-first-female-prime-minister" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera: who is Sanae Takaichi (profile, 2025)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">Oct. 21–25, 2021 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>A live round on the &quot;Rust&quot; film set kills cinematographer Halyna Hutchins</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 21, 2021, Alec Baldwin was rehearsing with a revolver on a film set near Santa Fe, New Mexico, when it fired a live bullet. It killed cinematographer Halyna Hutchins, 42, and wounded director Joel Souza. The gun was supposed to be safe.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Armorer Hannah Gutierrez-Reed was convicted of involuntary manslaughter in 2024 and served her 18-month sentence. She was paroled in May 2025. Baldwin&#x27;s manslaughter case was thrown out in July 2024 because prosecutors had withheld evidence. In October 2026 a federal judge dismissed most of his lawsuit against those prosecutors, but some claims will go ahead. A lighting technician&#x27;s civil suit against Baldwin and the producers has been pushed to March 2027. The film itself came out in May 2025.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.npr.org/2021/10/22/1048395324/alec-baldwin-rust-movie-shooting-prop-gun-halyna-hutchins" target="_blank" rel="noopener noreferrer" class="pill" title="npr.org">NPR, Oct. 22, 2021</a></li><li><a href="https://www.theguardian.com/us-news/2025/may/23/rust-movie-armorer-released-hannah-gutierrez-reed" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian on the armorer&#x27;s release</a></li><li><a href="https://www.abajournal.com/news/article/judge-tosses-most-of-alec-baldwins-claims-against-prosecutors-over-rust-shooting" target="_blank" rel="noopener noreferrer" class="pill" title="abajournal.com">ABA Journal on Baldwin&#x27;s lawsuit, Oct. 2026</a></li><li><a href="https://mynewsla.com/hollywood/2026/09/09/baldwin-others-win-delay-in-start-of-rust-lighting-techs-trial/" target="_blank" rel="noopener noreferrer" class="pill" title="mynewsla.com">MyNewsLA on the delayed civil trial</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=DDogTKEFOAw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS Evening News: sheriff&#x27;s body-camera footage (original footage, 2022)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=q8mMU7QZ-0Y" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Hulu: &quot;Last Take: Rust and the Story of Halyna&quot; (investigative documentary, 2025; trailer)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Sudan&#x27;s army seizes power and ends the shared transition to democracy</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 25, 2021, Gen. Abdel Fattah al-Burhan dissolved Sudan&#x27;s civilian-military government, declared a state of emergency and detained Prime Minister Abdalla Hamdok. That ended the transition that began after Omar al-Bashir was toppled in 2019. Hamdok was briefly reinstated under a deal with the army, then resigned in January 2022.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The coup leaders later turned on each other. Since April 2023, Burhan&#x27;s army has been fighting the Rapid Support Forces (RSF) led by his former deputy, Mohamed Hamdan Dagalo (&quot;Hemedti&quot;). Tens of thousands have been killed and about 13 million people have fled their homes. A year after the RSF took El Fasher, Amnesty reports ongoing killings and torture there. Burhan rejected peace talks this month. Hamdok leads Somoud, a civilian anti-war coalition that&#x27;s lobbying abroad for a ceasefire.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-africa-59033142" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the coup</a></li><li><a href="https://www.aljazeera.com/news/2026/10/7/sudans-al-burhan-rejects-talks-vows-to-retake-all-territory-from-rsf" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera, Oct. 7, 2026</a></li><li><a href="https://www.amnesty.org/en/latest/news/2026/10/sudan-el-fasher-civilians-suffer-unlawful-killings-detention-and-torture-one-year-after-citys-capture-by-the-rsf-new-testimony/" target="_blank" rel="noopener noreferrer" class="pill" title="amnesty.org">Amnesty on El Fasher, Oct. 2026</a></li><li><a href="https://thesudantimes.com/sudan/hamdok-presents-civilian-roadmap-to-end-sudan-war-in-washington/" target="_blank" rel="noopener noreferrer" class="pill" title="thesudantimes.com">Sudan Times on Hamdok&#x27;s roadmap</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=mMLTE90J2AA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Hamdok detained in coup (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=HXw7y8w2irA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC World Service: &quot;The city no journalist can enter: El Fasher&#x27;s battle for survival&quot; (investigative documentary, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">Oct. 2–7, 2016 · 2 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Colombians narrowly reject the FARC peace deal, and Santos wins the Nobel anyway</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 2, 2016, Colombians voted against the peace agreement with the FARC guerrillas, 50.2% to 49.8%, a margin of about 54,000 votes. Turnout was only about 37%. Five days later, President Juan Manuel Santos won the Nobel Peace Prize. The Nobel committee said voters had rejected one specific deal, not peace itself. A revised deal was signed on Nov. 24 and approved by Congress without another popular vote.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The FARC did lay down its weapons, and more than 11,000 former fighters are still in the reintegration programme. But 501 of them have been killed since 2016, and the UN says other armed groups have grown from about 15,000 members in 2022 to about 28,000 now. Only about a third of the deal&#x27;s commitments had been fully carried out by late 2025. Abelardo de la Espriella, a right-wing candidate, has been president since Aug. 7, 2026, and his approach to the peace court is under debate. Santos is 75 and still defends the deal. In Oslo in September, he called holding the vote &quot;my mistake.&quot;</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-latin-america-37537252" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the &quot;No&quot; vote</a></li><li><a href="https://www.nobelprize.org/prizes/peace/2016/press-release/" target="_blank" rel="noopener noreferrer" class="pill" title="nobelprize.org">Nobel Committee press release</a></li><li><a href="https://news.un.org/en/story/2026/10/1168580" target="_blank" rel="noopener noreferrer" class="pill" title="news.un.org">UN News, Oct. 12, 2026</a></li><li><a href="https://www.nobelpeacecenter.org/en/news/colombia-s-lessons-for-a-world-in-conflict" target="_blank" rel="noopener noreferrer" class="pill" title="nobelpeacecenter.org">Santos&#x27;s Oslo speech, Sept. 2026</a></li><li><a href="https://colombiaone.com/2026/10/02/colombia-10-years-no-peace/" target="_blank" rel="noopener noreferrer" class="pill" title="colombiaone.com">Colombia One, 10 years after the &quot;No&quot;</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=uR3g1MBsmb0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Nobel Prize: announcement of the 2016 Peace Prize (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2016/10/3/can-peace-in-colombia-be-saved" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story: &quot;Can peace in Colombia be saved?&quot; (in-depth discussion, 2016)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=mR_dk19WX4Y" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">University of Chicago: James Robinson on why voters rejected the deal (expert explainer, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The &quot;Access Hollywood&quot; tape shakes Trump&#x27;s campaign</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 7, 2016, The Washington Post published a 2005 hot-mic recording of Trump bragging to &quot;Access Hollywood&quot; host Billy Bush about groping and kissing women without asking. Republican leaders condemned him and some called on him to quit the race. Trump called it &quot;locker room talk&quot; and apologised. A month later he won the presidency anyway.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The tape didn&#x27;t end his political career. Trump is now in his second term. The recording came back as evidence in E. Jean Carroll&#x27;s lawsuit, where a jury found in 2023 that Trump had sexually abused her and later defamed her. On June 29, 2026, the Supreme Court refused to hear his appeal, so the $5 million verdict stands. It turned down his request to reconsider in August.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.washingtonpost.com/politics/trump-recorded-having-extremely-lewd-conversation-about-women-in-2005/2016/10/07/3b9ce776-8cb4-11e6-bf8a-3d26847eeed4_story.html" target="_blank" rel="noopener noreferrer" class="pill" title="washingtonpost.com">Washington Post&#x27;s original story</a></li><li><a href="https://www.cnn.com/2026/06/29/politics/e-jean-carroll-trump-supreme-court" target="_blank" rel="noopener noreferrer" class="pill" title="cnn.com">CNN on the Supreme Court ruling, June 2026</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.washingtonpost.com/video/national/watch-donald-trump-recorded-having-extremely-lewd-conversation-about-women-in-2005/2016/10/07/3bf16d1e-8caf-11e6-8cdc-4fbb1973b506_video.html" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Washington Post: the original tape (original footage, 2016)</span><span class="vhost">washingtonpost.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=fYqKx1GuZGg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: report on the tape (news report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/trump-tape-starts-national-conversation-about-sexual-assault-1483489430/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: the tape starts a national conversation about sexual assault (in-depth segment, 2016)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+
+Investigado por Past Minerva&#x27;s owl · Generado el 23 de octubre de 2026, 09:13 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
