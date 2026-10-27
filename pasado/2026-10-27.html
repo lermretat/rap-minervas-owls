@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Martes 27 de octubre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Martes 27 de octubre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>46 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">Sept. 29–Oct. 4, 2026 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The last U.S. and coalition troops leave Iraq</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 30, U.S. Central Command finished pulling out of Erbil Air Base. That ended the Operation Inherent Resolve military mission in Iraq, 12 years after it began. Erbil had hosted most of the roughly 1,500 U.S. and coalition troops still in the country, and about 100 British personnel left alongside them. The withdrawal had been agreed with Baghdad in 2024, under President Biden. Prime Minister Ali al-Zaidi marked it with four days of national holiday, which he called &quot;Sovereignty Days&quot;. President Trump called it the end of &quot;a very expensive excursion into Hell&quot;. The coalition headquarters moved to Jordan, and the counter-ISIS mission continues in Syria. Britain said the coalition had trained more than 111,000 Iraqi forces, including over 21,000 Kurdish Peshmerga.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The withdrawal went as reported, and Iraq is now handling its own security. The risk is that the Islamic State recovers. The Washington Institute counts how many attacks IS claims in Iraq. The number fell from 1,459 in 2020 to 16 in 2025. In the first three weeks of September 2026, though, IS claimed five attacks, more than in the previous eight months combined. Iraqi prisons are also under strain: more than 5,700 IS detainees were moved there from Syria in January. Coalition partners meeting in Rome on Oct. 1 pledged more than $75 million to keep the campaign going. The UN estimates that up to 3,000 IS fighters remain in Syria. This is the third time U.S. forces have left Iraq. Whether it lasts depends on Iraq&#x27;s own forces and on the wider conflict with Iran.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4614532/us-forces-end-operation-inherent-resolve-mission-in-iraq/" target="_blank" rel="noopener noreferrer" class="pill" title="centcom.mil">CENTCOM on the end of the mission</a></li><li><a href="https://www.bbc.com/news/articles/c65ym1dyn92mo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the withdrawal</a></li><li><a href="https://www.gov.uk/government/news/conclusion-of-the-global-coalitions-military-mission-in-iraq" target="_blank" rel="noopener noreferrer" class="pill" title="gov.uk">UK government on the coalition&#x27;s exit</a></li><li><a href="https://www.washingtoninstitute.org/policy-analysis/islamic-state-iraq-after-us-withdrawal" target="_blank" rel="noopener noreferrer" class="pill" title="washingtoninstitute.org">Washington Institute: Islamic State in Iraq after the U.S. withdrawal</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=SJOZE15fvX8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story: &quot;Can Iraq handle future security challenges alone?&quot; (debate, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=a5-69smWsEk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: &quot;US withdrawal from Iraq raises fears of instability amid Iran conflict&quot; (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=NcgJUgsNfQ8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP: the last U.S. troops leave Iraq (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Morocco names its first female head of government</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 29, King Mohammed VI appointed Fatima Ezzahra El Mansouri as head of government. She is the first woman to hold the job. She coordinates the collective leadership of the Authenticity and Modernity Party (PAM), which came first in the Sept. 23 elections with 97 of 395 seats. Under Article 47 of the 2011 constitution, the king must choose the head of government from the party that wins the most seats. El Mansouri is a lawyer and former mayor of Marrakech, and she was housing minister from 2021. Fouzi Lekjaa had been tipped for the top job and instead became economy and finance minister.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The appointment has held, and the government is now in office. On Oct. 16 the king appointed a 32-member cabinet formed by four parties: PAM, Istiqlal (65 seats), the USFP (26) and the PPS (19), with 207 seats between them. Only seven of the 32 posts went to women. The outgoing ruling party, the RNI (66 seats), leads the opposition along with the PJD (54). The government presented its programme on Oct. 19 and won its confidence vote on Oct. 22 by 204 votes to 127. Its main tasks are preparing for the 2030 World Cup, reforming the family code (the Mudawana), and tackling youth unemployment, which fuelled the GenZ212 protests of 2025. About 2.9 million Moroccans aged 15 to 29 are not in work or education. The government is targeting 5% annual growth.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://agendapublica.es/noticia/21602/morocco-new-government-key-facts" target="_blank" rel="noopener noreferrer" class="pill" title="agendapublica.es">Agenda Pública: key facts on the new government</a></li><li><a href="https://en.le360.ma/politics/el-mansouri-govt-wins-confidence-vote-204127_OIBFD3DZGVBKDHVJ7UVGIX3J2U/" target="_blank" rel="noopener noreferrer" class="pill" title="en.le360.ma">Le360 on the 204–127 confidence vote</a></li><li><a href="https://apnews.com/article/morocco-prime-minister-mansouri-king-mohammed-8456b759e417876f008d8c49c2a729c3" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP on the appointment</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=rdANsCrKkac" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: &quot;What Morocco&#x27;s first female premier means for the Arab world&quot; (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=0MqFoNT3pdo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24: El Mansouri named Morocco&#x27;s first woman PM (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Flávio Bolsonaro beats Lula in Brazil&#x27;s first round</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In Brazil&#x27;s presidential first round on Oct. 4, Flávio Bolsonaro of the Liberal Party came first. He is the son of the jailed former president Jair Bolsonaro. According to the electoral court (TSE), he won 47.03% of the vote (56.1 million votes), against 45.16% (53.9 million) for President Luiz Inácio Lula da Silva. Neither reached 50%, so the race went to a runoff. Turnout was 78.9%, and about 33 million voters stayed away.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The first-round result was overturned. In the Oct. 25 runoff, Lula won 51.79% to 48.21%, a margin of about 4.4 million votes. He is the first Brazilian president since 1985 to win after losing the first round, and the first elected four times. He turns 81 today, and his new term begins on Jan. 5. Flávio Bolsonaro at first refused to concede and sought to annul the vote over a two-hour extension of voting hours. He dropped that on Oct. 26. He now plans a case to disqualify Lula&#x27;s ticket for alleged abuse of power, although his own party has recognised the result. Supreme Court Justice Alexandre de Moraes has ordered him to hand over his passports as part of a money-laundering investigation. President Trump called the result &quot;another rigged election&quot;, and São Paulo stocks fell sharply when trading opened after the runoff. Jair Bolsonaro is still serving a 27-year sentence.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica" target="_blank" rel="noopener noreferrer" class="pill" title="tse.jus.br">TSE: first-round results</a></li><li><a href="https://www.theguardian.com/world/ng-interactive/2026/oct/04/brazil-presidential-election-2026-first-round-live-results" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian live results</a></li><li><a href="https://www.bbc.com/news/articles/ckm23y3mg1yyo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the runoff</a></li><li><a href="https://agenciabrasil.ebc.com.br/en/politica/noticia/2026-10/flavio-bolsonaro-rejects-lulas-victory-seeks-annul-election" target="_blank" rel="noopener noreferrer" class="pill" title="agenciabrasil.ebc.com.br">Agência Brasil on Flávio&#x27;s bid to annul</a></li><li><a href="https://english.news.cn/20261027/b8a6c5125f444ef09f8ae993f6a85206/c.html" target="_blank" rel="noopener noreferrer" class="pill" title="english.news.cn">Xinhua on the aftermath</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=KEe4VuOJ9Jc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Flávio Bolsonaro wins the first round (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=wiBSDYDK2Uc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC Global News Podcast: &quot;How Brazil&#x27;s President Lula beat Bolsonaro in a runoff election&quot; (analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=srdlMrbbKq8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: &quot;Lula prevails in Brazil but Flávio Bolsonaro refuses to concede&quot; (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">Oct. 26–29, 2025 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Hurricane Melissa strikes Jamaica as a Category 5</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 28, 2025, Hurricane Melissa made landfall near New Hope in southwestern Jamaica. It had winds of about 160 knots (185 mph) and a central pressure of 892 millibars. The U.S. National Hurricane Center later confirmed it as the strongest landfall on record in Jamaica. It also tied the record for the strongest Atlantic landfall, held by Dorian (2019) and the 1935 Labor Day hurricane. Melissa killed 93 people, including 45 in Jamaica and 43 in Haiti. The World Bank put damage in Jamaica at $12.2 billion.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The early reports of a historic storm proved accurate. A year on, recovery is slow. The AP reported on Oct. 1 that the damage equalled about 57% of Jamaica&#x27;s GDP and that around 20 hotels were still closed. More than 61% of hotel insurance claimants were still waiting for full settlement. Visitor arrivals were down 17% and tourism revenue down 18%, about $550 million. Prime Minister Andrew Holness has threatened legislation to force insurers to pay. In Black River, one of the hardest-hit towns, most businesses were still shut as of this week.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.nhc.noaa.gov/data/tcr/AL132025_Melissa.pdf" target="_blank" rel="noopener noreferrer" class="pill" title="nhc.noaa.gov">NHC tropical cyclone report on Melissa (PDF)</a></li><li><a href="https://www.wral.com/news/ap/acf1f-jamaica-struggles-to-recover-a-year-after-hurricane-melissa-hit-as-peak-tourism-season-looms/" target="_blank" rel="noopener noreferrer" class="pill" title="wral.com">AP via WRAL: Jamaica struggles to recover a year on</a></li><li><a href="https://jamaica-gleaner.com/article/commentary/20261025/one-year-hurricane-melissa-and-black-river-business-community" target="_blank" rel="noopener noreferrer" class="pill" title="jamaica-gleaner.com">Jamaica Gleaner: one year on for Black River businesses</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=wZgrRJYVgbg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: the destruction after Melissa&#x27;s Category 5 landfall (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=1E6MTkTZRKc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Noel Phillips: &quot;Hurricane Melissa: The Storm That Broke Jamaica&quot; (independent documentary)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=tIN0FOo7mr4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Television Jamaica: &quot;Black River One Year After Hurricane Melissa&quot; (local report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Javier Milei wins Argentina&#x27;s midterms</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 26, 2025, President Javier Milei&#x27;s party, La Libertad Avanza, won nearly 41% of the vote in Argentina&#x27;s midterm elections. The result defied forecasts after a heavy defeat in Buenos Aires province weeks earlier. The party won 13 of the 24 Senate seats and 64 of the 127 lower-house seats up for election. Before the vote it had 7 senators and 37 deputies. Turnout was 67.9%, the lowest in decades. President Trump had tied a $40 billion support package, including a $20 billion currency swap, to Milei&#x27;s success.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The win gave Milei enough votes in Congress to pass laws, but the economy remains fragile. His labour reform passed the Senate 42–28 on Feb. 27, 2026 and became law on Mar. 6. Congress has approved 11 of the 40 privatisations he sought. The Buenos Aires Herald reported that economic activity fell 2.9% month-on-month in July and that unemployment reached 7.9% in the second quarter. Argentina&#x27;s country-risk premium is above 600 points. At a business conference this month, Milei asked for patience and pinned his hopes on the 2027 presidential election.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/articles/c4gw8qpyvqdo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the midterm result</a></li><li><a href="https://www.bbc.com/news/articles/c4g3mdvle78o" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the U.S. bailout link</a></li><li><a href="https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-de-modernizacion-laboral-a-una-semana-de-su-aprobacion-en-el-senado-nid06032026/" target="_blank" rel="noopener noreferrer" class="pill" title="lanacion.com.ar">La Nación: labour reform promulgated (Spanish)</a></li><li><a href="https://buenosairesherald.com/economics/milei-at-idea-a-call-for-patience-and-a-bet-on-2027" target="_blank" rel="noopener noreferrer" class="pill" title="buenosairesherald.com">Buenos Aires Herald: Milei&#x27;s call for patience</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=aWXmi5afOtk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Bloomberg: &quot;Why Milei&#x27;s Economic Shock Therapy Is Dividing Argentina&quot; (in-depth explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=10hUSRYfmJM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP: Milei wins decisive midterm victories (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Tanzania&#x27;s election ends in a deadly crackdown</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Tanzania voted on Oct. 29, 2025, and President Samia Suluhu Hassan was declared the winner with 97.66% of the vote. Her main challengers had been kept off the ballot. Chadema leader Tundu Lissu was in jail on treason charges, and ACT-Wazalendo&#x27;s Luhaga Mpina was disqualified. Protests broke out on election day. The government shut down the internet and imposed a curfew, and security forces opened fire on crowds. Chadema said about 700 people were killed, and a diplomatic source told the BBC at least 500 had died.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Early estimates of the death toll were close to the official count. In April 2026, a government inquiry found that at least 518 people had been killed and 2,390 injured, but it blamed the protesters. A second commission, chaired by Shaban Lila, began work in August and moved to identifying suspects on Sept. 27. Lissu is still in prison. On Oct. 26 he began a hunger strike over being denied access to his lawyers. The verdict in his treason trial is due on Nov. 6. Hassan remains president.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/articles/cm2ww0e0jewo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the result and the killings</a></li><li><a href="https://www.reuters.com/world/africa/tanzania-inquiry-says-over-500-killed-last-years-election-violence-2026-04-23/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters on the inquiry&#x27;s death toll</a></li><li><a href="https://www.thecitizen.co.tz/tanzania/news/national/tanzania-election-violence-probe-enters-suspect-identification-phase-5647348" target="_blank" rel="noopener noreferrer" class="pill" title="thecitizen.co.tz">The Citizen: probe enters suspect-identification phase</a></li><li><a href="https://www.timeslive.co.za/news/africa/2026-10-27-tanzanian-opposition-leader-tundu-lissu-begins-hunger-strike-in-jail/" target="_blank" rel="noopener noreferrer" class="pill" title="timeslive.co.za">TimesLive/Reuters: Lissu begins hunger strike</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=m48cqny6tA0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN&#x27;s Larry Madowo: investigation finds police killed protesters and mass graves (investigative report, posted on his channel)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=9V11iRcPX1A" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC Africa Eye: &quot;Tundu Lissu: A Fight Too Far?&quot; (documentary)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=f8wY0x7PvYU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: President Hassan calls force against civilians &quot;proportional&quot; (interview)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">Oct. 30–Nov. 2, 2021 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>COP26 opens in Glasgow</h3>
+<p class="summary-label">Qué pasó</p>
+<p>The UN climate summit COP26 opened in Glasgow on Oct. 31, 2021, a year late because of the pandemic. Early pledges came on forests, from more than 120 countries, and on methane, from more than 100. A $130 trillion finance alliance was also launched. The final Glasgow Climate Pact was the first COP deal to target coal. At the last minute, though, China and India pushed through a change from &quot;phase-out&quot; to &quot;phase-down&quot;, and COP26 president Alok Sharma held back tears as he apologised. He said 1.5°C was still alive but that &quot;its pulse is weak&quot;.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Sharma&#x27;s warning turned out to be accurate. The UN&#x27;s Emissions Gap Report, published on Oct. 21, says it is now unavoidable that warming will overshoot 1.5°C. Even the best remaining path peaks at 1.7–1.8°C. That would require emissions cuts of 18% by 2030 and 45% by 2035 compared with 2025. Current policies point to about 2.8°C of warming. If countries delivered all their pledges, it would be 2.6°C. The outlook got worse after the U.S. left the Paris Agreement. COP31 meets in Antalya, Türkiye, on Nov. 9–20.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://news.un.org/en/story/2021/11/1105792" target="_blank" rel="noopener noreferrer" class="pill" title="news.un.org">UN News on the Glasgow outcome</a></li><li><a href="https://news.un.org/en/story/2026/10/1168634" target="_blank" rel="noopener noreferrer" class="pill" title="news.un.org">UN News on the 2026 Emissions Gap Report</a></li><li><a href="https://www.unep.org/en/publications/report/emissions-gap-report-2026" target="_blank" rel="noopener noreferrer" class="pill" title="unep.org">UNEP Emissions Gap Report 2026</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=U2hxCW5DnZk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Conversation: &quot;Glasgow Climate Pact: what happened at COP26 and what it means for the world&quot; (expert panel, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=FOjIVgR4X4M" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Sky News: how the Glasgow pact was reached (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=o7EpiXViSIQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">UN: David Attenborough&#x27;s address to world leaders (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>G20 leaders back a 15% global minimum corporate tax</h3>
+<p class="summary-label">Qué pasó</p>
+<p>At their Rome summit on Oct. 30–31, 2021, G20 leaders endorsed the two-pillar deal on international tax. The deal had been agreed through the OECD on Oct. 8. Its core was a 15% minimum tax on large multinationals, meant to end the race to the bottom on corporate rates. The leaders&#x27; declaration called it &quot;a historic achievement&quot; and said the new rules should come into effect globally in 2023.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The deal survives in a weaker form. The EU and dozens of other countries brought in the minimum tax, but the U.S. never did. On Jan. 5, 2026, the OECD&#x27;s Inclusive Framework of more than 140 countries agreed a &quot;side-by-side&quot; package under pressure from Washington. It exempts U.S.-headquartered multinationals from the deal&#x27;s backstop taxes, for fiscal years starting from Jan. 1, 2026. Countries can still apply their own domestic minimum taxes. The U.S. relies on its own system instead, which taxes foreign profits at roughly 12.6–14% on a blended rather than country-by-country basis. The arrangement is due for review by 2029. The idea of a global minimum survives, but the world&#x27;s largest economy no longer follows the common rules.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.g20.utoronto.ca/2021/211031-declaration.html" target="_blank" rel="noopener noreferrer" class="pill" title="g20.utoronto.ca">G20 Rome Leaders&#x27; Declaration</a></li><li><a href="https://www.reuters.com/business/g20-leaders-endorse-global-minimum-corporate-tax-deal-2023-start-2021-10-30/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters on the endorsement</a></li><li><a href="https://thefactcoalition.org/policy-brief-oecd-side-by-side-system/" target="_blank" rel="noopener noreferrer" class="pill" title="thefactcoalition.org">FACT Coalition on the side-by-side system</a></li><li><a href="https://www.rsmus.com/insights/tax-alerts/2026/oecd-package-offers-path-for-us-multinational-enterprises" target="_blank" rel="noopener noreferrer" class="pill" title="rsmus.com">RSM on what the 2026 package means for U.S. groups</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Y1r7YKu_xMQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNBC International: &quot;What is the global minimum corporate tax?&quot; (explainer, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=eKv85HRtZ5U" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: G20 leaders back minimum corporate tax (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ChkTqi7WW4I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">OECD Tax: &quot;Understanding the Side-by-Side package&quot; (technical briefing, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Ethiopia declares a state of emergency as Tigrayan forces advance</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 2, 2021, Ethiopia declared a six-month nationwide state of emergency. Tigrayan forces had claimed the towns of Dessie and Kombolcha, about 400 km from Addis Ababa. Justice Minister Gedion Timothewos announced the measure, and residents of the capital were told to register their weapons. The U.S. moved to suspend Ethiopia&#x27;s duty-free trade access under AGOA. More than 2.5 million people had been displaced by then. The government said it had retaken the towns by early December, and the war ended with the Pretoria agreement in November 2022.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The peace did not last. Fighting between the federal government and the Tigray People&#x27;s Liberation Front broke out again in late September 2026. In early October the army took the regional capital, Mekelle. With an allied militia, it then entered Aksum and retook Adwa and Adigrat. Gedion Timothewos, the minister who announced the 2021 emergency, is now foreign minister. He wrote to accuse Eritrea of an &quot;all-out invasion&quot;, and Ethiopian drones have struck Eritrean forces near Adigrat. Eritrea has cut diplomatic ties, and U.S. Secretary of State Marco Rubio has urged both sides to de-escalate.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.aljazeera.com/news/2021/11/2/ethiopia-declares-nationwide-state-of-emergency" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera on the 2021 emergency</a></li><li><a href="https://www.bbc.com/news/articles/c65ynvw250y1o" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the renewed war</a></li><li><a href="https://www.aljazeera.com/news/2026/10/15/ethiopian-forces-expand-control-in-tigray-as-militia-claims-eritrean-losses" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera on Ethiopian advances in Tigray</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=g0OxwpFlaA0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: &quot;The Horrors of the Hidden War: Inside the Tigray conflict&quot; (investigative report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=kissGXmxvw0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24: Ethiopia declares a state of emergency as rebels gain ground (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=lNEAyMVmmQI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: &quot;Why fighting in Tigray matters far beyond northern Ethiopia&quot; (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">Oct. 21–28, 2016 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Comey&#x27;s letter reopens the Clinton email inquiry</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 28, 2016, 11 days before the presidential election, FBI Director James Comey wrote to Congress. He said agents had found emails that might be relevant to the closed investigation into Hillary Clinton&#x27;s private server. They were on a laptop used by Anthony Weiner, the husband of Clinton aide Huma Abedin. Clinton&#x27;s campaign demanded the full facts. On Nov. 6, Comey wrote again to say the review had not changed the FBI&#x27;s conclusion.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>In June 2018, the Justice Department&#x27;s inspector general concluded that Comey had made &quot;a serious error of judgment&quot; with the October letter. The report separately called his July 2016 press statement &quot;insubordinate&quot;, but it found no evidence that political bias drove the investigative decisions. Clinton and her campaign blamed the letter for her defeat. Comey, now 65, has since become a target of the Trump Justice Department. A false-statements case was dismissed in November 2025 because the prosecutor who brought it had been invalidly appointed. A second case, over an &quot;86 47&quot; social media post, is pending in North Carolina. On Oct. 26, a third case was unsealed, charging him with transmitting national defence information. Comey&#x27;s response: &quot;Well, they&#x27;re back again… I&#x27;m still innocent.&quot; On the same day, a judge ruled that his daughter Maurene had been unlawfully fired as a federal prosecutor and ordered her reinstated.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.theguardian.com/us-news/2016/oct/28/fbi-reopens-hillary-clinton-emails-investigation" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian on the 2016 letter</a></li><li><a href="https://www.politico.com/story/2016/10/full-text-fbi-letter-announcing-new-clinton-review-230463" target="_blank" rel="noopener noreferrer" class="pill" title="politico.com">Politico: full text of the letter</a></li><li><a href="https://oig.justice.gov/sites/default/files/reports/18-04.pdf" target="_blank" rel="noopener noreferrer" class="pill" title="oig.justice.gov">DOJ inspector general report, 2018 (PDF)</a></li><li><a href="https://www.nbcnews.com/politics/justice-department/former-fbi-james-comey-charged-third-time-trump-national-security-rcna342963" target="_blank" rel="noopener noreferrer" class="pill" title="nbcnews.com">NBC News on the third indictment</a></li><li><a href="https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html" target="_blank" rel="noopener noreferrer" class="pill" title="cnbc.com">CNBC on the new charges</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=ZWxLSowloo8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRONTLINE: &quot;Comey, Trump and Clinton&#x27;s Emails: The Backstory&quot; (documentary excerpt)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=kk8GQfDwY7I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: the FBI director&#x27;s letter on new Clinton emails (original report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=IMAIPLMGHG8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC Nightly News: IG finds Comey &quot;insubordinate&quot; but unbiased (report, 2018)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>France clears the Calais &quot;Jungle&quot;</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 24, 2016, French authorities began clearing the &quot;Jungle&quot;, a migrant camp near Calais. It held about 7,000 people (aid group Help Refugees counted 8,143), most of them hoping to reach Britain. More than 1,200 police were deployed. In the first two days more than 4,000 people were bussed to reception centres across France, and demolition began on Oct. 25. Unaccompanied children were moved into containers on site, and Britain took in close to 200. On Oct. 26 the local prefect declared the camp cleared.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The camp is gone, but the attempts to cross have not stopped. Since 2020, small boats have been the main route to Britain. In 2025, 41,472 people crossed the Channel that way. From Jan. 1 to Oct. 18, 2026, the figure was 20,935, down 43% on the year before. In 2025, Britain and France agreed a &quot;one in, one out&quot; returns deal, and it was scrapped on Oct. 1 after 423 days. Roughly 1,500 people were returned under it, while more than 40,000 arrived by small boat. According to the BBC, 162 people died crossing the Channel between 2018 and 2025. Migrants still sleep rough in makeshift camps near Calais.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-europe-37759032" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC on the clearance, 2016</a></li><li><a href="https://www.reuters.com/article/world/clearance-of-calais-jungle-camp-accomplished-french-prefect-says-idUSKCN12Q0JU/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters: prefect declares camp cleared</a></li><li><a href="https://www.theguardian.com/uk-news/2026/oct/01/why-uk-france-one-in-one-out-migration-deal-being-scrapped" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian: why the one-in, one-out deal was scrapped</a></li><li><a href="https://www.bbc.co.uk/news/articles/cjvgy1g932xro" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.co.uk">BBC: small-boat crossings in numbers</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=9sA5NIe5VIg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: the Jungle demolition continues (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=T92ubtOfqBQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24: &quot;From &#x27;Jungle&#x27; to jungles, migrants in Calais continue to dream of UK&quot; (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=efRm4DmPhTw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24: Calais, 10 years after the Jungle (short report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Mirai botnet knocks out much of the web</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 21, 2016, waves of traffic hit Dyn, a company that runs a large share of the internet&#x27;s address system (DNS). Twitter, Netflix, Reddit, PayPal, Spotify, CNN and the Guardian were unreachable for hours across much of the U.S. and parts of Europe. Dyn said the main source was Mirai, a botnet built from about 100,000 hijacked webcams, video recorders and routers. At the time, experts called it the largest attack of its kind. In December 2017, three young Americans, Paras Jha, Josiah White and Dalton Norman, pleaded guilty to creating Mirai. Jha had posted its source code online in autumn 2016, and the charges did not cover the Dyn attack itself.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The early warnings about insecure &quot;internet of things&quot; devices proved correct. Because Mirai&#x27;s code was public, many copies followed. A botnet built from it, Aisuru/Kimwolf, set a record of 31.4 terabits per second in late 2025, more than 25 times the reported peak of the Dyn attack. In March 2026, the U.S. Justice Department took down four Mirai-derived botnets, which together controlled more than 3 million devices. The original creators were sentenced to probation and went on to help the FBI.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.theguardian.com/technology/2016/oct/26/ddos-attack-dyn-mirai-botnet" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">Guardian: experts call the Dyn attack the largest of its kind</a></li><li><a href="https://www.justice.gov/archives/opa/pr/justice-department-announces-charges-and-guilty-pleas-three-computer-crime-cases-involving" target="_blank" rel="noopener noreferrer" class="pill" title="justice.gov">DOJ: guilty pleas over Mirai, 2017</a></li><li><a href="https://www.wired.com/story/us-takes-down-botnets-used-in-record-breaking-cyberattacks/" target="_blank" rel="noopener noreferrer" class="pill" title="wired.com">Wired: U.S. takes down botnets used in record attacks</a></li><li><a href="https://blog.cloudflare.com/ddos-threat-report-2025-q4/" target="_blank" rel="noopener noreferrer" class="pill" title="blog.cloudflare.com">Cloudflare DDoS threat report, Q4 2025</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=1pywzRTJDaY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">USENIX Security &#x27;17: &quot;Understanding the Mirai Botnet&quot; (research presentation, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Bd9_1ioRF4o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC Nightly News: DHS investigates massive internet attack (original report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Wc8-CXgnjW0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: massive internet disruptions from cyberattacks (original report, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code></code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 27 de octubre de 2026, 09:20 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
