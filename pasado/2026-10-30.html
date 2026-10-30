@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 30 de octubre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 30 de octubre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>54 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">Sept. 28–30, 2026 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>SpaceX&#x27;s Starship reaches orbit for the first time</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 28, Starship Flight 14 lifted off from Starbase, Texas, at 7:48 a.m. CT and became the first Starship to reach orbit. It deployed 26 Starlink V3 satellites. One engine shut down early during ascent, and for a while SpaceX&#x27;s livestream said the ship would not make orbit, but it did. SpaceX cut the planned mission of about 10 hours down to about three. The ship then made Starship&#x27;s first deorbit burn and splashed down on target in the northern Pacific.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On Tesla&#x27;s Oct. 20 earnings call, Elon Musk said Flight 15 will fly in November. On that flight the launch tower will try to catch the Ship itself, not just the booster. Musk said success was &quot;more likely than not&quot; and would be &quot;the first time that an orbital launch vehicle has been fully recovered.&quot; He wants weekly flights in the first half of 2027 and two a week by the end of 2027. FAA airspace planning shows a tentative Nov. 12 date, but SpaceX has not announced it.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.spacex.com/launches/starship-flight-14/" target="_blank" rel="noopener noreferrer" class="pill" title="spacex.com">SpaceX: Flight 14 mission page</a></li><li><a href="https://www.reuters.com/business/media-telecom/spacexs-starship-launches-14th-flight-first-headed-orbit-2026-09-28/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters: Starship launches 14th flight, first headed to orbit</a></li><li><a href="https://techcrunch.com/2026/09/28/spacexs-starship-rocket-reaches-orbit-for-the-first-time/" target="_blank" rel="noopener noreferrer" class="pill" title="techcrunch.com">TechCrunch: Starship reaches orbit for the first time</a></li><li><a href="https://www.teslarati.com/spacex-confirms-starship-15-launch-window-massive-ambitions/" target="_blank" rel="noopener noreferrer" class="pill" title="teslarati.com">Teslarati: Flight 15 window</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=oHnT9VOthb8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NASASpaceflight: &quot;Starship Flight 14 Reaches Orbit—but Returns Early&quot; (in-depth analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=s2U54BS25bE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">VideoFromSpace: &quot;Blastoff! SpaceX Starship launches to orbit for first time, booster splashes down&quot; (launch footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Prime Minister Andy Burnham opens the door to rejoining the EU</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Ten years after the Brexit vote, Prime Minister Andy Burnham used his Labour conference speech in Liverpool on Sept. 29 and a BBC interview on Sept. 30 to say Britain should look at every option for its relationship with Europe. He listed keeping the current arrangement, a customs union, the single market, or going &quot;all the way&quot; to full EU membership. He said a referendum &quot;wouldn&#x27;t be the right thing to do right now.&quot; He also said a referendum pledge in a future manifesto was &quot;possible&quot; because &quot;where we are isn&#x27;t good enough.&quot;</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>He has since pulled back. Earlier this week Burnham suggested a referendum on free movement, and No 10 then appeared to backtrack. At Prime Minister&#x27;s Questions on Oct. 28 he said there was &quot;no confusion at all.&quot; He said the 2024 manifesto red lines (no free movement, no single market, no customs union) &quot;will stay in place firmly for the whole of this Parliament.&quot; Conservative leader Kemi Badenoch accused him of not respecting the 2016 result. In a letter, Burnham told ministers to be &quot;aligned and disciplined.&quot; The letter says any fundamental change &quot;would be for the public to decide and a matter for the next Parliament.&quot; A UK–EU summit in Brussels on Nov. 20 is due to cover youth mobility, food and drink, energy and illegal migration. The youth-mobility scheme may be delayed.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.reuters.com/world/uk/burnham-says-britain-should-weigh-eu-options-including-rejoining-bloc-2026-09-30/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters: Burnham says Britain should weigh EU options</a></li><li><a href="https://www.theguardian.com/politics/2026/sep/30/andy-burnham-uk-could-go-all-the-way-rejoining-eu" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">The Guardian: UK could &quot;go all the way&quot; to rejoining</a></li><li><a href="https://www.bbc.com/news/articles/cmlyewr0lnj3o" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC</a></li><li><a href="https://www.bbc.com/news/articles/cqlyejngjenxo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC</a></li><li><a href="https://www.theguardian.com/world/2026/oct/23/uk-eu-brexit-reset-youth-mobility-scheme-summit" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">The Guardian: summit and youth mobility</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=N2KVy7uq_xo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC Radio 4 Today: &quot;Andy Burnham: &#x27;Brexit has caused more harm than good&#x27;&quot; (long-form interview, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=yh2zkQ9XuSU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC Newscast: &quot;Could the UK really rejoin the EU?&quot; (explainer/podcast, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>A flydubai co-pilot attacks his captain with a crash axe</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Sept. 30, flydubai flight FZ1073 from Dubai to Tel Aviv was carrying 174 passengers. Its 29-year-old Omani co-pilot attacked the Indian captain, Smit Machchhar, with the cockpit crash axe, and the plane dropped about 17,000 feet. A pilot who was rostered for the return flight noticed the cockpit door opening and closing oddly. He went in using the access code, and with cabin crew and passengers he subdued the attacker. The return-flight crew then landed the plane in Tabuk, Saudi Arabia. Saudi Arabia arrested the co-pilot and handed him to the UAE, which leads the criminal investigation. Saudi Arabia opened its own safety probe. Israeli Prime Minister Netanyahu said the co-pilot apparently tried to crash the plane.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On Oct. 9, UAE Attorney-General Hamad Saif Al Shamsi said the suspect had planned a suicide attack on the passenger terminal at Ben Gurion Airport. He said the man&#x27;s radicalisation dated to 2017, when he was studying in Melbourne, and that he had used two earlier Tel Aviv flights to scout the target. The suspect flew for Oman Air from 2020 to 2024 and for Royal Air Maroc in 2025. He joined flydubai in January 2026 after passing its checks. He confessed to acting alone, and investigators are still checking that claim. Officials said the captain&#x27;s head injuries could have been fatal. As of Oct. 21, Dubai–Tel Aviv flights were suspended until at least Nov. 15, with no bookings open before year-end. Israel wants its own security staff and X-ray screening in Dubai. Its Transportation Ministry admitted it had never vetted foreign crews. Etihad is now the only UAE airline flying to Israel, with six flights a day.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.aljazeera.com/news/2026/10/3/flydubai-co-pilot-stabbed-pilot-with-crash-axe-in-terrorist-attack-uae" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera: UAE calls it a terrorist attack</a></li><li><a href="https://www.wam.ae/en/article/c2nmy0l-uae-attorney-general-announces-updates" target="_blank" rel="noopener noreferrer" class="pill" title="wam.ae">WAM: UAE Attorney-General update</a></li><li><a href="https://english.alarabiya.net/News/saudi-arabia/2026/10/01/saudi-probe-says-flydubai-copilot-assaulted-captain-before-emergency-landing" target="_blank" rel="noopener noreferrer" class="pill" title="english.alarabiya.net">Al Arabiya: Saudi probe</a></li><li><a href="https://www.jns.org/news/israel-news/flights-to-dubai-from-tel-aviv-remain-suspended-three-weeks-after-attack" target="_blank" rel="noopener noreferrer" class="pill" title="jns.org">JNS: flights still suspended</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=oun0ZCKRw3U" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Flydubai co-pilot attacked captain with axe, UAE official says&quot; (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ATsWl7P-eWg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: &quot;Flydubai pilot &#x27;stabbed or hit with an axe&#x27; during hijack attempt; more new details&quot; (extended report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=4mZSlq3ytTs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC 7 Chicago: &quot;Axe-wielding FlyDubai co-pilot had been flagged over extremism concerns&quot; (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">Oct. 28–30, 2025 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Rio de Janeiro&#x27;s deadliest police raid</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 28, 2025, about 2,500 police officers went into the Complexo da Penha and Complexo do Alemão favelas to serve 100 arrest warrants against the Comando Vermelho gang. About 122 people died, five of them police officers (the fifth officer died on Nov. 22). It was the deadliest one-day police operation on record in Brazil. Residents laid out 62 bodies in a square in Penha. Governor Cláudio Castro called the raid a &quot;success.&quot; Police arrested 99 people and seized 122 guns, 96 of them rifles. A Quaest poll found that 67% of Brazilians approved of the raid.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Human Rights Watch released an investigation on Oct. 28, 2026, the first anniversary. It reviewed 4,400 hours of police bodycam footage, and none of it shows a killing. HRW found signs that cameras had been tampered with, and only about 23% of officers were wearing one. HRW says 19 officers have been charged, with offences such as break-ins, theft and camera tampering, but none for unlawful use of force. Rio&#x27;s Public Defender&#x27;s Office released its own bodycam report the same day, alleging torture and electric shocks. Thirty-three of the people named in warrants are still at large, including the senior figures known as Doca, Gardenal and Pedro Bala, and the Comando Vermelho still controls the area. According to G1, shootings there have fallen 61%. A new governor takes office on Jan. 6.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.hrw.org/feature/2026/10/28/a-strategy-of-death/investigating-brazils-deadliest-police-operation" target="_blank" rel="noopener noreferrer" class="pill" title="hrw.org">HRW: &quot;A Strategy of Death&quot;</a></li><li><a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/10/28/um-ano-da-megaoperacao-no-alemao-e-na-penha.ghtml" target="_blank" rel="noopener noreferrer" class="pill" title="g1.globo.com">G1: one year since the mega-operation</a></li><li><a href="https://www1.folha.uol.com.br/cotidiano/2026/10/um-ano-apos-operacao-mais-letal-do-pais-investigacao-segue-sem-conclusao-morador-relembra-retirada-de-corpos.shtml" target="_blank" rel="noopener noreferrer" class="pill" title="www1.folha.uol.com.br">Folha: investigation still inconclusive</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=KRs46iVJsfQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: &quot;Brazilians in a Rio favela line up bodies after the city&#x27;s deadliest police raid&quot; (original footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=zn6BtSQ9lEg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AFP Español: &quot;HRW sugiere posibles ejecuciones en letal operación policial hace un año en Brasil&quot; (report on the HRW investigation, Spanish, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=tHF7n7czyws" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 Español: &quot;¿Cuáles son los principales hallazgos del informe de HRW…?&quot; (explainer, Spanish, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>King Charles strips Andrew of the title &quot;prince&quot;</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 30, 2025, Buckingham Palace said it had begun the formal process of removing Andrew&#x27;s style, titles and honours. From then on he would be known as Andrew Mountbatten Windsor. He was served notice to give up the lease on Royal Lodge and was to move to the Sandringham estate. Earlier that month he had given up the title Duke of York, after the posthumous publication of Virginia Giuffre&#x27;s memoir and the emergence of his 2011 emails with Jeffrey Epstein. He continues to deny the allegations.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Police arrested him on Feb. 19, 2026, his 66th birthday, on suspicion of misconduct in public office. The allegation is that he shared sensitive information with Epstein while serving as a UK trade envoy. Police searched Royal Lodge and his home on the Sandringham estate. On Oct. 8, Mr Justice Hilliard ruled the search warrants unlawful because they had been issued under the wrong section of the Police and Criminal Evidence Act (section 8 instead of section 9). A police application to keep the seized material will be heard next year. The investigation continues, and Thames Valley Police are discussing the case with the Crown Prosecution Service. On Oct. 9, the Crown Estate confirmed he had surrendered the Royal Lodge lease more than 50 years early. He paid £1.8m for dilapidations and received about £302k in compensation, a net £1.5m to the Crown Estate.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.royal.uk/news-and-activity/2025-10-30/a-statement-from-buckingham-palace" target="_blank" rel="noopener noreferrer" class="pill" title="royal.uk">Royal.uk: Buckingham Palace statement, Oct. 30, 2025</a></li><li><a href="https://www.bbc.com/news/articles/cr7m4yjkp74o" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC</a></li><li><a href="https://www.theguardian.com/uk-news/2026/oct/08/search-warrants-used-in-andrew-mountbatten-windsor-raids-were-unlawful-court-rules" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">The Guardian: search warrants ruled unlawful</a></li><li><a href="https://www.thecrownestate.co.uk/news/the-crown-estate-confirms-the-surrender-of-the-lease-royal-lodge" target="_blank" rel="noopener noreferrer" class="pill" title="thecrownestate.co.uk">The Crown Estate: Royal Lodge lease surrendered</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=VB2eRwOp_Ck" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Andrew stripped of &#x27;prince&#x27; title and will move out of Royal Lodge&quot; (extended report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=yjvx9haZxPo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Andrew Arrested - The Story of the Day&quot; (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=CYFbSic4Mak" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: &quot;Search warrants on Andrew Mountbatten-Windsor&#x27;s homes were unlawful&quot; (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>D66 narrowly wins the Dutch election under Rob Jetten</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In the Dutch general election of Oct. 29, 2025, Rob Jetten&#x27;s centrist D66 and Geert Wilders&#x27; far-right PVV each won 26 seats. D66 took 1,790,634 votes (16.94%) and the PVV 1,760,966 (16.66%). Finishing first by 29,668 votes gave D66 the first chance to form a coalition.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The Jetten cabinet was sworn in on Feb. 23, 2026. It is a minority coalition of D66, VVD and CDA with 18 ministers. It is the first Dutch minority cabinet since 1918 to govern without a confidence-and-supply deal. The BBC called Jetten the youngest Dutch prime minister ever. His deputies are Dilan Yeşilgöz (VVD, also defence minister) and Bart van den Brink (CDA). As of Oct. 30 the government has no majority for its budget or tax plan. It is negotiating with JA21, BBB and SGP on the right and with PRO and Volt on the left. The tax plan goes to the lower house next week, with votes expected a week later.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.verkiezingsuitslagen.nl/verkiezingen/detail/TK20251029" target="_blank" rel="noopener noreferrer" class="pill" title="verkiezingsuitslagen.nl">Kiesraad: official 2025 results</a></li><li><a href="https://nltimes.nl/2025/11/07/official-election-results-confirm-26-seats-d66-pvv-change-final-exit-polls" target="_blank" rel="noopener noreferrer" class="pill" title="nltimes.nl">NL Times: official results confirm 26 seats each</a></li><li><a href="https://apnews.com/article/netherlands-election-wilders-jetten-d66-coalition-a0c90665f4e85b63754a30b8d5fe4f83" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Netherlands election</a></li><li><a href="https://www.government.nl/latest/news/2026/02/23/jetten-government-sworn-in" target="_blank" rel="noopener noreferrer" class="pill" title="government.nl">Government.nl: Jetten government sworn in</a></li><li><a href="https://en.wikipedia.org/wiki/Jetten_cabinet" target="_blank" rel="noopener noreferrer" class="pill" title="en.wikipedia.org">Wikipedia: Jetten cabinet</a></li><li><a href="https://nos.nl/artikel/2637267-jetten-spreekt-oppositie-we-kunnen-vandaag-zaken-doen" target="_blank" rel="noopener noreferrer" class="pill" title="nos.nl">NOS: Jetten and the opposition</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=M7ncxS-eXzY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Associated Press: &quot;Rob Jetten claims &#x27;historic&#x27; win in Dutch election after exit poll shows slight lead&quot; (original footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=WmbHTFtoCFs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: &quot;Dutch centrist D66 party wins big in election as far right loses support&quot; (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=a9Lxo1bXH5c" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP Archive: &quot;Dutch king swears in a new coalition government led by youngest-ever premier Rob Jetten&quot; (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">Oct. 28–31, 2021 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Facebook renames itself Meta</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 28, 2021, Mark Zuckerberg announced that Facebook Inc. would be called Meta and would bet its future on the metaverse. &quot;From now on, we will be metaverse-first, not Facebook-first,&quot; he wrote. The rebrand came in the middle of the scandal over documents leaked by whistleblower Frances Haugen.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The metaverse bet has not paid off, and Meta&#x27;s money still comes from its social apps. Slate reported that Reality Labs, the metaverse and hardware division, lost $12.8bn in the first nine months of 2026. In the third quarter, more than 99% of Meta&#x27;s $64.6bn revenue came from its family of apps, which have 3.64 billion daily users. In March, Meta said it would pull Horizon Worlds from VR headsets, then partly reversed the decision days later. Hardware has found a niche in smart glasses: Meta sold more than 7 million pairs in 2025 and had 94% of AI-glasses shipments in the first half of 2026. In September it launched an AI agent called Meta Muse.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.theguardian.com/technology/2021/oct/28/facebook-mark-zuckerberg-meta-metaverse" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">The Guardian: Facebook renames itself Meta (2021)</a></li><li><a href="https://slate.com/technology/2026/10/facebook-meta-rebrand-five-years.html" target="_blank" rel="noopener noreferrer" class="pill" title="slate.com">Slate: the Meta rebrand five years on</a></li><li><a href="https://www.cnbc.com/2026/07/29/metas-reality-labs-lost-over-4point6-billion-in-second-quarter.html" target="_blank" rel="noopener noreferrer" class="pill" title="cnbc.com">CNBC: Reality Labs Q2 2026 loss</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Sya_ET05N7E" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Guardian News: &quot;Meta: Mark Zuckerberg announces Facebook&#x27;s new name&quot; (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=BrNu2a9uhR0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNBC: &quot;Why Facebook-Parent Meta Is Willing To Lose Billions On The Metaverse&quot; (in-depth explainer, 2024)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The U.S. authorizes the Pfizer COVID vaccine for children aged 5 to 11</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 29, 2021, the FDA gave emergency use authorization to the Pfizer-BioNTech COVID-19 vaccine for children aged 5 to 11. The dose was 10 micrograms, a third of the adult dose, given twice three weeks apart. In the trial it was 90.7% effective at preventing COVID-19. The CDC recommended it on Nov. 2, 2021.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The vaccine is no longer routinely recommended for all children, and federal vaccine policy is tied up in court. Under the CDC&#x27;s 2026–27 guidance, updated Sept. 23, 2026, a COVID vaccine is recommended for immunocompromised children. For other children it is left to &quot;shared clinical decision-making&quot; between parents and clinicians. The FDA now approves Pfizer&#x27;s Comirnaty for ages 5 to 11 only for children with a high-risk condition. Pfizer&#x27;s vaccine is no longer authorized for ages 6 months to 4 years. On March 16, 2026, Judge Brian Murphy of the federal court in Massachusetts issued a preliminary injunction in <em>AAP v. Kennedy</em>. It puts on hold Health Secretary Robert F. Kennedy Jr.&#x27;s appointments to the CDC&#x27;s vaccine advisory committee (ACIP) and all of that committee&#x27;s votes. It also halts HHS&#x27;s Jan. 5, 2026 childhood vaccine schedule and overturns Kennedy&#x27;s May 2025 COVID vaccine directive. The First Circuit heard the government&#x27;s appeal on Oct. 6, and as of Oct. 21 the injunction was still in place.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://web.archive.org/web/20211029192535/https:/www.fda.gov/news-events/press-announcements/fda-authorizes-pfizer-biontech-covid-19-vaccine-emergency-use-children-5-through-11-years-age" target="_blank" rel="noopener noreferrer" class="pill" title="web.archive.org">FDA press release, Oct. 29, 2021 (archived)</a></li><li><a href="https://www.cdc.gov/mmwr/volumes/70/wr/mm7045e1.htm" target="_blank" rel="noopener noreferrer" class="pill" title="cdc.gov">CDC MMWR: ACIP recommendation, Nov. 2021</a></li><li><a href="https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html" target="_blank" rel="noopener noreferrer" class="pill" title="cdc.gov">CDC: current COVID-19 vaccine guidance</a></li><li><a href="https://www.apha.org/news-and-media/news-releases/apha-news-releases/federal-judge-blocks-immunization-schedule-changes" target="_blank" rel="noopener noreferrer" class="pill" title="apha.org">APHA: federal judge blocks immunization schedule changes</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=IckGdSW63n8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: &quot;FDA Authorizes Pfizer Covid Vaccine For Kids 5 to 11&quot; (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=UnVGDVjbEjs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: &quot;Judge temporarily blocks RFK Jr.&#x27;s efforts to reshape childhood vaccine policy&quot; (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Kishida&#x27;s LDP keeps its majority in Japan</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In Japan&#x27;s general election of Oct. 31, 2021, Prime Minister Fumio Kishida&#x27;s Liberal Democratic Party won 261 of 465 seats, comfortably above the 233 needed for a majority. With its partner Komeito, the coalition held 293 seats. Polls had suggested the LDP might lose its outright majority.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Prime Minister Sanae Takaichi called a snap election for Feb. 8, 2026, and the LDP won 316 seats on its own, a two-thirds majority and 125 more than before. Its coalition with Ishin holds 352 seats. The Centrist Reform Alliance, formed by the CDP and Komeito, fell to 49. Kishida kept his Hiroshima 1st seat, and his successor as prime minister, Shigeru Ishiba, kept his Tottori seat. Kishida chairs a ruling-party group that advised on Takaichi&#x27;s ¥370 trillion growth strategy (Japan Times, Aug. 6). He has joined Oxford&#x27;s Blavatnik World Leaders Circle, and on Oct. 20 he became an international adviser to the Praemium Imperiale arts prize.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.co.uk/news/world-asia-59110828" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.co.uk">BBC: Japan election 2021</a></li><li><a href="https://www.reuters.com/world/asia-pacific/japan-votes-test-new-pm-kishida-political-stability-2021-10-30/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters: Japan votes in test for Kishida (2021)</a></li><li><a href="https://en.wikipedia.org/wiki/Results_of_the_2026_Japanese_general_election" target="_blank" rel="noopener noreferrer" class="pill" title="en.wikipedia.org">Wikipedia: results of the 2026 Japanese general election</a></li><li><a href="https://www.japantimes.co.jp/business/2026/08/06/economy/japan-former-pm-kishida-interview-growth-strategy/" target="_blank" rel="noopener noreferrer" class="pill" title="japantimes.co.jp">Japan Times: Kishida interview on the growth strategy</a></li><li><a href="https://www.praemiumimperiale.org/en/news/20261020-2/" target="_blank" rel="noopener noreferrer" class="pill" title="praemiumimperiale.org">Praemium Imperiale: new international advisers</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=ifGRvASi3fw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Bloomberg Television: &quot;Japan&#x27;s LDP Keeps Majority in Election&quot; (analysis, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=LWDTkBDwrZ0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TRT World: &quot;Japan&#x27;s ruling LDP wins clear majority, PM Kishida stays in power&quot; (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">Oct. 22–30, 2016 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>South Korea&#x27;s Choi Soon-sil scandal breaks</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 24, 2016, the broadcaster JTBC reported that Choi Soon-sil had received, and sometimes edited, drafts of President Park Geun-hye&#x27;s speeches. Choi was a longtime friend of Park and held no government post. JTBC said it had recovered about 200 files from a computer in Choi&#x27;s office, including 44 presidential speeches and remarks. The next day Park apologized on television. She admitted that Choi had helped with her campaign speeches and some materials after she took office, but said this stopped once her Blue House staff was in place. Choi came back from Germany and appeared before prosecutors on Oct. 31.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The scandal brought down Park, who became the first South Korean president removed from office. She was later sentenced to a combined 22 years. After serving 4 years and 9 months, she was freed under a special pardon from President Moon Jae-in on Dec. 31, 2021. Now 74, she has returned to politics. She campaigned for People Power Party candidates before the June 3, 2026 local elections. In August she attended a PPP retreat, her first since the party expelled her in 2017. Choi, now 70 and known as Choi Seo-won, received a combined 21 years for the corruption case and for a university admissions case involving her daughter. She is the only central figure in the scandal still serving her sentence, which is due to end in 2038. In June she was granted her third temporary suspension of imprisonment for serious health problems after spinal surgery. In September prosecutors extended it by two months, with her residence restricted to a Seoul hospital. In her first interview in 10 years she said: &quot;I wish I had never met former President Park Geun-hye.&quot;</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://en.yna.co.kr/view/AEN20161025008551315" target="_blank" rel="noopener noreferrer" class="pill" title="en.yna.co.kr">Yonhap: Park apologizes (Oct. 25, 2016)</a></li><li><a href="https://en.yna.co.kr/view/AEN20211230001852315" target="_blank" rel="noopener noreferrer" class="pill" title="en.yna.co.kr">Yonhap: Park freed under pardon (2021)</a></li><li><a href="https://www.koreaherald.com/article/10755553" target="_blank" rel="noopener noreferrer" class="pill" title="koreaherald.com">Korea Herald: Park hits campaign trail</a></li><li><a href="https://en.sedaily.com/politics/2026/08/27/park-geun-hye-urges-unity-at-first-party-retreat-since" target="_blank" rel="noopener noreferrer" class="pill" title="en.sedaily.com">Seoul Economic Daily: Park at first party retreat since impeachment</a></li><li><a href="https://www.koreatimes.co.kr/southkorea/20260708/i-wish-id-never-met-park-geun-hye-choi-seo-won-breaks-silence-after-10-years" target="_blank" rel="noopener noreferrer" class="pill" title="koreatimes.co.kr">Korea Times: Choi Seo-won interview</a></li><li><a href="https://www.newsis.com/view/NISX20260904_0003777162" target="_blank" rel="noopener noreferrer" class="pill" title="newsis.com">Newsis: suspension extended (Korean)</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=3v6kzkqdOlY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">VICE Asia: &quot;How a Puppy Exposed Corruption in South Korea&#x27;s Presidency | The Big Steal&quot; (investigative documentary series, 2022)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=2JE1Cc5VYq0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">KBS News: &quot;Choi Soon-sil Scandal&quot; (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=-PgIM0vuh4w" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Bloomberg Television: &quot;South Korea&#x27;s Park Ousted From Presidency&quot; (analysis, 2017)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>AT&amp;T agrees to buy Time Warner</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 22, 2016, AT&amp;T agreed to buy Time Warner, owner of HBO, CNN and Warner Bros., for $107.50 a share, half in cash and half in AT&amp;T stock. That valued Time Warner&#x27;s equity at $85.4bn, or $108.7bn including its net debt. Both boards approved the deal unanimously, but it still needed shareholder and regulatory approval.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The deal survived the courts but did not last. The Justice Department sued to block it. On June 12, 2018, U.S. District Judge Richard Leon rejected that challenge, and the merger went ahead. AT&amp;T then reversed course: on April 8, 2022, it spun off WarnerMedia and merged it with Discovery to form Warner Bros. Discovery. AT&amp;T received $40.4bn in cash, and its shareholders got 71% of the new company. On Oct. 6, 2026, Paramount, controlled by the Ellison family and RedBird Capital, completed its takeover of Warner Bros. Discovery. WBD shareholders received about $31.02 a share in cash. The combined company is named Skydance and trades as SKYD. It owns CBS, HBO, CNN, CBS News, Warner Bros. and Paramount, has close to $70bn in annual revenue, and is targeting at least $6bn in savings. The Ellison family and RedBird hold 100% of the voting shares.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.sec.gov/Archives/edgar/data/1105705/000095015716002367/ex99-1.htm" target="_blank" rel="noopener noreferrer" class="pill" title="sec.gov">SEC: AT&amp;T–Time Warner announcement (2016)</a></li><li><a href="https://apnews.com/article/d4021f9e1b1841aea892d04145f16cc3" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: judge approves AT&amp;T–Time Warner merger (2018)</a></li><li><a href="https://www.wbd.com/discovery-and-att-close-warnermedia-transaction" target="_blank" rel="noopener noreferrer" class="pill" title="wbd.com">Warner Bros. Discovery: Discovery and AT&amp;T close WarnerMedia transaction (2022)</a></li><li><a href="https://ir.skydance.com/news-releases/news-release-details/paramount-completes-acquisition-warner-bros-discovery-creating" target="_blank" rel="noopener noreferrer" class="pill" title="ir.skydance.com">Skydance: Paramount completes acquisition of WBD</a></li><li><a href="https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/" target="_blank" rel="noopener noreferrer" class="pill" title="arstechnica.com">Ars Technica: $111B merger creates Skydance</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=yIeT6vmm9Nc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Wall Street Journal: &quot;Inside the AT&amp;T-Time Warner Deal&quot; (in-depth discussion, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=YYFQYjawGDs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: &quot;Paramount Skydance completes $110 billion takeover of Warner Bros.&quot; (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The EU and Canada sign CETA after Wallonia&#x27;s blockade</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 30, 2016, Canadian Prime Minister Justin Trudeau and EU leaders Donald Tusk, Jean-Claude Juncker and Robert Fico signed the Comprehensive Economic and Trade Agreement (CETA) in Brussels. The deal had taken seven years to negotiate. The signing was days late because Belgium&#x27;s Wallonia region had blocked it, and Belgium&#x27;s regions approved it only at the last minute.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Ten years on, CETA is still not fully in force, even as the EU and Canada move closer. Most of the deal has applied provisionally since 2017, removing tariffs on 98% of goods. The European Commission says trade in goods and services rose 80% between 2016 and 2025, to €130bn. But nine member states have not ratified it: Belgium, Bulgaria, Cyprus, France, Greece, Hungary, Ireland, Italy and Poland. Slovenia ratified on Oct. 1, 2026. France&#x27;s Senate rejected the deal in 2024. Italy has been stuck since 2018, and an Italian MEP said it was unlikely to go to parliament before the December 2027 elections. The investment court system will start only after all member states ratify. In September, Commission President Ursula von der Leyen proposed moving &quot;from CETA to an Alliance for the Future&quot; and floated making Canada the EU&#x27;s first &quot;associate member.&quot; At this week&#x27;s EU–Canada summit in Montreal, Germany and other member states had the term &quot;associate membership&quot; removed from the joint statement. The statement now speaks of an &quot;ever closer association&quot; short of full membership.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/world-europe-37814884" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC: EU and Canada sign long-delayed deal (2016)</a></li><li><a href="https://www.pm.gc.ca/en/news/news-releases/2016/10/30/canada-and-eu-sign-historic-trade-agreement-during-eu-canada-summit" target="_blank" rel="noopener noreferrer" class="pill" title="pm.gc.ca">Prime Minister of Canada: CETA signed (2016)</a></li><li><a href="https://www.euronews.com/2026/09/21/what-is-ceta-and-why-is-the-eu-canada-trade-deal-still-in-limbo" target="_blank" rel="noopener noreferrer" class="pill" title="euronews.com">Euronews: why CETA is still in limbo</a></li><li><a href="https://www.mlex.com/mlex/articles/2532466/slovenia-ratifies-eu-canada-ceta-deal-full-entry-into-force-closer" target="_blank" rel="noopener noreferrer" class="pill" title="mlex.com">MLex: Slovenia ratifies</a></li><li><a href="https://www.euronews.com/2026/10/29/is-von-der-leyens-associate-membership-for-canada-already-dead" target="_blank" rel="noopener noreferrer" class="pill" title="euronews.com">Euronews: is &quot;associate membership&quot; already dead?</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=bbJxjTjl-dU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">euronews: &quot;Landmark CETA trade pact signed after seven years of talks&quot; (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=tVv5nJnvdi8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC News: The National: &quot;Carney, EU chief talk up &#x27;associate membership&#x27; despite pushback from Germany&quot; (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=LHxy1kfq6Ss" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">European Commission: &quot;EU-Canada Relations: A New Strategic Partnership for the Future&quot; (summit press conference, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code></code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 30 de octubre de 2026, 09:14 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
