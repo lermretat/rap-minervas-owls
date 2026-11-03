@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Martes 3 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Martes 3 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>59 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">Sept. 30–Oct. 5, 2026 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Tennessee fails to execute Christa Pike</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the night of Sept. 30, Tennessee tried to execute Christa Pike, 50, at Riverbend Maximum Security Institution in Nashville. She survived two doses of pentobarbital. Pike was sentenced to death in 1996 for the 1995 murder of 19-year-old Colleen Slemmer at a job-training program for low-income young people. Her accomplice, Tadaryl Shipp, got life because he was a minor. Pike would have been the first woman executed in Tennessee in more than 200 years. Her lawyers said the IV team needed at least seven needle sticks, and the drug likely pooled in tissue instead of entering a vein. She was taken to a hospital and put on a ventilator. The Death Penalty Information Center says she is the first person known to survive receiving lethal-injection drugs.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Gov. Bill Lee ordered an independent review and halted executions for the rest of 2026. That postponed the only other execution on the calendar. Corrections Commissioner Frank Strada is stepping down. Pike was moved from the hospital to the Debra K. Johnson Rehabilitation Center on Oct. 10. At an Oct. 7 hearing, the state said any new execution date is up to the Tennessee Supreme Court, and a judge ordered the evidence preserved. Released 911 recordings showed confusion inside the prison that night. Pike&#x27;s first public statement came on Oct. 30: &quot;There hasn&#x27;t been a moment since that night when I haven&#x27;t been in pain.&quot; Her lawyers are seeking commutation. There is a precedent for trying again: Alabama executed Kenneth Smith in 2024 after a failed attempt in 2022.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/articles/ckge4eql4q7eo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC: Pike survives execution attempt</a></li><li><a href="https://apnews.com/article/christa-pike-execution-tennessee-f826a60582083b90ac7695ecb16afbdf" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: the execution attempt</a></li><li><a href="https://www.cnn.com/2026/10/10/us/tennessee-execution-christa-pike" target="_blank" rel="noopener noreferrer" class="pill" title="cnn.com">CNN: Pike leaves hospital</a></li><li><a href="https://apnews.com/article/christa-pike-failed-execution-911-call-d9798c737c60bf77e6d6b15e0c075572" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: the 911 calls</a></li><li><a href="https://apnews.com/article/christa-pike-failed-execution-first-statement-292a1eb75ff5cee19da58f17c9eb224c" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Pike&#x27;s first statement</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/videos/cq5ymyl1y29ko" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;What we know after Christa Pike survived two lethal injections&quot; (explainer, 2026)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/videos/cmkg8gkpd9vko" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Stephanie Hegarty: What happened in the failed execution of Christa Pike?&quot; (analysis, 2026)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.cnn.com/2026/10/01/us/video/media-witnesses-recall-what-happened-during-christa-pikes-failed-execution-digvid-vrtc-hnk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: &quot;Media witnesses recall what happened during Christa Pike&#x27;s failed execution&quot; (report, 2026)</span><span class="vhost">cnn.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The G7 releases 100 million barrels of oil and diesel</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Oct. 2, G7 leaders on a call chaired by French President Emmanuel Macron agreed to release up to 100 million barrels of oil and fuel through the International Energy Agency over four months. A first batch of diesel was to go out within 20 days. They also agreed not to restrict energy exports to one another. The deal came after President Trump threatened to ban US diesel exports; he later said a ban was &quot;never really on the table.&quot; The shortage comes from Iran&#x27;s restrictions on shipping through the Strait of Hormuz since the US and Israel attacked Iran. Brent crude, about $73 before the war, briefly dipped below $100 on the news and then settled near $102. UK diesel had passed £2 a litre.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Prices did not stay down. Oil rose more than 10% in October. On Nov. 2, Brent fell 7.6% to $104.77 and US crude to $96.46 on hopes of US–Iran talks. Trump says Iran wants a deal. Iranian President Masoud Pezeshkian says he is open to dialogue, and Foreign Minister Abbas Araghchi wants sanctions and the blockade lifted first. Secretary of State Marco Rubio said Trump &quot;hasn&#x27;t made a decision&quot; on new strikes. Hormuz remains the deciding factor for fuel prices this winter.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.co.uk/news/articles/ck87zg8jnwngo" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.co.uk">BBC: G7 agrees emergency release</a></li><li><a href="https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_26_2057/STATEMENT_26_2057_EN.pdf" target="_blank" rel="noopener noreferrer" class="pill" title="ec.europa.eu">G7 leaders&#x27; statement (PDF)</a></li><li><a href="https://apnews.com/article/trump-europe-diesel-fuel-prices-774a360d1646d9ce8aba764fdd9959d2" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Trump, Europe and diesel</a></li><li><a href="https://www.cnbc.com/2026/11/02/oil-prices-fall-as-iran-us-pursue-diplomacy.html" target="_blank" rel="noopener noreferrer" class="pill" title="cnbc.com">CNBC: oil falls on diplomacy hopes, Nov. 2</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2026/10/3/g7-nations-bow-to-us-pressure-and-avoid-crippling-diesel-ban" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera: &quot;G7 nations bow to US pressure and avoid crippling diesel ban&quot; (report, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.cbc.ca/player/play/video/9.7368047" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC News: &quot;G7 countries set to release diesel reserves after U.S. pressure&quot; (report, 2026)</span><span class="vhost">cbc.ca</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Sánchez calls a snap Spanish election over housing</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In late September, video of 87-year-old Maricarmen Abascal being evicted from the Madrid flat she had lived in since 1956 went viral. It set off protests across Spain. On Oct. 2, the right-wing opposition and Junts voted down two government housing decrees in parliament. On Oct. 3, a huge crowd marched in Madrid and protesters set up tents in the Puerta del Sol. On Oct. 5, Prime Minister Pedro Sánchez called an early general election for Nov. 29 and warned of a &quot;far-right wave.&quot; That evening, a large housing march in Barcelona ended in clashes with police. On Oct. 6, the cabinet re-approved most of the rejected measures as 21 urgent steps, including eviction protections and a €10 billion fund for first-home loans. Polls at the time had the conservative Popular Party (PP) at about 34%, Sánchez&#x27;s Socialists (PSOE) at 26% and the far-right Vox at 18%.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The campaign changed on Oct. 28. A high-speed train hit a stationary train near Urda, in Toledo province, killing 69 people. Officials pointed to a failure in the old LZB train-control system. Rail safety and competence replaced housing as the main issues. Recent polls give the PP about 31–33%, PSOE about 25–27% and Vox about 19–20%. In some polls, PP and Vox together pass the 176 seats needed for a majority. The government plans to put its housing decrees to a vote on Nov. 12, the day after a general strike on Nov. 11 and the day before the official campaign begins.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.politico.eu/article/spain-pedro-sanchez-calls-snap-elections/" target="_blank" rel="noopener noreferrer" class="pill" title="politico.eu">Politico Europe: Sánchez calls snap election</a></li><li><a href="https://apnews.com/article/spain-sanchez-election-housing-7d8347e35f1a9e2965ea5b0f8c012bd8" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP</a></li><li><a href="https://www.euronews.com/2026/10/07/sanchez-announces-21-urgent-housing-measures-after-nationwide-protests-ahead-of-snap-elect" target="_blank" rel="noopener noreferrer" class="pill" title="euronews.com">Euronews: 21 urgent housing measures</a></li><li><a href="https://www.aljazeera.com/news/2026/10/30/spains-train-crash-redraws-the-electoral-battle-ahead-of-the-elections" target="_blank" rel="noopener noreferrer" class="pill" title="aljazeera.com">Al Jazeera: train crash redraws the campaign</a></li><li><a href="https://www.eldiario.es/politica/gobierno-preve-llevar-diputacion-permanente-decretos-vivienda-dia-despues-huelga-general_1_13616839.html" target="_blank" rel="noopener noreferrer" class="pill" title="eldiario.es">elDiario.es: decree vote planned for Nov. 12 (Spanish)</a></li><li><a href="https://www.lasexta.com/elecciones/generales/encuestas-sondeos-29n-2026_202611036ae9889d025012321571f583.html" target="_blank" rel="noopener noreferrer" class="pill" title="lasexta.com">laSexta: poll tracker (Spanish)</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2026/10/9/how-will-spains-housing-crisis-impact-elections" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story: &quot;How will Spain&#x27;s housing crisis affect elections?&quot; (panel discussion, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.co.uk/news/videos/cmgj9vz2zxelo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Will Spain&#x27;s housing crisis lead to a snap election?&quot; (explainer, 2026)</span><span class="vhost">bbc.co.uk</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">Nov. 4–5, 2025 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Zohran Mamdani is elected mayor of New York</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 4, 2025, Zohran Mamdani, a 34-year-old state assemblyman and self-described democratic socialist, won the New York City mayor&#x27;s race. He got 1,114,184 votes (50.8%). Former Gov. Andrew Cuomo, running as an independent, got 906,614 (41.3%), and Republican Curtis Sliwa got 153,749 (7.0%). More than 2.2 million ballots were cast. Mamdani ran on rent freezes, free buses, city-run grocery stores and free child care, paid for by higher taxes on the rich.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>He took office in January. Some promises have moved. In June, the Rent Guidelines Board voted a two-year rent freeze for about 1 million rent-stabilized apartments. A pilot of five city-run grocery stores is still being set up. Free buses have been put off in favor of making buses faster first. The administration is pushing a tax on expensive second homes and has a 10-year goal of building 200,000 affordable homes and preserving 200,000 more. It closed a budget gap partly by restructuring pension payments. It has had fights with the City Council: it sued the Council over a paraprofessional bonus law, and by Oct. 23 Mamdani had signed just one Council bill and vetoed one, while 89 became law without his signature. Labor contracts with big city unions are coming up. Today, Nov. 3, he is backing Gov. Kathy Hochul in her re-election race.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://apnews.com/article/mamdani-cuomo-sliwa-nyc-mayor-af8b9790e7cb4e023d0984a0207cbcca" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Mamdani wins</a></li><li><a href="https://www.nytimes.com/interactive/2025/11/04/us/elections/nyc-mayor-results-precinct-map.html" target="_blank" rel="noopener noreferrer" class="pill" title="nytimes.com">The New York Times: precinct results map</a></li><li><a href="https://www.businessinsider.com/zohran-mamdani-reshaping-nyc-economy-2026-11" target="_blank" rel="noopener noreferrer" class="pill" title="businessinsider.com">Business Insider: how Mamdani is reshaping the city&#x27;s economy</a></li><li><a href="https://www.nycpolitics.org/on-my-block/nyc-mamdani-bills-signed-unsigned-tally" target="_blank" rel="noopener noreferrer" class="pill" title="nycpolitics.org">NYC Politics: one signed, one vetoed, 89 unsigned</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=kOQT_4A1eb8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: &quot;FULL SPEECH: Zohran Mamdani&#x27;s victory speech following historic NYC mayoral win&quot; (speech, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=X8_20Nkk4Q4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WNYC: &quot;Mamdani in Review&quot; (analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The Supreme Court hears the Trump tariffs case</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 5, 2025, the Supreme Court heard more than two and a half hours of argument on whether the International Emergency Economic Powers Act (IEEPA) lets the president impose tariffs. Solicitor General D. John Sauer defended the tariffs. Neal Katyal argued for small businesses, and Oregon&#x27;s Benjamin Gutman for 12 states. Chief Justice John Roberts described the claimed power as one &quot;to impose tariffs on any product from any country … in any amount for any length of time.&quot; Justice Sonia Sotomayor said: &quot;you want to say tariffs are not taxes, but that&#x27;s exactly what they are.&quot; Justice Neil Gorsuch warned of a &quot;one-way ratchet&quot; of power moving to the president. Justice Amy Coney Barrett worried that refunds would be &quot;a complete mess.&quot; Justices Brett Kavanaugh and Samuel Alito were more sympathetic to the government.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The skepticism held. On Feb. 20, 2026, in Learning Resources v. Trump, the Court ruled 6–3 that IEEPA does not authorize tariffs. Roberts wrote the opinion, and Kavanaugh, Alito and Justice Clarence Thomas dissented. Trump switched to Section 122 of the Trade Act, which allows tariffs of up to 15% for 150 days. Those expired on July 24. Tariffs under Sections 232 and 301 remain. Refunds are now being paid. Customs had collected about $166 billion in IEEPA duties from some 330,000 importers. By Oct. 2, its refund portal had accepted about $136.6 billion in claims and paid about $126 billion, including interest. The Court of International Trade has certified a class of importers who did not sue, and the Justice Department is appealing a separate refund order.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.scotusblog.com/2025/11/court-appears-dubious-of-trumps-tariffs/" target="_blank" rel="noopener noreferrer" class="pill" title="scotusblog.com">SCOTUSblog: court appears dubious</a></li><li><a href="https://www.reuters.com/world/us/supreme-court-weighs-legality-tariffs-major-test-trumps-power-2025-11-05/" target="_blank" rel="noopener noreferrer" class="pill" title="reuters.com">Reuters: argument day</a></li><li><a href="https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf" target="_blank" rel="noopener noreferrer" class="pill" title="supremecourt.gov">Supreme Court opinion (PDF)</a></li><li><a href="https://www.congress.gov/crs-product/LSB11398" target="_blank" rel="noopener noreferrer" class="pill" title="congress.gov">Congressional Research Service: after the ruling</a></li><li><a href="https://www.theconveyor.co/p/ieepa-tariff-refund-class-action-certified" target="_blank" rel="noopener noreferrer" class="pill" title="theconveyor.co">The Conveyor: refund class certified</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=4a9BvCKYsBY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Slate: &quot;When Tariffs Crashed Into SCOTUS | Amicus With Dahlia Lithwick&quot; (legal analysis, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=B4PmR-bPMFk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: &quot;Supreme Court rules Trump&#x27;s tariffs illegal&quot; (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=eBPtvxIjin8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ITV News: &quot;What does the US Supreme Court ruling mean for Trump&#x27;s global tariffs?&quot; (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>UPS Flight 2976 crashes in Louisville</h3>
+<p class="summary-label">Qué pasó</p>
+<p>At about 5:14 p.m. on Nov. 4, 2025, UPS Flight 2976, an MD-11 cargo jet bound for Honolulu, crashed just after takeoff from Louisville, Kentucky. Its left engine and pylon came off the wing as the plane lifted off. The jet hit businesses beside the airport. The three pilots, Richard Wartenberg, Lee Truitt and Dana Diamond, and 11 people on the ground were killed. A 15th victim died of injuries 51 days later.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The NTSB found fatigue cracking in a bearing race in the left pylon&#x27;s rear mount, which led the mounting lugs to fail. At its hearing on May 19–20, 2026, it heard that there had been 10 similar bearing fractures over two decades, and only four were reported to the FAA. Boeing had extended the inspection interval and did not classify the problem as a flight-safety risk. The FAA grounded all MD-11s. UPS retired its MD-11 fleet and took a $137 million after-tax charge. FedEx resumed MD-11 flights after the FAA approved Boeing&#x27;s fix. The NTSB&#x27;s final report is expected within the next year. Louisville marks the anniversary tomorrow, Nov. 4, with bells at 5:14 p.m.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.ntsb.gov/investigations/Documents/DCA26MA024%20Investigative%20Update.pdf" target="_blank" rel="noopener noreferrer" class="pill" title="ntsb.gov">NTSB: investigative update (PDF)</a></li><li><a href="https://www.ntsb.gov/news/events/Pages/DCA26MA024InvHearing.aspx" target="_blank" rel="noopener noreferrer" class="pill" title="ntsb.gov">NTSB: investigative hearing</a></li><li><a href="https://apnews.com/article/ups-kentucky-louisville-crash-md11-boeing-9832be76e1a025ba2b89582778ee45db" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: UPS retires MD-11s</a></li><li><a href="https://apnews.com/article/louisville-kentucky-ups-plane-crash-boeing-md11-04cddebb98cb86dbcfc012bea5b1dd8f" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: FAA approves fix</a></li><li><a href="https://www.wdrbwave.com/2026/11/03/ntsb-investigation-into-ups-flight-2976-continues-final-report-expected-within-next-year/" target="_blank" rel="noopener noreferrer" class="pill" title="wdrbwave.com">WAVE/WDRB: final report expected</a></li><li><a href="https://www.lpm.org/news/2026-10-23/louisville-to-mark-one-year-since-deadly-ups-plane-crash-with-citywide-observance" target="_blank" rel="noopener noreferrer" class="pill" title="lpm.org">Louisville Public Media: anniversary observance</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=iWkLZjJXaos" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NTSB: &quot;NTSB Animation - Engine-to-Wing Attachment Design Overview and Findings&quot; (investigative animation, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=O2l-LicDYAw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NTSB: &quot;NTSB Investigative Hearing: UPS Flight 2976 Crash During Takeoff&quot; (full hearing, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">Nov. 2–5, 2021 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Glenn Youngkin wins Virginia</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 2, 2021, Republican businessman Glenn Youngkin beat former Democratic Gov. Terry McAuliffe for governor of Virginia, a state Joe Biden had won by 10 points a year earlier. Youngkin got 1,663,596 votes (50.6%) to McAuliffe&#x27;s 1,600,116 (48.6%). He campaigned on schools and parents&#x27; rights and kept Donald Trump at a distance. Republicans saw it as a model for winning suburban voters.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The model did not last in Virginia. Youngkin could not run again, and in 2025 Democrat Abigail Spanberger beat his lieutenant governor, Winsome Earle-Sears, with about 57.6% of the vote. Spanberger was sworn in on Jan. 17, 2026, as Virginia&#x27;s first female governor. Youngkin is now chairman at Red Cell Partners. In August he launched Empowering America&#x27;s Parents to promote the new federal Education Freedom Tax Credit, which starts in January 2027. He is often named as a possible 2028 presidential candidate. On Nov. 2 he campaigned for Rep. John McGuire ahead of today&#x27;s midterms.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.vpap.org/electionresults/20211102/office-governor/" target="_blank" rel="noopener noreferrer" class="pill" title="vpap.org">VPAP: 2021 results</a></li><li><a href="https://www.politico.com/news/magazine/2021/11/05/youngkin-mcauliffe-politics-virginia-strategy-2021-upset-analysis-519622" target="_blank" rel="noopener noreferrer" class="pill" title="politico.com">Politico Magazine: how Youngkin won</a></li><li><a href="https://apnews.com/article/abigail-spanberger-virginia-governor-inauguration-5a0da64bf53f8e800783fa428cb99d50" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Spanberger sworn in</a></li><li><a href="https://www.cbsnews.com/news/glenn-youngkin-education-tax-credits/" target="_blank" rel="noopener noreferrer" class="pill" title="cbsnews.com">CBS News: Youngkin&#x27;s tax-credit push</a></li><li><a href="https://www.29news.com/2026/11/02/former-governor-youngkin-joins-mcguire-final-push-votes-ahead-election-day/" target="_blank" rel="noopener noreferrer" class="pill" title="29news.com">29News: Youngkin campaigns for McGuire</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.pbs.org/newshour/show/why-the-dem-strategy-in-virginia-failed-and-how-youngkin-flipped-the-state" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: &quot;Why the Dem strategy in Virginia failed, and how Youngkin flipped the state&quot; (analysis, 2021)</span><span class="vhost">pbs.org</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=QsaWOwRwFNE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WSLS 10: &quot;What led to Glenn Youngkin&#x27;s victory in Virginia&quot; (analysis, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The Astroworld crowd crush</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 5, 2021, during Travis Scott&#x27;s headline set at his Astroworld Festival in Houston, the crowd pressed toward the stage until people could not breathe. Ten people died of compression asphyxia, the youngest a 9-year-old boy, Ezra Blount. Hundreds were injured. Scott kept performing for a while as fans begged for the show to stop. Early claims that someone was injecting people with drugs turned out to be false.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>No one was charged. In June 2023 a Harris County grand jury declined to indict Scott and five others. The Houston police report, released in July 2023, showed that a worker had warned an organizer that &quot;someone&#x27;s going to end up dead.&quot; All 10 wrongful-death lawsuits were settled by May 2024, the last one by the Blount family, on confidential terms. Many injury suits were also settled. The family of victim Madison Dubiski runs the Pink Bows Foundation, which provides safe-space tents at concerts and crowd-safety training.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.nytimes.com/2021/11/06/us/travis-scott-crowd-surge.html" target="_blank" rel="noopener noreferrer" class="pill" title="nytimes.com">The New York Times: &quot;No Way Out&quot;</a></li><li><a href="https://abcnews.com/US/deadly-astroworld-crowd-crush-grand-jury/story?id=100502752" target="_blank" rel="noopener noreferrer" class="pill" title="abcnews.com">ABC News: grand jury declines to indict</a></li><li><a href="https://apnews.com/article/astroworld-travis-scott-festival-deaths-police-report-4df425940590b0472b33dc6173857d8e" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: police report</a></li><li><a href="https://apnews.com/article/travis-scott-astroworld-lawsuits-settled-1cda1e925527de38ad2a37e71ebd99af" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: last wrongful-death suit settled</a></li><li><a href="https://www.rollingstone.com/music/music-features/astroworld-festival-anniversary-victims-travis-scott-1235452293/" target="_blank" rel="noopener noreferrer" class="pill" title="rollingstone.com">Rolling Stone: victims&#x27; families four years on</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=jccYp7a_FzI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WFAA: &quot;Astroworld timeline: How tragedy unfolded at the Travis Scott concert&quot; (timeline report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.nbcnews.com/now/video/minute-by-minute-breakdown-of-deadly-astroworld-concert-125795397844" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News Now: &quot;Minute-by-minute breakdown of deadly Astroworld concert&quot; (report, 2021)</span><span class="vhost">nbcnews.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The House passes the bipartisan infrastructure bill</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Late on Nov. 5, 2021, the House passed the Infrastructure Investment and Jobs Act 228–206. Thirteen Republicans voted yes and six progressive Democrats voted no. The $1.2 trillion law included about $550 billion in new spending on roads, bridges, rail, transit, broadband, water pipes and the power grid. President Biden signed it on Nov. 15, 2021.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Its five-year highway and transit authorization ran out on Sept. 30, 2026. A short extension keeps Highway Trust Fund money flowing to Dec. 11. But the law&#x27;s advance appropriations were not extended. Regional development groups say that leaves a gap of about $36.8 billion a year, a cut of more than 15%, which hits programs such as Safe Streets and Roads for All. A House committee has approved a replacement, the BUILD America 250 Act, but it has not reached the floor, and the Senate has no bill. Another extension is likely.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://rollcall.com/2021/11/05/house-sends-infrastructure-bill-to-biden-without-budget-vote/" target="_blank" rel="noopener noreferrer" class="pill" title="rollcall.com">Roll Call: House sends bill to Biden</a></li><li><a href="https://www.govtrack.us/congress/votes/117-2021/h369" target="_blank" rel="noopener noreferrer" class="pill" title="govtrack.us">GovTrack: the vote</a></li><li><a href="https://www.nado.org/iija-funding-expired-september-30-nado-continues-to-advocate-for-full-funding-of-transportation-programs/" target="_blank" rel="noopener noreferrer" class="pill" title="nado.org">NADO: funding expired Sept. 30</a></li><li><a href="https://www.hklaw.com/en/insights/publications/2026/10/beyond-the-midterms-congress-faces-converging-year-end-deadlines" target="_blank" rel="noopener noreferrer" class="pill" title="hklaw.com">Holland &amp; Knight: year-end deadlines</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=ncYSZ9F3lyE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: &quot;Biden&#x27;s bipartisan trillion-dollar infrastructure bill passes House&quot; (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/newshour/politics/watch-live-house-to-vote-on-infrastructure-bill" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: &quot;WATCH: House approves infrastructure bill&quot; (live coverage, 2021)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">Nov. 2–4, 2016 · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The Cubs end a 108-year drought</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 2, 2016, the Chicago Cubs beat Cleveland 8–7 in 10 innings in Game 7 of the World Series. It was their first title since 1908. Cleveland tied the game in the eighth. A 17-minute rain delay came after the ninth. In the 10th, Ben Zobrist doubled in the go-ahead run and Miguel Montero singled in another. Mike Montgomery got the final out on a grounder to Kris Bryant. Zobrist was named World Series MVP.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The 2016 team held a 10-year reunion at the Cubs Convention in January 2026, and pitcher Jon Lester entered the Cubs Hall of Fame. Theo Epstein, who built the team, left in 2020. He now owns a minority stake in the Red Sox and advises their owner, Fenway Sports Group. Manager Joe Maddon is retired. Anthony Rizzo and Kris Bryant are no longer playing. This season the Cubs went 89–73 and were swept by the Padres in the Wild Card round, losing the last game on Sept. 30. The Milwaukee Brewers, who won the Cubs&#x27; division, went on to win their first World Series on Oct. 28.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://apnews.com/general-news-ac4871e46f804b419784b963cedc19c9" target="_blank" rel="noopener noreferrer" class="pill" title="apnews.com">AP: Cubs win the World Series</a></li><li><a href="https://www.mlb.com/news/ben-zobrist-named-world-series-mvp-c207951690" target="_blank" rel="noopener noreferrer" class="pill" title="mlb.com">MLB: Zobrist named MVP</a></li><li><a href="https://www.mlb.com/news/cubs-celebrate-10-year-anniversary-of-2016-world-series-win" target="_blank" rel="noopener noreferrer" class="pill" title="mlb.com">MLB: 10-year anniversary</a></li><li><a href="https://www.nytimes.com/athletic/7455344/2026/07/18/theo-epstein-cubs-red-sox-executive/" target="_blank" rel="noopener noreferrer" class="pill" title="nytimes.com">The Athletic: Epstein</a></li><li><a href="https://chicago.suntimes.com/cubs/2026/10/01/cubs-padres-playoffs-game-2-wild-card-series-mlb-postseason-pete-crow-armstrong-alex-bregman-kevin-gausman" target="_blank" rel="noopener noreferrer" class="pill" title="chicago.suntimes.com">Chicago Sun-Times: Cubs eliminated</a></li><li><a href="https://www.mlb.com/news/brewers-beat-rays-game-5-win-2026-world-series" target="_blank" rel="noopener noreferrer" class="pill" title="mlb.com">MLB: Brewers win the 2026 World Series</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.mlb.com/video/2016-ws-film-cubs-vs-indians" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">MLB: &quot;2016 WS Film: Cubs vs. Cleveland&quot; (official World Series film)</span><span class="vhost">mlb.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=HOp8w2PgHlM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">MLB: &quot;Cubs win World Series with Game 7 win&quot; (game footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The High Court rules that Parliament must approve Brexit</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 3, 2016, three High Court judges in London ruled that Theresa May&#x27;s government could not trigger Article 50, the formal exit from the EU, without a vote in Parliament. Lord Chief Justice Lord Thomas of Cwmgiedd said the government &quot;does not have power under the Crown&#x27;s prerogative to give notice pursuant to Article 50.&quot; The case was brought by investment manager Gina Miller, who said: &quot;The result today is about all of us.&quot; Brexit supporters were furious. The next day the Daily Mail&#x27;s front page called the judges &quot;Enemies of the People.&quot; The press regulator IPSO received more than 1,000 complaints about it.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The ruling held. On Jan. 24, 2017, the Supreme Court upheld it 8–3, and ruled unanimously that the devolved governments of Scotland, Wales and Northern Ireland had no veto. Parliament then passed a short law, and May triggered Article 50 in March 2017. Miller won again in 2019, when the Supreme Court struck down Boris Johnson&#x27;s suspension of Parliament. She later founded the True and Fair Party. The case set the rule that ministers cannot remove rights created by Parliament without Parliament&#x27;s consent. That matters again now that Prime Minister Andy Burnham says any fundamental change to the UK–EU relationship would be for the public and the next Parliament.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.bbc.com/news/uk-politics-37857785" target="_blank" rel="noopener noreferrer" class="pill" title="bbc.com">BBC: Parliament must vote on Article 50</a></li><li><a href="https://www.theguardian.com/politics/2016/nov/04/enemies-of-the-people-british-newspapers-react-judges-brexit-ruling" target="_blank" rel="noopener noreferrer" class="pill" title="theguardian.com">The Guardian: &quot;Enemies of the people&quot;</a></li><li><a href="https://www.independent.co.uk/news/media/daily-mail-nazi-propaganda-front-page-ipso-complaints-brexit-eu-enemies-of-the-people-a7409836.html" target="_blank" rel="noopener noreferrer" class="pill" title="independent.co.uk">The Independent: IPSO complaints</a></li><li><a href="https://www.supremecourt.uk/cases/uksc-2016-0196" target="_blank" rel="noopener noreferrer" class="pill" title="supremecourt.uk">UK Supreme Court: the Miller case</a></li><li><a href="https://en.wikipedia.org/wiki/Gina_Miller" target="_blank" rel="noopener noreferrer" class="pill" title="en.wikipedia.org">Wikipedia: Gina Miller</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/av/uk-politics-37857971" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Brexit challenge: &#x27;This result is about all our futures&#x27;&quot; (statement outside court, 2016)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=zgIib_Uj1T4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: &quot;Nigel Farage to Gina Miller &#x27;What part of leave don&#x27;t you understand?&#x27;&quot; (debate, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Paris climate agreement enters into force</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On Nov. 4, 2016, the Paris Agreement became international law, less than a year after it was adopted. It needed 55 countries covering 55% of global emissions to ratify. That threshold was reached on Oct. 5, and the deal took effect 30 days later. The US and China had joined together in early September. UN Secretary-General Ban Ki-moon said: &quot;Today we make history in humankind&#x27;s efforts to combat climate change.&quot; The first climate summit under the agreement opened in Marrakech three days later.</p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The US is out. Its second withdrawal took effect on Jan. 27, 2026. The UN Environment Programme&#x27;s Emissions Gap Report, released Oct. 21, says current policies point to about 2.8°C of warming. Full national pledges would bring that to about 2.6°C, and 2.1°C in the most optimistic case. Holding warming to 1.5°C would need emissions cuts of 18% by 2030 and 45% by 2035 from 2025 levels. The report also says renewable energy has grown much faster than expected. The next summit, COP31, opens in Antalya, Türkiye, on Nov. 9, with Australia leading the negotiations. It starts the agreement&#x27;s second global stocktake.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"><li><a href="https://www.un.org/sustainabledevelopment/blog/2016/11/un-calls-for-strong-climate-action-as-paris-agreement-enters-into-force/" target="_blank" rel="noopener noreferrer" class="pill" title="un.org">UN: Paris Agreement enters into force</a></li><li><a href="https://www.congress.gov/crs-product/R48504" target="_blank" rel="noopener noreferrer" class="pill" title="congress.gov">Congressional Research Service: US withdrawal</a></li><li><a href="https://www.unep.org/en/news-and-stories/press-release/new-unep-report-lays-out-emission-cuts-needed-return-15degc" target="_blank" rel="noopener noreferrer" class="pill" title="unep.org">UNEP: Emissions Gap Report 2026</a></li><li><a href="https://enb.iisd.org/antalya-un-climate-change-conference-cop31" target="_blank" rel="noopener noreferrer" class="pill" title="enb.iisd.org">IISD Earth Negotiations Bulletin: COP31</a></li></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=1g8-qMsQFIo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">United Nations: &quot;UN Secretary-General Ban Ki-moon&#x27;s message on entry-into-force of Paris Agreement on Climate Change&quot; (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=b5003rRAevs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC News: &quot;10 years since the Paris climate deal: What&#x27;s changed?&quot; (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code></code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 3 de noviembre de 2026, 09:20 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
