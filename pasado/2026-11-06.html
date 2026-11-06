@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 6 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 6 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Yemen launches “Dawn of Yemen” offensive against the Houthis</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>4 October 2026</strong>, Rashad al-Alimi, head of Yemen’s Saudi-backed Presidential Leadership Council, announced Operation Dawn of Yemen—a nationwide campaign to retake Houthi-held territory, including pressure toward Sanaa. The move followed a Houthi lightning advance that seized Mocha and strategic stretches of the Bab al-Mandeb Red Sea coast, a chokepoint that had grown even more critical while the Strait of Hormuz was disrupted. Within a day the Saudi-led coalition said roughly 100 fighter jets were supporting the offensive; Houthis answered with claimed missile and drone strikes on Saudi Aramco sites.</p>
+<p>Sources: <a class="inline-link" href="https://www.aljazeera.com/news/2026/10/4/yemens-leader-announces-military-operation-to-retake-houthi-held-territory" target="_blank" rel="noopener noreferrer">Al Jazeera</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/05/yemen-air-campaign-houthis-saudi-led-coalition" target="_blank" rel="noopener noreferrer">The Guardian</a>, <a class="inline-link" href="https://www.nbcnews.com/world/middle-east/yemen-leader-major-military-operations-iran-backed-houthis-rcna601377" target="_blank" rel="noopener noreferrer">NBC News / Reuters</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/5/a-month-after-yemen-government-offensive-began-war-of-attrition-takes-hold" target="_blank" rel="noopener noreferrer">Al Jazeera (attrition update)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>A month on, Al Jazeera and other outlets describe a war of attrition rather than a decisive breakthrough. Government forces report gains in al-Jawf and around Bab al-Mandeb; Houthis have advanced in parts of Taiz and Lahij and keep firing missiles into Saudi Arabia. Sanaa remains under Houthi control amid recurring airstrikes. Early claims of rapid liberation have not been borne out; the fight is now locked into a costly regional proxy struggle with no ceasefire in sight as of early November 2026.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2026/10/5/can-yemen-retake-territory-seized-by-houthis" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story — Can Yemen retake territory seized by Houthis? (explainer, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.reuters.com/video/watch/idRW740604102026RP1/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters video — Yemen leader announces operations (news footage, 2026)</span><span class="vhost">reuters.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Eritrean troops cross into Ethiopia’s Tigray as war risk spikes</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In <strong>early October 2026</strong> (BBC reporting peaked around <strong>7–9 October</strong>), residents and monitors said Eritrean forces had advanced tens of kilometres into Ethiopia’s Tigray region, including Adigrat, after fighting resumed between Addis Ababa and the Tigray People’s Liberation Front. Ethiopia’s foreign minister told the UN Security Council it faced an “all-out invasion” and reserved the right of self-defence; Eritrea accused Ethiopia of seeking a pretext to seize a Red Sea port. Ethiopian drone strikes hit Adigrat; witnesses described Eritrean vehicles withdrawing north. The flare-up revived fears of a full Horn of Africa war after the 2018 rapprochement had already collapsed.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c65ynvw250y1o" target="_blank" rel="noopener noreferrer">BBC</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/ckvgd63rj92lo" target="_blank" rel="noopener noreferrer">BBC (deeper troop movements)</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/10/7/witnesses-spot-eritrean-troops-inside-northern-ethiopia-as-tensions-flare" target="_blank" rel="noopener noreferrer">Al Jazeera</a>, <a class="inline-link" href="https://apnews.com/article/ethiopia-eritrea-tigray-conflict-mekelle-un-abiy-9386a16a06e537a29ffe2de273267c8b" target="_blank" rel="noopener noreferrer">AP</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>By early November 2026, Ethiopian federal forces had retaken major Tigray towns including Mekelle, Shire and Sheraro; Eritrean units largely pulled back toward the border, but ACLED and Crisis Group still flag an active, unstable front. Abiy Ahmed remains in power; Asmara and Addis remain mutually hostile. Early “invasion” framing was partly borne out by troop presence, but a wider interstate war was contained short of all-out conflict—leaving a dangerous frozen crisis rather than peace.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2026/10/16/can-diplomacy-resolve-long-standing-ethiopia-eritrea-differences" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story — Can diplomacy resolve Ethiopia–Eritrea differences? (analysis, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2026/10/12/11-10-reported-ethiopia-hamza-mohammad-report-abiy-ahmed-ep" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Newsfeed — Ethiopian troops enter Adigrat (report, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>French high-school protests shut hundreds of lycées</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Around <strong>1–5 October 2026</strong>, a nationwide lycée revolt over teacher shortages, overcrowded classes, dilapidated buildings and long school days peaked when Education Minister Édouard Geffray said <strong>400–500</strong> schools would be partly or fully closed on 5 October; Interior figures put thousands of arrests (mostly minors) and dozens of schools burned or ransacked. Clashes with riot police spread from Paris to Marseille, Nantes and Lyon. Prime Minister Sébastien Lecornu’s government scrambled with substitute teachers, facility pledges and talk of Parcoursup reform as Macron’s final presidential year approached.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/cwkg5n7lm3y5o" target="_blank" rel="noopener noreferrer">BBC</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/08/france-student-protests-schools-vow-to-continue" target="_blank" rel="noopener noreferrer">The Guardian</a>, <a class="inline-link" href="https://www.france24.com/en/france/20261009-live-141-french-high-schools-closed-as-student-protests-continue-for-fifth-day" target="_blank" rel="noopener noreferrer">France 24</a>, <a class="inline-link" href="https://apnews.com/article/france-high-schools-protests-macron-66403512e943e3aee4cdca64ecccfe33" target="_blank" rel="noopener noreferrer">AP</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Street intensity has fallen, but the grievance has not. By early November 2026 only about twenty lycées were still blocked; the government has pledged to replace Parcoursup by 2028, add posts and cap class sizes. Student unions call the package insufficient. Early coverage of mass closures and youth-led unrest was accurate; lasting impact is a live education-funding fight heading into the 2027 presidential race, with Lecornu and Geffray still managing residual blockades.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.france24.com/en/video/20261008-high-school-student-protests-continue-in-france" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24 — High school student protests continue (news footage, 2026)</span><span class="vhost">france24.com</span></span></a></li><li><a class="vchip" href="https://www.france24.com/en/video/20261001-hundreds-held-dozens-wounded-as-french-school-protests-escalate" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24 — Hundreds held, dozens wounded as protests escalate (news footage, 2026)</span><span class="vhost">france24.com</span></span></a></li><li><a class="vchip" href="https://www.france24.com/en/video/20261006-student-protests-first-images-from-demonstrations-in-paris" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">France 24 — Student protests: first images from Paris (original footage, 2026)</span><span class="vhost">france24.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>RSF seizes El Fasher; mass killings shock Darfur</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Between <strong>26–30 October 2025</strong>, Sudan’s Rapid Support Forces overran El Fasher—the army’s last major holdout in Darfur—after an 18-month siege. UN and rights groups soon documented summary executions, hospital massacres (WHO cited hundreds killed at Saudi Hospital), sexual violence and abduction-for-ransom; OHCHR later estimated <strong>more than 6,000</strong> killed in three days. BBC Verify geolocated execution videos; Yale’s Humanitarian Research Lab flagged satellite clusters consistent with bodies in the streets. The fall cemented RSF control of almost all of Darfur and raised genocide alarms.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/cd9kjw515pyo" target="_blank" rel="noopener noreferrer">BBC</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/c364jgkge46o" target="_blank" rel="noopener noreferrer">BBC (hospital toll)</a>, <a class="inline-link" href="https://www.reuters.com/world/africa/escapee-describes-summary-killings-after-darfur-citys-fall-2025-10-28/" target="_blank" rel="noopener noreferrer">Reuters</a>, <a class="inline-link" href="https://apnews.com/article/sudan-hospital-rsf-darfur-fasher-who-3ac305299da5ee388429f3352ca5c6fa" target="_blank" rel="noopener noreferrer">AP</a>, <a class="inline-link" href="https://www.hrw.org/news/2026/10/26/sudan-one-year-on-from-the-cataclysm-of-el-fasher" target="_blank" rel="noopener noreferrer">Human Rights Watch (one-year mark)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>One year later (Oct–Nov 2026), El Fasher remains an RSF-held ghost town—population collapsed from over a million toward tens of thousands. Amnesty and HRW report ongoing detention, torture and blocked aid; UN investigators say the campaign bore “hallmarks of genocide.” RSF leader Mohamed Hamdan Dagalo (“Hemedti”) has largely escaped new accountability; early casualty and atrocity reporting has been reinforced, not retracted, by subsequent OHCHR and HRW findings.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=QuDBUfUoSnI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Fault Lines — Encircled, starved and killed: the siege of el-Fasher (documentary, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ZgdW3YjmUQU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters — Death in Darfur: 3 days of horror caught on camera (investigative, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.theguardian.com/world/video/2025/nov/14/i-still-cant-believe-im-alive-sudanese-civilians-recount-their-flight-from-el-fasher-video" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Guardian — Survivors recount flight from El Fasher (testimony video, 2025)</span><span class="vhost">theguardian.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Trump and Xi strike a one-year trade truce in Busan</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>30 October 2025</strong>, on the sidelines of APEC in Busan, South Korea, Donald Trump and Xi Jinping held their first face-to-face meeting since 2019 and announced a roughly one-year trade truce: the U.S. cut fentanyl-linked tariffs (overall China rate from about 57% to 47%); China paused newly announced rare-earth export curbs, resumed U.S. soybean purchases, and pledged tighter fentanyl-precursor enforcement. Analysts called it a tactical freeze, not a structural reset; Trump billed the sit-down a “12 out of 10.”</p>
+<p>Sources: <a class="inline-link" href="https://www.aljazeera.com/news/2025/10/30/trump-xi-meeting-in-busan-key-takeaways-from-the-summit" target="_blank" rel="noopener noreferrer">Al Jazeera</a>, <a class="inline-link" href="https://apnews.com/article/trump-xi-china-trade-war-4c19a752c97828246c08f60f0dc54c79" target="_blank" rel="noopener noreferrer">AP</a>, <a class="inline-link" href="https://www.reuters.com/world/china/trump-xi-amazing-summit-brings-tactical-truce-not-major-reset-2025-10-30/" target="_blank" rel="noopener noreferrer">Reuters</a>, <a class="inline-link" href="https://apnews.com/article/trump-xi-trade-tiktok-tariffs-semiconductors-7934c7772af030ba246ba200adf7bf8b" target="_blank" rel="noopener noreferrer">AP (takeaways)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The political truce was later extended toward <strong>10 January 2027</strong>, and a separate 2026 Washington summit built on it—but China’s rare-earth legal pause was still set to expire around <strong>10 November 2026</strong> unless Beijing issued a fresh notice, leaving markets jittery as of digest date. Early skepticism that Busan was a “partial freeze” proved right: tariffs stayed high, tech controls remained contested, and rare earths stayed leverage. Distinct from any later Xi state visit to Washington.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://apnews.com/video/trump-and-xi-shake-hands-before-sitting-down-for-meeting-in-south-korea-6cb72f65c66844719467437fa4c52cf4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP — Trump and Xi shake hands before Busan meeting (original footage, 2025)</span><span class="vhost">apnews.com</span></span></a></li><li><a class="vchip" href="https://apnews.com/video/trump-hails-meeting-with-chinas-xi-as-a-12-out-of-10-d8963b715e23404b8de6dedb744f51cd" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP — Trump hails meeting as a “12 out of 10” (press reaction, 2025)</span><span class="vhost">apnews.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=po3kIThzQ6k" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">White House — Bilateral meeting with President Xi (official footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Typhoon Kalmaegi (Tino) devastates the Philippines, then Vietnam</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>4 November 2025</strong>, Typhoon Kalmaegi—locally <strong>Tino</strong>—made landfall in the central Philippines (Southern Leyte/Cebu and Visayas), dumping roughly a month’s rain in a day, sweeping cars through Cebu streets and obliterating poorer neighbourhoods. By <strong>7 November</strong>, the BBC put the Philippine death toll near <strong>188</strong> (later tallies climbed higher as twin storms were counted) with well over 100 missing; the storm then hit central Vietnam, adding further deaths and mass evacuations before weakening toward Cambodia and Laos. Manila declared a state of calamity as another Pacific storm loomed.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c70jnx9e414o" target="_blank" rel="noopener noreferrer">BBC</a>, <a class="inline-link" href="https://apnews.com/article/typhoon-kalmaegi-vietnam-philippines-da322fbd6cbb3f4bb2328ec046ffe2b7" target="_blank" rel="noopener noreferrer">AP</a>, <a class="inline-link" href="https://reliefweb.int/disaster/tc-2025-000203-phl" target="_blank" rel="noopener noreferrer">ReliefWeb / OCHA</a>, <a class="inline-link" href="https://www.rappler.com/philippines/visayas/typhoon-tino-cebu-survivors-2026/" target="_blank" rel="noopener noreferrer">Rappler (one-year recovery)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>A year on, Cebu and Negros Occidental are still rebuilding roads, schools and flood defences; Rappler and local press report families still in tents and incomplete resettlement. Early death-toll figures rose as body recovery continued—standard for major Asian typhoons—but the core story of catastrophic flash floods and climate-amplified rainfall held. Kalmaegi/Tino remains a benchmark disaster for Philippine disaster policy and Visayas reconstruction into late 2026.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/videos/cr5el2jm1e9o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC — Cars pile up on Philippines streets after Kalmaegi (aerial footage, 2025)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://apnews.com/video/typhoon-kalmaegi-moves-across-central-philippines-leaving-at-least-1-dead-and-setting-off-floods-bf5c9422377b4d80a5e913d85f3cf61a" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP — Typhoon moves across central Philippines (news footage, 2025)</span><span class="vhost">apnews.com</span></span></a></li><li><a class="vchip" href="https://apnews.com/video/vietnam-and-philippines-left-reeling-from-damaged-caused-by-typhoon-kalmaegi-fcb06dfd969848a2bd672375f9643971" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP — Vietnam and Philippines left reeling (damage report, 2025)</span><span class="vhost">apnews.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Peng Shuai vanishes after accusing a Chinese official</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>2 November 2021</strong>, Chinese tennis star Peng Shuai posted on Weibo accusing former vice-premier Zhang Gaoli of sexual assault; censors scrubbed the post within minutes, and she disappeared from independent public view. The Women’s Tennis Association demanded proof she was free to speak and a transparent investigation—turning a #MeToo allegation into a global sports-and-diplomacy crisis ahead of the Beijing Winter Olympics. Stars including Serena Williams and Naomi Osaka amplified #WhereIsPengShuai as state media circulated contested “she’s fine” messages the WTA rejected.</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/sport/2021/nov/19/the-disappearance-of-peng-shuai-what-happened-to-the-chinese-tennis-star" target="_blank" rel="noopener noreferrer">The Guardian</a>, <a class="inline-link" href="https://www.bbc.com/sport/tennis/59498779" target="_blank" rel="noopener noreferrer">BBC Sport (WTA suspension)</a>, <a class="inline-link" href="https://www.wtatennis.com/news/2384758/steve-simon-announces-wtas-decision-to-suspend-tournaments-in-china" target="_blank" rel="noopener noreferrer">WTA (Steve Simon statement)</a>, <a class="inline-link" href="https://apnews.com/article/peng-shuai-wta-china-boycott-missing-e44bef45085bbeb7bcc0ebd46d4429a9" target="_blank" rel="noopener noreferrer">AP (boycott ends)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On 1 December 2021 the WTA suspended all tournaments in China and Hong Kong; it resumed play in China in autumn 2023 after saying it had assurances Peng was safe and living with family in Beijing, without securing the independent investigation it had demanded. As of late 2025–2026, reporting indicates she lives quietly in Beijing and has been seen in private settings, but she has not freely addressed the allegations in open media, and Zhang Gaoli has never publicly answered them. The episode remains a landmark of how sports governing bodies can—and sometimes later walk back—confronting authoritarian censorship.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=qiFrAShEzM4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS Sports / Jon Wertheim interview with WTA CEO Steve Simon (interview, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/metoo-in-china-1637187366/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour — Tennis star Peng Shuai and #MeToo in China (news segment, 2021)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Belarus pushes migrants onto Poland’s frozen frontier</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Through early–mid <strong>November 2021</strong>—especially from about <strong>8–18 November</strong>—thousands of migrants, largely from the Middle East and Afghanistan, were stranded in freezing forest strips along the Belarus–Poland border. The EU accused Alexander Lukashenko’s government of deliberately funneling people westward as retaliation for sanctions after the disputed 2020 election and the Ryanair forced landing; Poland massed troops, built barriers, and used water cannon and tear gas as deaths and hypothermia cases mounted. Russia flew nuclear-capable bombers over Belarus and sent troops for drills, while Warsaw framed the crisis as a “hybrid attack” with a Moscow shadow.</p>
+<p>Sources: <a class="inline-link" href="https://www.aljazeera.com/news/2021/11/12/poland-belarus-border-what-you-need-to-know-about-the-crisis" target="_blank" rel="noopener noreferrer">Al Jazeera explainer (12 Nov 2021)</a>, <a class="inline-link" href="https://www.npr.org/2021/11/17/1056129127/poland-belarus-eu-migrant-border-crisis" target="_blank" rel="noopener noreferrer">NPR</a>, <a class="inline-link" href="https://www.hrw.org/report/2021/11/24/die-here-or-go-poland/belarus-and-polands-shared-responsibility-border-abuses" target="_blank" rel="noopener noreferrer">Human Rights Watch report (24 Nov 2021)</a>, <a class="inline-link" href="https://www.bbc.com/news/av/world-europe-59307350" target="_blank" rel="noopener noreferrer">BBC — Poland water cannon / tear gas</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Early reporting that Minsk was instrumentalizing migration held up; repatriation flights and temporary shelters later eased the immediate crush, but the tactic entered Europe’s security playbook. Into 2025–2026 Poland has repeatedly extended border exclusion zones and asylum restrictions despite fewer illegal crossings, while limited Belarus–Poland contacts (prisoner swaps, exploratory talks) coexist with Lukashenko still in power and migration pressure remaining a lever. The episode hardened EU external-border politics and foreshadowed the broader Russia–West confrontation that exploded weeks later over Ukraine.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Qq_KqCcNVlk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC — Steve Rosenberg report: Polish water cannon and tear gas at the border (news footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/av/world-europe-59273174" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News AV — camps within touching distance of the EU (report, 2021)</span><span class="vhost">bbc.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>NATO warns as Russia masses troops near Ukraine</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In <strong>early–mid November 2021</strong>, Ukraine said roughly 90,000–nearly 100,000 Russian troops remained near its borders after exercises; on <strong>15 November</strong> NATO Secretary-General Jens Stoltenberg called the concentration “large and unusual” and warned Moscow against aggressive action. U.S. and European officials privately briefed allies on intelligence suggesting a possible invasion plan, while the Kremlin dismissed the alarm as “alarmist” and pointed to NATO activity in the Black Sea. The buildup sat alongside the Belarus border crisis, which some Western officials saw as distraction or pressure in the same theater.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-europe-59288181" target="_blank" rel="noopener noreferrer">BBC — NATO warning (15 Nov 2021)</a>, <a class="inline-link" href="https://www.bbc.com/news/world-europe-59415885" target="_blank" rel="noopener noreferrer">BBC — why Moscow is stoking tensions</a>, <a class="inline-link" href="https://www.bbc.com/news/world-europe-59409537" target="_blank" rel="noopener noreferrer">BBC — view from Ukraine front line</a>, <a class="inline-link" href="https://apnews.com/article/russia-ukraine-war-numbers-f023cd82917ccb29ad2dda54ea589249" target="_blank" rel="noopener noreferrer">AP — war by the numbers / later updates</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The warnings were not overblown: Russia launched a full-scale invasion on 24 February 2022. By late 2025–November 2026 the war is a grinding multi-year conflict—Russia holding roughly a fifth of Ukraine’s territory, casualties on both sides in the high hundreds of thousands, and reconstruction needs estimated in the hundreds of billions of dollars—while U.S.-mediated talks and debates over postwar security guarantees continue. Volodymyr Zelenskyy remains Ukraine’s president; Vladimir Putin remains Russia’s. The November 2021 force posture is now read as the visible overture to Europe’s largest land war since 1945.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=jssjhGAUEXs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News — Why tensions are rising with Russia (explainer, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/world-europe-59409537" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC — Russian troop build-up: view from Ukraine front line (report, 2021)</span><span class="vhost">bbc.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Trump shocks the map and wins the White House</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On election night <strong>8–9 November 2016</strong>, Republican Donald J. Trump defeated Democrat Hillary Clinton, flipping the “blue wall” states of Pennsylvania, Michigan, and Wisconsin and winning the Electoral College even as Clinton led the national popular vote. Markets swung, world leaders scrambled, and Trump—reality-TV celebrity, first-time office-seeker—pledged to be president “for all Americans” after a campaign defined by immigration hard lines, trade nationalism, and rejection of political norms. Republicans also retained both houses of Congress, giving him unified early control.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/election-us-2016-37920175" target="_blank" rel="noopener noreferrer">BBC — Trump beats Clinton (9 Nov 2016)</a>, <a class="inline-link" href="https://apnews.com/article/fb2e92a47f054019a2589ace78d20836" target="_blank" rel="noopener noreferrer">AP — Trump claims victory as 45th president</a>, <a class="inline-link" href="https://www.archives.gov/electoral-college/2016" target="_blank" rel="noopener noreferrer">U.S. National Archives — 2016 Electoral College results</a>, <a class="inline-link" href="https://ballotpedia.org/Donald_Trump_presidential_administration,_2025-2026" target="_blank" rel="noopener noreferrer">Ballotpedia — Trump administration 2025–2026</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Trump served as 45th president (2017–2021), lost the 2020 election, then won again in 2024 and began a second term on 20 January 2025; as of early November 2026 he remains president (with midterm politics already framing a late-term “lame duck” discussion). The 2016 upset remade the Republican Party, normalized outsider celebrity candidacies, and set in motion fights over courts, immigration, trade, and democratic norms that still dominate U.S. politics a decade later. Hillary Clinton left elective politics; many of Trump’s 2016 themes remain central to his second-term agenda.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=SMwXKl0odq8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS FRONTLINE — Trump’s Road to the White House (documentary, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/av/magazine-37924657" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC — Tears and euphoria as Trump wins (news footage, 2016)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.cnn.com/2016/11/09/politics/moment-cnn-projects-trump-u-s-president-cnntv" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN — moment Trump is projected president-elect (broadcast clip, 2016)</span><span class="vhost">cnn.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Standing Rock: water cannons in sub-freezing Dakota night</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the night of <strong>20–21 November 2016</strong>, roughly 400 “water protectors” opposing the Dakota Access Pipeline clashed with law enforcement at Backwater Bridge near the Standing Rock Sioux camps in North Dakota. Authorities used tear gas, rubber bullets, and continuous water spray in temperatures around 23°F (−5°C); medics reported more than 150 injuries and widespread hypothermia, while police called it a riot and denied using “water cannons” even as video showed sustained streams on crowds. The standoff was then the largest Native-led environmental protest movement in modern U.S. history, focused on treaty land, sacred sites, and drinking water from the Missouri River.</p>
+<p>Sources: <a class="inline-link" href="https://www.nbcnews.com/storyline/dakota-pipeline-protests/dakota-pipeline-protesters-authorities-clash-temperatures-drop-n686581" target="_blank" rel="noopener noreferrer">NBC News — protesters soaked in freezing temperatures (20–21 Nov 2016)</a>, <a class="inline-link" href="https://www.cbc.ca/news/world/dakota-access-clashes-sunday-night-1.3859945" target="_blank" rel="noopener noreferrer">CBC — protesters repelled at bridge</a>, <a class="inline-link" href="https://eelp.law.harvard.edu/tracker/dakota-access-pipeline/" target="_blank" rel="noopener noreferrer">Harvard EELP DAPL tracker (updated Oct 2026)</a>, <a class="inline-link" href="https://www.theguardian.com/us-news/2016/nov/26/us-army-orders-eviction-of-dakota-protesters-camp-tribe-says" target="_blank" rel="noopener noreferrer">The Guardian — Army Corps camp closure order</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>After Obama’s Army Corps briefly denied the Lake Oahe easement in December 2016, the first Trump administration approved it in early 2017; oil has flowed for years while courts ordered fuller environmental review. On <strong>21 May 2026</strong> the Corps signed a Record of Decision granting a new easement with added leak-detection and monitoring conditions; on <strong>9 October 2026</strong> the Standing Rock Sioux Tribe filed a fresh federal suit seeking to vacate that decision and shut the line down. The 2016 camps are gone, but DAPL remains both operating infrastructure and unfinished legal-political conflict—and a template for later pipeline and Indigenous-rights fights.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=WmksesdcfZE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Nov 20, 2016 Confrontation at Standing Rock (on-the-ground footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=4dWeg_jHdK0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Black Snake Killaz: A #NoDAPL Story (documentary, 2017)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Fidel Castro dies at 90</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the evening of <strong>25 November 2016</strong> (announced overnight into the 26th), Cuban President Raúl Castro told the nation on state TV that his brother Fidel—revolutionary commander, prime minister, then president who ruled Cuba for nearly five decades—had died at age 90. Nine days of mourning followed; ashes were carried across the island to Santiago. Admirers hailed anti-imperial defiance and social gains; critics damned a one-party dictatorship marked by prisons, exile, and suppressed speech. The death came just after Trump’s U.S. election, raising immediate questions about the fragile Obama-era thaw with Havana.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-latin-america-38114953" target="_blank" rel="noopener noreferrer">BBC — Fidel Castro dies at 90</a>, <a class="inline-link" href="https://www.reuters.com/article/world/cuban-revolutionary-leader-fidel-castro-dies-aged-90-idUSKBN13L03Z/" target="_blank" rel="noopener noreferrer">Reuters — Cuban revolutionary leader dies aged 90</a>, <a class="inline-link" href="https://www.cnn.com/2016/11/26/americas/fidel-castro-obit" target="_blank" rel="noopener noreferrer">CNN obituary / video package</a>, <a class="inline-link" href="https://apnews.com/article/cuba-president-miguel-diaz-canel-castro-cousins-9546dcd1d4b55b38e900c1d3144a70aa" target="_blank" rel="noopener noreferrer">AP — Castro family still central to Cuba’s leadership</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Fidel’s death did not liberalize Cuba’s political system. Raúl Castro left the presidency in 2018 (Miguel Díaz-Canel succeeded him and later took the Communist Party leadership), but the Castro family and military-party apparatus remain central. The island has endured deepening economic crisis, mass emigration, and tightened U.S. pressure across administrations—including Trump’s second term. A decade on, Fidel’s personal cult has faded into history while the revolutionary state’s structures—and the unresolved U.S.–Cuba estrangement—persist.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Vni6891OaPs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Raúl Castro announces Fidel’s death (broadcast / translated clip, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/av/world-latin-america-38115162" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News AV — Cuba’s Fidel Castro dies aged 90 (obituary package, 2016)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/av/world-latin-america-38115171" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News AV — Raúl Castro announces the death (announcement clip, 2016)</span><span class="vhost">bbc.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-06.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 6 de noviembre de 2026, 09:14 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
