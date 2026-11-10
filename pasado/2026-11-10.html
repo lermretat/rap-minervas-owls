@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Martes 10 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Martes 10 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Houthi missiles hit Riyadh&#x27;s main airport, killing at least 12</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>10 October 2026</strong>, a Houthi missile strike hit a passenger terminal at King Khalid International Airport in Riyadh, killing at least 12 people and injuring more than 300. A second projectile hit Terminal 4 the next day, killing one more person and wounding 11. Saudi Arabia suspended operations, schools in the capital moved online, and the Saudi-led coalition answered with airstrikes on Sanaa. The strikes came days after Yemen&#x27;s government launched a major offensive against the Houthis, and they pulled the Saudi capital directly into the wider regional war around Iran.</p>
+<p>Sources: <a class="inline-link" href="https://www.democracynow.org/2026/10/12/headlines" target="_blank" rel="noopener noreferrer">Democracy Now! headlines (12 Oct 2026)</a>, <a class="inline-link" href="https://www.justsecurity.org/160381/early-edition-october-12-2026/" target="_blank" rel="noopener noreferrer">Just Security Early Edition (12 Oct 2026)</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/c6ly3mjx958eo" target="_blank" rel="noopener noreferrer">BBC: Aramco Tower hit</a>, <a class="inline-link" href="https://www.thenationalnews.com/news/gulf/2026/11/08/saudi-led-coalition-intercepts-two-houthi-missiles-fired-towards-riyadh/" target="_blank" rel="noopener noreferrer">The National (8 Nov 2026)</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/10/saudi-arabia-downs-missiles-fired-at-riyadh-after-houthi-attack-on-pipeline" target="_blank" rel="noopener noreferrer">Al Jazeera (10 Nov 2026)</a>, <a class="inline-link" href="https://aerocorner.com/news/houthis-riyadh-airport-missile-claim-november-4-flights-continue/" target="_blank" rel="noopener noreferrer">AeroCorner: airport status</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The airport was closed for about two weeks and partly reopened on 25 October with a reduced schedule. Attacks haven&#x27;t stopped: on 7–8 November the Houthis targeted the airport, Aramco sites and Riyadh&#x27;s financial district, and BBC Verify footage shows the Aramco Tower was hit harder than the Saudi energy ministry&#x27;s &quot;minor damage&quot; statement suggested. On 10 November the coalition said it shot down more missiles fired at Riyadh. Etihad, Lufthansa, Air India, flydubai and others still have Riyadh flights suspended into mid- or late November. The UN-brokered truce that had mostly held since 2022 is effectively gone.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/videos/cj4g17wz7gv0o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: CCTV shows people taking cover as missiles hit Riyadh airport (original footage, 2026)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2026/10/11/11-10-reported-latest-attack-on-riyadh-king-khalid-airport-houthis" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera: twelve killed, more than 300 injured in Riyadh airport attack (news report, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.dw.com/en/houthis-warn-airlines-after-deadly-riyadh-airport-strike/video-79634673" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW: Houthis warn airlines after deadly Riyadh airport strike (news report, 2026)</span><span class="vhost">dw.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Trump declares a Russia–Ukraine &quot;energy ceasefire&quot; after a diesel deal with Putin</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>11 October 2026</strong>, Donald Trump posted that Russia and Ukraine had agreed to an immediate &quot;energy ceasefire&quot; and warned both sides &quot;Do not break it!&quot; Zelensky said the announcement was &quot;news to me,&quot; and Russia hit a power plant in Kharkiv the same day. Two days earlier Trump had announced that Putin would release Russian diesel onto world markets, and the U.S. Treasury issued a license suspending sanctions on Russian diesel through 7 April 2027. Zelensky called it a &quot;gift to Putin.&quot; Trump also said it was &quot;time for Ukraine to get a new president.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://apnews.com/article/russia-ukraine-war-yandex-trump-zelenskyy-f621fa788196f204448e7f75fcc78c68" target="_blank" rel="noopener noreferrer">AP News</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cm1dwgr666wno" target="_blank" rel="noopener noreferrer">BBC: diesel deal</a>, <a class="inline-link" href="https://www.nbcnews.com/world/ukraine/russian-strikes-cut-power-thousands-ukraine-trumps-energy-ceasefire-rcna606784" target="_blank" rel="noopener noreferrer">NBC News / Reuters (1 Nov 2026)</a>, <a class="inline-link" href="https://en.interfax.com.ua/news/general/1233943.html" target="_blank" rel="noopener noreferrer">Interfax-Ukraine (10 Nov 2026)</a>, <a class="inline-link" href="https://kyivindependent.com/ukraine-russia-us-resume-trilateral-peace-talks-in-abu-dhabi-after-9-month-pause/" target="_blank" rel="noopener noreferrer">Kyiv Independent: Abu Dhabi talks</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>There is no working energy truce. Ukraine briefly paused strikes on Russian refineries under U.S. pressure, then resumed them; Russia keeps hitting Ukraine&#x27;s grid, and on 10 November emergency blackouts were in force in Kyiv, Kharkiv, Poltava and Sumy. Trump also waived a package of new Russia sanctions, which strained U.S.–Ukraine relations. One real development: U.S., Ukrainian and Russian delegations restarted trilateral peace talks in Abu Dhabi on 10 November, the first since February, with an energy and maritime ceasefire on Kyiv&#x27;s agenda.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/videos/cwvgde9vrdd9o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: What&#x27;s behind Trump&#x27;s energy ceasefire claim? (explainer, 2026)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/russian-invasion-1791831890/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: Ukraine disputes ceasefire as Trump&#x27;s diesel deal draws fire (in-depth report, 2026)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>A magnitude 7.7 earthquake strikes central Panama</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>9 October 2026</strong>, a magnitude 7.7 earthquake struck near Pitaloza Arriba in Herrera province, at a shallow depth of about 12.6 km. Footage showed a cathedral collapsing and a hotel facade falling onto a car in Penonomé. More than 600 aftershocks followed. The government confirmed one death, 68-year-old Elena Barría, and 27 injuries. Hospitals in the Azuero peninsula were damaged and the Tonosí rural hospital was knocked out of service.</p>
+<p>Sources: <a class="inline-link" href="https://apnews.com/article/panama-sismo-evacuados-danos-8f4bbce4c81952ccfcd8eddbbb95c203" target="_blank" rel="noopener noreferrer">AP (Spanish)</a>, <a class="inline-link" href="https://www.ccrif.org/sites/default/files/publications/eventreports/20261017_CCRIF_FinalEventBriefing_PAN-FAP_eq20261009_Final.pdf" target="_blank" rel="noopener noreferrer">CCRIF event briefing (PDF)</a>, <a class="inline-link" href="https://www.prensa.com/sociedad/las-heridas-y-la-reconstruccion-de-azuero-un-mes-despues-de-que-temblo-la-tierra/" target="_blank" rel="noopener noreferrer">La Prensa Panamá: one month later</a>, <a class="inline-link" href="https://www.euronews.com/2026/10/09" target="_blank" rel="noopener noreferrer">Euronews (9 Oct 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The low death toll held, but the housing damage turned out to be huge. By 5 November, authorities had evaluated 19,865 homes: 4,633 were destroyed and 15,740 need some repair. About 3,356 people were still in 113 shelters at the start of November. Only 20 to 25 new homes had been finished by 8 November, and President José Raúl Mulino has promised 2,700 housing solutions by March 2027, which means about 75 a week. Panama&#x27;s catastrophe insurance with the Caribbean facility CCRIF triggered a payout.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.cnn.com/2026/10/09/world/video/aftermath-footage-shows-destruction-earthquake-panama-digvid-vrtc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: aftermath footage of the Panama earthquake (original footage, 2026)</span><span class="vhost">cnn.com</span></span></a></li><li><a class="vchip" href="https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-9-octubre-30-dias-despues-terremoto_1_2270258.html" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TVN Panamá: &quot;9 de octubre, 30 días después&quot; (in-depth report, Spanish, 2026)</span><span class="vhost">tvn-2.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The BBC&#x27;s director-general resigns over the Panorama Trump edit</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>9 November 2025</strong>, BBC director-general Tim Davie and BBC News chief executive Deborah Turness resigned after it emerged that a 2024 Panorama documentary had spliced together two parts of Trump&#x27;s 6 January 2021 speech, delivered more than 50 minutes apart, so he appeared to directly urge supporters to march on the Capitol and &quot;fight like hell.&quot; BBC chair Samir Shah apologised for the edit, and Trump threatened to sue.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c3vn25d5dq7o" target="_blank" rel="noopener noreferrer">BBC News (9 Nov 2025)</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cmy0ryjx7741o" target="_blank" rel="noopener noreferrer">BBC News: Trump ordered to answer questions under oath</a>, <a class="inline-link" href="https://inews.co.uk/news/world/trump-sued-bbc-10bn-panorama-january-6-florida-court-4847006" target="_blank" rel="noopener noreferrer">i news: where the lawsuit stands</a>, <a class="inline-link" href="https://www.bbc.co.uk/mediacentre/2026/matt-brittin-appointed-bbc-director-general/" target="_blank" rel="noopener noreferrer">BBC Media Centre: Matt Brittin appointed</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The reporting about the edit held up; the BBC admitted the error. Trump did sue, for $10 billion in a Florida federal court, and the case is still alive. The BBC is trying to get it dismissed, arguing that Panorama was never broadcast or available in the U.S. Trump has been ordered to answer questions under oath, and a trial is set for February 2027 if the case survives. Former Google executive Matt Brittin was named the new director-general and took office on 18 May 2026.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=EczqWXF_ch0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Tim Davie resigns over Trump documentary edit (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.bbc.com/news/videos/cr7mp7rnx48o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Ros Atkins on the BBC resignations (explainer, 2025)</span><span class="vhost">bbc.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Syria&#x27;s Ahmed al-Sharaa visits the White House</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>10 November 2025</strong>, Ahmed al-Sharaa became the first Syrian head of state to visit the White House. Less than a year earlier he had led the rebel offensive that toppled Bashar al-Assad, and he had once been a designated terrorist with a U.S. bounty on his head. Trump promised to do &quot;everything&quot; he could to help Syria succeed, and Washington extended a suspension of the Caesar Act sanctions as Syria moved to join the U.S.-led coalition against ISIS.</p>
+<p>Sources: <a class="inline-link" href="https://www.reuters.com/world/middle-east/trump-meet-sharaa-white-house-capping-major-turnaround-syria-2025-11-10/" target="_blank" rel="noopener noreferrer">Reuters (10 Nov 2025)</a>, <a class="inline-link" href="https://www.al-monitor.com/originals/2025/12/senate-vote-paves-way-trump-repeal-syrias-caesar-sanctions" target="_blank" rel="noopener noreferrer">Al-Monitor: Caesar repeal vote</a>, <a class="inline-link" href="https://www.al-monitor.com/originals/2026/05/sanctions-whats-keeping-syria-us-terror-blacklist" target="_blank" rel="noopener noreferrer">Al-Monitor (May 2026)</a>, <a class="inline-link" href="https://alhurra.com/en/36513" target="_blank" rel="noopener noreferrer">Alhurra: U.S. bets on Syria</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The turnaround stuck. Congress repealed the Caesar Act in December 2025, and in August 2026 the U.S. took Syria off its list of state sponsors of terrorism, removing major barriers to investment. Al-Sharaa remains president, but Syria still faces instability, corruption and security threats, and analysts note that Damascus keeps working ties with Russia even as it leans toward Washington.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.pbs.org/video/syria-visit-1762814239/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: Al-Sharaa meets with Trump as Syria seeks ties with the West (in-depth report, 2025)</span><span class="vhost">pbs.org</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2025/11/11/video-trump-hails-syrias-al-sharaa-after-historic-white-house-talks" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera: Trump hails al-Sharaa after historic White House talks (key footage, 2025)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>COP30 opens in Belém, at the edge of the Amazon</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>10 November 2025</strong>, the UN climate summit COP30 opened in Belém, Brazil, the first held in the Amazon region. The United States sent no official delegation. Brazil pushed for a roadmap to move away from fossil fuels and launched a fund for standing tropical forests, while Indigenous protesters broke into the venue to demand a voice. The final deal tripled adaptation finance by 2035 but left out any negotiated fossil-fuel roadmap after resistance from oil producers.</p>
+<p>Sources: <a class="inline-link" href="https://news.un.org/en/story/2026/11/1168763" target="_blank" rel="noopener noreferrer">UN News: COP31 opens in Antalya</a>, <a class="inline-link" href="https://cop30.br/en/news-about-cop30/from-belem-to-antalya-cop30-presidency-brings-implementation-roadmaps-and-climate-action-agenda-to-cop31" target="_blank" rel="noopener noreferrer">COP30 Presidency: from Belém to Antalya</a>, <a class="inline-link" href="https://www.carbonbrief.org/qa-what-is-in-the-global-roadmap-for-transitioning-away-from-fossil-fuels" target="_blank" rel="noopener noreferrer">Carbon Brief Q&amp;A on the roadmap</a>, <a class="inline-link" href="https://unfccc.int/cop31" target="_blank" rel="noopener noreferrer">UNFCCC: COP31</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Because the talks failed to agree on one, Brazil&#x27;s presidency published its own voluntary, non-binding roadmap for transitioning away from fossil fuels. COP31 opened in Antalya, Türkiye, on 9 November 2026 and runs to 20 November. Its formal agenda centres on electrification, including a target of 35% of global final energy coming from electricity by 2035, and the Brazilian roadmap is being promoted there as an implementation tool rather than a binding decision.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.zdf.de/video/dokus/planet-e-106/bilanz-belem--klimakonferenz-im-regenwald-100" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ZDF planet e: &quot;Bilanz Belém – Klimakonferenz im Regenwald&quot; (documentary, German, 2025)</span><span class="vhost">zdf.de</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=XT0waFxGkEk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Protesters break into COP30 venue in Brazil (original footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=DsJGrbc0UjQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The National: Belém becomes global climate focus on eve of COP30 (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Ortega wins a fourth straight term in a vote with no real rivals</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>7 November 2021</strong>, Daniel Ortega was declared winner of Nicaragua&#x27;s presidential election with about 76% of the vote, with his wife Rosario Murillo again as vice-president. In the months before the vote his government jailed seven would-be opposition candidates and dozens of activists, journalists and business leaders, and banned the main opposition parties. The U.S., the EU and the UK called the election a sham, and Washington threatened new sanctions.</p>
+<p>Sources: <a class="inline-link" href="https://www.reuters.com/world/americas/nicaraguas-ortega-coasting-victory-after-contentious-election-2021-11-08/" target="_blank" rel="noopener noreferrer">Reuters (8 Nov 2021)</a>, <a class="inline-link" href="https://apnews.com/article/elections-central-america-nicaragua-daniel-ortega-rosario-murillo-c8d9e42cb0dcc7d9a537cb39536110a8" target="_blank" rel="noopener noreferrer">AP News</a>, <a class="inline-link" href="https://efe.com/mundo/2026-11-10/daniel-ortega-nicaragua-reaparece-publico/" target="_blank" rel="noopener noreferrer">EFE (10 Nov 2026)</a>, <a class="inline-link" href="https://confidencial.digital/en/english/daniel-ortega-reappears-for-brief-ceremony-after-long-absence/" target="_blank" rel="noopener noreferrer">Confidencial</a>, <a class="inline-link" href="https://apnews.com/article/onu-nicaragua-derechos-humanos-lesa-humanidad-daniel-ortega-rosario-murillo-8d6f5b22f741bc884ba061713631e80d" target="_blank" rel="noopener noreferrer">AP: UN experts on crimes against humanity</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The reporting was accurate, and the slide into one-family rule deepened. Nicaragua expelled 222 political prisoners to the U.S. in 2023 and stripped them of citizenship, and a 2025 constitutional reform made Ortega and Murillo &quot;co-presidents&quot; and extended their hold over every branch of government. UN experts say the couple may have committed crimes against humanity. Ortega, now 80, reappeared in public on 10 November 2026 after a 66-day absence that had fed speculation about his health.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.cbsnews.com/video/nicaragua-daniel-ortega-60-minutes-video-2021-10-31/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS 60 Minutes: How Daniel Ortega tossed democracy aside (investigative report, 2021)</span><span class="vhost">cbsnews.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=d7TC1tfusfY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Grayzone: &quot;Inside Nicaragua&#x27;s 2021 elections&quot; (on-the-ground report sympathetic to the government, read with care, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>A judge ends Britney Spears&#x27;s 13-year conservatorship</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>12 November 2021</strong>, Los Angeles Superior Court Judge Brenda Penny ended the conservatorship that had controlled Britney Spears&#x27;s money, career and personal life since 2008. The ruling followed Spears&#x27;s June 2021 testimony describing it as abusive, her father Jamie Spears&#x27;s suspension as conservator in September, a wave of documentaries, and the #FreeBritney movement.</p>
+<p>Sources: <a class="inline-link" href="https://www.npr.org/2021/11/12/1054860726/britney-spears-conservatorship-ended" target="_blank" rel="noopener noreferrer">NPR (12 Nov 2021)</a>, <a class="inline-link" href="https://www.reuters.com/world/us/los-angeles-judge-terminates-britney-spears-conservatorship-2021-11-12/" target="_blank" rel="noopener noreferrer">Reuters (12 Nov 2021)</a>, <a class="inline-link" href="https://apnews.com/article/britney-spears-reissue-justin-timberlake-be86ed5dc856478b4d8011ef762aad78" target="_blank" rel="noopener noreferrer">AP: 25th-anniversary release</a>, <a class="inline-link" href="https://www.rollingstone.com/music/music-news/britney-spears-find-a-new-family-1235651260/" target="_blank" rel="noopener noreferrer">Rolling Stone (2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The case put a spotlight on how U.S. guardianships can strip adults of control over their lives. Spears published her memoir &quot;The Woman in Me&quot; in 2023 and has not returned to touring. In November 2026 she released a 25th-anniversary edition of her album &quot;Britney&quot; with five unreleased songs, including a duet with Justin Timberlake, while publicly attacking her sister Jamie Lynn and ex-husband Kevin Federline.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=mksU_JPjV50" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Variety: Spears&#x27;s lawyer on the conservatorship ending (original press conference, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Kyle Rittenhouse trial heads to verdict</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In <strong>November 2021</strong>, the trial of Kyle Rittenhouse dominated U.S. news. He was 17 when he shot three men, killing Joseph Rosenbaum and Anthony Huber and wounding Gaige Grosskreutz, during unrest in Kenosha, Wisconsin, in August 2020. Grosskreutz testified on 8 November that he was pointing his own gun at Rittenhouse when he was shot. On 19 November the jury acquitted Rittenhouse of all charges, accepting his self-defence claim.</p>
+<p>Sources: <a class="inline-link" href="https://en.wikipedia.org/wiki/Kyle_Rittenhouse" target="_blank" rel="noopener noreferrer">Kyle Rittenhouse (Wikipedia overview)</a>, <a class="inline-link" href="https://patch.com/florida/sarasota/fl-gun-shop-hires-kyle-rittenhouse-5-years-after-kenosha-shooting-acquittal" target="_blank" rel="noopener noreferrer">Patch: Sarasota gun shop hires Rittenhouse</a>, <a class="inline-link" href="https://www.newsweek.com/kyle-rittenhouse-volunteers-for-thomas-massie-sparks-maga-fury-11961683" target="_blank" rel="noopener noreferrer">Newsweek: Massie volunteer controversy</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The verdict stands and became a lasting symbol in the U.S. culture war over guns and protest. Rittenhouse, now 23, became a figure on the right, published a memoir and toured campuses; in 2026 he moved to Sarasota, Florida, and works at a gun shop. He drew anger from parts of the MAGA movement in May 2026 by volunteering for Rep. Thomas Massie.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=VpTW2AJE9MQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">New York Times: &quot;A Fatal Night in Kenosha&quot; (visual investigation, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=sLgyyixa9gQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Law&amp;Crime Network: verdict read in court (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>India withdraws 86% of its cash overnight</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>8 November 2016</strong>, Prime Minister Narendra Modi announced in a televised address that ₹500 and ₹1,000 notes, about 86% of the currency in circulation, would stop being legal tender at midnight. The stated goals were to wipe out black money, fake notes and terrorist financing. The result was weeks of bank queues, cash shortages and disruption for farmers, small traders and daily-wage workers.</p>
+<p>Sources: <a class="inline-link" href="https://indianexpress.com/article/explained/explained-economics/10-years-demonetisation-india-cash-currency-gdp-digital-payments-10956081/" target="_blank" rel="noopener noreferrer">Indian Express: 10 years of demonetisation</a>, <a class="inline-link" href="https://www.dw.com/en/indias-demonetization-10-years-on-promises-remain-unfulfilled/a-79903331" target="_blank" rel="noopener noreferrer">DW: promises remain unfulfilled</a>, <a class="inline-link" href="https://www.thehindu.com/business/10-years-since-demonetisation-cash-usage-unchanged-fake-notes-on-the-rise/article71673986.ece" target="_blank" rel="noopener noreferrer">The Hindu: cash usage unchanged, fake notes rising</a>, <a class="inline-link" href="https://scroll.in/article/1096851/a-decade-after-demonetisation-no-dent-in-black-money-and-corruption" target="_blank" rel="noopener noreferrer">Scroll</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On the tenth anniversary, the verdict is mostly negative. The Reserve Bank of India later reported that about 99% of the banned notes came back into the banks, which undercut the black-money goal. Cash in circulation has more than doubled since before the ban, and fake notes are rising again. The lasting change is the boom in digital payments through UPI, India&#x27;s instant payment system, though analysts disagree on how much demonetisation caused it. Modi remains prime minister.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=jjdZM-X9mv8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Marginal Revolution University: &quot;When 86% of India&#x27;s Currency Disappeared&quot; with Harvard economist Gabriel Chodorow-Reich (in-depth explainer)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=DnDAT9tR6iA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PIB India: S. Gurumurthy makes the government&#x27;s case, &quot;War on Black Money&quot; (original official footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Colombia and the FARC announce a revised peace deal</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>12 November 2016</strong>, six weeks after voters narrowly rejected the original accord in a referendum, Colombia&#x27;s government and the FARC guerrillas announced a revised agreement in Havana. It included changes demanded by the &quot;No&quot; camp, such as an inventory of FARC assets for victim reparations and tighter rules on the special peace tribunal. President Juan Manuel Santos and FARC leader Rodrigo Londoño, known as &quot;Timochenko,&quot; signed it on 24 November at Bogotá&#x27;s Teatro Colón, and Congress, not another referendum, ratified it.</p>
+<p>Sources: <a class="inline-link" href="https://www.npr.org/sections/thetwo-way/2016/11/12/501863434/colombia-farc-rebels-announce-a-new-peace-deal" target="_blank" rel="noopener noreferrer">NPR (12 Nov 2016)</a>, <a class="inline-link" href="https://www.reuters.com/article/us-colombia-peace-idUSKBN1370PV/" target="_blank" rel="noopener noreferrer">Reuters (2016)</a>, <a class="inline-link" href="https://kroc.nd.edu/news-events/news/navigating-the-shift-new-kroc-institute-report-maps-the-future-of-colombian-peace-amidst-pivotal-political-transition/" target="_blank" rel="noopener noreferrer">Kroc Institute report (2026)</a>, <a class="inline-link" href="https://www.pares.com.co/wp-content/uploads/2026/10/Informe-10-anos-despues-de-acuerdo-de-paz.pdf" target="_blank" rel="noopener noreferrer">Pares: &quot;Diez años después&quot; (PDF, Spanish)</a>, <a class="inline-link" href="https://www.npr.org/2026/08/07/nx-s1-5924775/colombias-new-president-vows-to-remake-the-country-and-challenge-its-fragile-peace" target="_blank" rel="noopener noreferrer">NPR: De la Espriella sworn in</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The FARC disarmed and became a political party, now called Comunes, and thousands of ex-fighters went through reintegration. But ten years on, Notre Dame&#x27;s Kroc Institute finds only 36% of the 578 commitments fully met and 43% barely started or not started. Rural reform, the safety of former fighters and reparations for victims are still lagging, and dissident groups keep fighting. The new president, the right-wing Abelardo de la Espriella, took office on 7 August 2026 and says he will &quot;rigorously&quot; review the special peace tribunal, the JEP, while respecting the law. Santos and Londoño are both alive.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=NpIxQs_-kAw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Agencia EFE: Santos and &quot;Timochenko&quot; sign the new peace deal (original footage, Spanish, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.senalmemoria.co/timeline/firma-del-nuevo-acuerdo-de-paz-en-el-teatro-colon" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Señal Memoria: signing at the Teatro Colón (public broadcaster archive, Spanish)</span><span class="vhost">senalmemoria.co</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Kaikōura earthquake rips through New Zealand&#x27;s South Island</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Just after midnight on <strong>14 November 2016</strong>, a magnitude 7.8 earthquake struck near Kaikōura. It ruptured more than 20 faults, one of the most complex quakes ever recorded, lifted parts of the coastline by several metres, and caused landslides that cut off Kaikōura by road and rail. Two people died. Wellington&#x27;s waterfront and several buildings were badly damaged.</p>
+<p>Sources: <a class="inline-link" href="https://www.kaikoura.govt.nz/council/news?item=id%3A305cqpfb41cxbyd2h07y" target="_blank" rel="noopener noreferrer">Kaikōura District Council: 10-year anniversary</a>, <a class="inline-link" href="https://www.engineeringnz.org/news-insights/moving-mountains/" target="_blank" rel="noopener noreferrer">Engineering NZ: &quot;Moving mountains&quot;</a>, <a class="inline-link" href="https://newswire.co.nz/2026/08/kaikoura-earthquake-faults/" target="_blank" rel="noopener noreferrer">Newswire NZ: the faults that broke (2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>State Highway 1 north of Kaikōura reopened in December 2017 after a huge rebuild of road and rail, and the quake changed how scientists model multi-fault earthquakes. Kaikōura is marking the tenth anniversary with community events from 12 to 27 November 2026, including a main commemoration on 14 November and a &quot;Resilient by Nature&quot; exhibition.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=hqjob7hjpfs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NZ Transport Agency Waka Kotahi: &quot;Kaikōura earthquake recovery – our story&quot; (documentary short, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://benjaminbrewer.co.uk/kaikoura-tv-documentary" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TVNZ Sunday: &quot;Kaikōura: A Big Year&quot; (TV documentary, 2018, maker&#x27;s page)</span><span class="vhost">benjaminbrewer.co.uk</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-10.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 10 de noviembre de 2026, 09:14 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
