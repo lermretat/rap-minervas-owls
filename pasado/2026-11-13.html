@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 13 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 13 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Alberta votes three to one to stay in Canada</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 October 2026</strong>, Albertans voted in a standalone, non-binding referendum with ten questions. The headline question asked whether Alberta should remain a province or whether the government should start the constitutional process toward a binding vote on separation. &quot;Remain&quot; won with 1,556,316 votes (74.95%) against 520,233 (25.05%), on a turnout of 67.44% for that question, according to Elections Alberta&#x27;s official results. The major cities and almost all rural ridings voted to stay. Voters also narrowly backed several of Premier Danielle Smith&#x27;s other proposals, including tighter provincial control over immigration (54.86%) and proof of citizenship to vote in provincial elections (58.06%).</p>
+<p>Sources: <a class="inline-link" href="https://www.elections.ab.ca/elections/referendum/referendum-results/" target="_blank" rel="noopener noreferrer">Elections Alberta: official results</a>, <a class="inline-link" href="https://www.cbc.ca/news/canada/calgary/alberta-referendum-official-results-9.7401791" target="_blank" rel="noopener noreferrer">CBC: official results</a>, <a class="inline-link" href="https://www.cbc.ca/news/canada/calgary/analysis-danielle-smith-ucp-separatists-unity-party-9.7389404" target="_blank" rel="noopener noreferrer">CBC analysis: separatists take the fight into the UCP</a>, <a class="inline-link" href="https://www.cbc.ca/news/canada/calgary/danielle-smith-ucp-alberta-leadership-support-review-9.7400247" target="_blank" rel="noopener noreferrer">CBC: riding groups avert leadership review</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The national unity question is off the table for now, but the fight has moved inside Smith&#x27;s United Conservative Party. Smith said the government has a &quot;clear mandate&quot; for a united Canada and asked separatists to &quot;believe and hope in Canada again.&quot; Separatist organizer Mitch Sylvestre, who also runs a UCP riding association, has talked about pushing her out or leaving the party. That threat has faded: on 28 October the party president said 65 of Alberta&#x27;s 87 riding associations had backed Smith and that there would be &quot;NO UCP leadership review before our next general election&quot; (October 2027). Separatists are now trying to win board seats at the party convention in Calgary in late November.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=CXJ7U6BqKDM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC News: CBC projects Alberta votes to remain in Canada (results-night report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=tVb_fB63Z8I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC Power &amp; Politics: Alberta chose Canada this time. Is a future referendum possible? (in-depth panel, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ezBWYpirRfo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC News Alberta: mapping where Albertans voted to remain, or not (data explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Navi Pillay wins the Nobel Peace Prize, and Israel and Trump hit back</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>9 October 2026</strong>, the Norwegian Nobel Committee gave the Peace Prize to South African jurist Navanethem &quot;Navi&quot; Pillay &quot;for her efforts to promote peace and international law.&quot; Pillay defended anti-apartheid activists including Nelson Mandela, presided over the International Criminal Tribunal for Rwanda, where judges first ruled that rape could be an act of genocide, sat on the International Criminal Court, and served as UN High Commissioner for Human Rights from 2008 to 2014. From 2021 to 2025 she chaired the UN commission of inquiry on the Occupied Palestinian Territory, which found that Israel had committed genocide in Gaza. Netanyahu&#x27;s office called her a &quot;bigot&quot; and said the committee had &quot;lost its moral compass.&quot; Trump called her &quot;a liberal person who works at the United Nations, who nobody has ever heard of&quot; and said the prize should have gone to the United States. Hours after the announcement, the Trump administration announced new sanctions on the ICC itself.</p>
+<p>Sources: <a class="inline-link" href="https://www.nobelprize.org/prizes/peace/2026/press-release/" target="_blank" rel="noopener noreferrer">Nobel Committee press release</a>, <a class="inline-link" href="https://www.jpost.com/israel-news/article-911248" target="_blank" rel="noopener noreferrer">Jerusalem Post: Netanyahu and Trump react</a>, <a class="inline-link" href="https://www.prio.org/comments/1930" target="_blank" rel="noopener noreferrer">PRIO: allies at odds after the prize (6 Nov 2026)</a>, <a class="inline-link" href="https://www.nobelpeaceprize.org/press/events/nobel-peace-prize-award-ceremony" target="_blank" rel="noopener noreferrer">Nobel Peace Prize: award ceremony</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The award has become part of a wider fight between Washington and European allies over international courts. Pillay has answered back in interviews defending the ICC, and on 6 November the Peace Research Institute Oslo said the prize shows Norway and other European states are &quot;increasingly on a collision course&quot; with the U.S. on how international politics should be run. Pillay is still an ad hoc judge at the International Court of Justice in the Gambia v. Myanmar genocide case. She is due to receive the prize at Oslo City Hall on 10 December.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=jlWklPLijl0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: Navi Pillay wins Nobel Peace Prize after long career investigating war crimes (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=GzzuVBnTYmE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: Navi Pillay answers Israel&#x27;s criticism (long-form interview, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=QyQPe3TSqUI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Nobel Prize: the call telling Pillay she had won (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>A drone strike on Abyei&#x27;s Amiet market kills scores of people</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 October 2026</strong>, drones struck Amiet Market, a busy trading hub about 10 km north of Abyei town in the area disputed by Sudan and South Sudan. The strikes hit a fuel depot and started fires that burned for days. The Abyei administration&#x27;s caretaker information minister, Yohana Akol Ngor, said 153 people were killed and about 8,000 displaced, and blamed Sudan&#x27;s army without giving evidence. Diplomatic sources told Reuters the depot had been used by the paramilitary Rapid Support Forces (RSF) to supply its troops. Khartoum denied any role. South Sudan summoned Sudan&#x27;s ambassador. The UN peacekeeping force UNISFA said on 21 October that at least 80 people were killed and 27 injured.</p>
+<p>Sources: <a class="inline-link" href="https://www.nbcnews.com/world/africa/drone-attack-kills-150-people-south-sudan-market-official-says-rcna604600" target="_blank" rel="noopener noreferrer">NBC News / Reuters (20 Oct 2026)</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/21/abyei-drone-strike-market-south-sudan-war-death-toll" target="_blank" rel="noopener noreferrer">The Guardian (21 Oct 2026)</a>, <a class="inline-link" href="https://reliefweb.int/report/sudan/unisfa-statement-drone-strikes-amiet-market-abyei-updated-22-october-2026" target="_blank" rel="noopener noreferrer">UNISFA statement via ReliefWeb</a>, <a class="inline-link" href="https://press.un.org/en/2026/sc16486.doc.htm" target="_blank" rel="noopener noreferrer">UN Security Council press statement</a>, <a class="inline-link" href="https://news.un.org/en/story/2026/11/1168749" target="_blank" rel="noopener noreferrer">UN News: Lacroix briefing (5 Nov 2026)</a>, <a class="inline-link" href="https://www.radiotamazuj.org/en/news/article/khartoum-denies-role-in-abyei-killings-as-rsf-allies-seek-probe" target="_blank" rel="noopener noreferrer">Radio Tamazuj: Khartoum denies role</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The death toll is still disputed. On 5 November, UN peacekeeping chief Jean-Pierre Lacroix told the Security Council that the strikes killed &quot;at least 30 people&quot; and injured about 59, and that peacekeepers were still checking whether that was an undercount. Local officials put the figure several times higher. No one has been held responsible. The Security Council condemned the attack and called for accountability, and the UN special envoy for the Horn of Africa urged a prompt, independent investigation. The RSF-aligned &quot;Government of Peace&quot; has asked the UN fact-finding mission on Sudan to investigate. The UN says these were the first drone strikes ever recorded in Abyei, and the Council is now debating whether to renew UNISFA&#x27;s mandate.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=mY90B3uGRmc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">UNISFA: mission leaders visit Amiet Market after the attack (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=oQ0oS1wKiwM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TRT World: South Sudan accuses Sudan of fatal drone attack in Abyei (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Czab8VsLrwE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WION: at least 153 killed in drone strike on Abyei market (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Congress votes 427–1 to force out the Epstein files</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>18 November 2025</strong>, the House passed the Epstein Files Transparency Act 427–1, with Louisiana Republican Clay Higgins casting the only no vote. The vote was forced by a discharge petition from Republican Thomas Massie that reached 218 signatures on 12 November, from four Republicans and 214 Democrats, after months of resistance from the House leadership and the White House. The Senate passed the bill by unanimous consent the next day, and Trump, who had reversed course and backed it, signed it on 19 November. The law gave the attorney general 30 days to publish the Justice Department&#x27;s Epstein files in searchable form.</p>
+<p>Sources: <a class="inline-link" href="https://www.justice.gov/opa/media/1426091/dl" target="_blank" rel="noopener noreferrer">U.S. DOJ: EFTA production report (PDF)</a>, <a class="inline-link" href="https://www.npr.org/2026/04/03/nx-s1-5771645/trump-removes-pam-bondi-as-attorney-general" target="_blank" rel="noopener noreferrer">NPR: Trump removes Bondi</a>, <a class="inline-link" href="https://www.npr.org/2026/05/19/nx-s1-5827183/massie-gallrein-kentucky-race-results-trump" target="_blank" rel="noopener noreferrer">NPR: Massie loses primary</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/ce8wjg507yro" target="_blank" rel="noopener noreferrer">BBC: Mandelson bail conditions lifted</a>, <a class="inline-link" href="https://www.theguardian.com/us-news/2026/nov/10/house-republicans-epstein-investigation" target="_blank" rel="noopener noreferrer">The Guardian: Oversight report (10 Nov 2026)</a>, <a class="inline-link" href="https://abcnews.com/US/discharge-petition-2nd-epstein-files-bill-secures-218/story?id=138057235" target="_blank" rel="noopener noreferrer">ABC News: second petition hits 218 (11 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The fight over the files hasn&#x27;t ended. The DOJ missed the 30-day deadline, released material in waves with heavy redactions, and said by 30 January 2026 that it had met its obligations after publishing more than 3.5 million pages. Fallout spread far: Trump fired Attorney General Pam Bondi on 2 April 2026, and in Britain Peter Mandelson was arrested in February on suspicion of misconduct in public office (he has not been charged). Massie lost his May primary to Trump-backed Ed Gallrein. On 10 November, House Oversight Republicans released a report saying federal agencies failed Epstein&#x27;s victims and that rushed releases exposed survivors&#x27; details. Democrats say more than 2.5 million pages are still being withheld. On 11 November, Massie&#x27;s second discharge petition, for an &quot;Epstein Files Transparency Act II&quot; that would let survivors, state attorneys general and members of Congress sue the DOJ over withheld records, reached 218 signatures. A floor vote could come as early as 2–3 December.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=S1XiYXjt1sU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News (Australia): Epstein Files Transparency Act passes the House (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=EeRiBT5NEA8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: what the Epstein Files Transparency Act compels the administration to do (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Bg4_hXwJRN0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: Trump signs bill directing DOJ to release Epstein files (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>A car bomb explodes near Delhi&#x27;s Red Fort</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the evening of <strong>10 November 2025</strong>, a car exploded near the Red Fort in Old Delhi, killing at least 11 people (some counts put the toll at 15) and injuring many more. It was the first terror attack in the capital in 14 years, and the government formally called it a terrorist act two days later. Investigators identified the driver as Dr Umar un-Nabi, a doctor from Pulwama in Kashmir who taught at Al-Falah University in Faridabad. The blast came soon after police raids in Faridabad, linked to a network of doctors, seized nearly 2,900 kg of explosive material. The press quickly called it a &quot;white-collar&quot; terror module.</p>
+<p>Sources: <a class="inline-link" href="https://www.thehindu.com/news/national/a-year-after-the-red-fort-blast-what-has-the-investigation-revealed-explained/article71689032.ece" target="_blank" rel="noopener noreferrer">The Hindu: a year after the Red Fort blast (11 Nov 2026)</a>, <a class="inline-link" href="https://www.timesnownews.com/india/red-fort-blast-a-year-later-key-findings-and-key-accused-traced-in-afghanistan-article-156486893" target="_blank" rel="noopener noreferrer">Times Now: probe findings, accused traced to Afghanistan</a>, <a class="inline-link" href="https://www.hindustantimes.com/india-news/red-fort-blast-a-year-on-families-still-waiting-for-justice-and-closure-101794273922171.html" target="_blank" rel="noopener noreferrer">Hindustan Times: families still waiting</a>, <a class="inline-link" href="https://www.republicworld.com/india/delhi-red-fort-blast-case-nia-court-to-hear-arguements-on-framing-of-charges-2026-11-05-140505" target="_blank" rel="noopener noreferrer">Republic World: NIA court to hear arguments on charges</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The National Investigation Agency (NIA) has filed chargesheets alleging that Nabi led a group called &quot;Ansar Ghazwat-ul-Hind Interim,&quot; which the agency calls an offshoot of al-Qaeda in the Indian Subcontinent. A UN sanctions monitoring report has also attributed the blast to AQIS. According to the chargesheet, core members tried to move to Taliban-ruled Afghanistan in 2022. One accused, Muzafar Ahmad Rather, is believed to be in Afghanistan and is under a non-bailable warrant. One year on, the case is at the charge-framing stage in a special Delhi court, a parallel money-laundering case is at the pre-trial stage, and victims&#x27; families say they are still waiting for justice.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=WI-gX-NAVns" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NDTV: how the Red Fort blast car was procured, driven and detonated (investigative reconstruction, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ehWRfwNkDS4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ET Now: NIA chargesheet and the al-Qaeda link (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Jm5rJLC0_Xo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">StudyIQ IAS: how the NIA broke the &quot;white-collar&quot; module (long explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Bangladesh sentences Sheikh Hasina to death in absentia</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>17 November 2025</strong>, Bangladesh&#x27;s International Crimes Tribunal found former prime minister Sheikh Hasina guilty of crimes against humanity for the crackdown on the 2024 student-led uprising, and sentenced her to death in absentia. The UN has estimated that up to 1,400 people were killed in that violence. Hasina, who fled to India in August 2024 after 15 years in power, called the verdict biased and politically motivated and rejected the tribunal&#x27;s legitimacy. Dhaka asked New Delhi to extradite her.</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/world/2026/nov/10/disgraced-former-leader-sheikh-hasina-plans-return-to-bangladesh-after-two-years-in-exile" target="_blank" rel="noopener noreferrer">The Guardian: Hasina plans return (10 Nov 2026)</a>, <a class="inline-link" href="https://www.indiatoday.in/world/story/sheikh-hasina-death-sentence-bangladesh-prosecutor-rules-out-passport-legal-recourse-3036374-2026-11-10" target="_blank" rel="noopener noreferrer">India Today: prosecutor rules out passport</a>, <a class="inline-link" href="https://www.thehindu.com/news/national/after-bangladesh-rules-out-passport-for-hasina-india-says-travel-document-needed/article71686655.ece" target="_blank" rel="noopener noreferrer">The Hindu: India says &quot;travel document&quot; needed</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Hasina is still living in Delhi. The Bangladesh Nationalist Party under Tarique Rahman won the February 2026 election, and Hasina&#x27;s Awami League is still banned. India has acknowledged Bangladesh&#x27;s extradition requests but hasn&#x27;t decided on them. This month Hasina&#x27;s British lawyer applied for a new passport, and party figures say she wants to go home in December. Bangladesh refused the passport, and the tribunal&#x27;s chief prosecutor said that because her appeal deadline has passed, she has &quot;no option but to face the execution of the verdict.&quot; She told AP: &quot;If death is my destiny, I would rather die on the soil of my own country.&quot;</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=u1fGtEekdfY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Sheikh Hasina sentenced to death for crimes against humanity (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Txhtxb0ZjVk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera 101 East: &quot;The Mother and the Monster&quot; (documentary, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=8uchpZ0Ah54" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story: Will Sheikh Hasina return to Bangladesh? (debate, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>COP26 ends with the Glasgow Climate Pact and a last-minute coal compromise</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the night of <strong>13 November 2021</strong>, a day late, nearly 200 countries adopted the Glasgow Climate Pact. It was the first UN climate decision to target coal by name, but a last-minute intervention by India, backed by China, softened &quot;phase out&quot; coal power to &quot;phase down.&quot; COP26 president Alok Sharma fought back tears: &quot;I am deeply sorry.&quot; The pact asked countries to strengthen their 2030 emissions targets the following year instead of waiting five years, and to double the share of climate finance spent on adaptation. Sharma said 1.5°C was still alive but &quot;its pulse is weak.&quot; Poor countries left without the loss-and-damage fund they wanted.</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/environment/2021/nov/13/cop26-countries-agree-to-accept-imperfect-climate-agreement" target="_blank" rel="noopener noreferrer">The Guardian (13 Nov 2021)</a>, <a class="inline-link" href="https://www.theguardian.com/environment/2021/nov/14/what-are-the-key-points-of-the-glasgow-climate-pact-cop26" target="_blank" rel="noopener noreferrer">The Guardian: key points of the pact</a>, <a class="inline-link" href="https://www.iea.org/reports/global-energy-review-2026/coal" target="_blank" rel="noopener noreferrer">IEA: Global Energy Review 2026, coal</a>, <a class="inline-link" href="https://news.un.org/en/story/2026/11/1168775" target="_blank" rel="noopener noreferrer">UN News: COP31 energy day (10 Nov 2026)</a>, <a class="inline-link" href="https://theconversation.com/avoiding-the-f-word-australia-and-turkey-dance-around-fossil-fuels-at-cop31-summit-296418" target="_blank" rel="noopener noreferrer">The Conversation: fossil fuels at COP31</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Five years later, the same arguments are running at COP31 in Antalya, Türkiye, which ends on 20 November. On 10 November, Brazil&#x27;s COP30 presidency formally presented a voluntary roadmap for moving away from fossil fuels, but it isn&#x27;t binding, and the hosts have avoided putting fossil fuels at the centre of the talks. Coal hasn&#x27;t gone away: the IEA says global coal demand rose 0.4% in 2025. Coal power fell in China (about 1.5%) and India (about 3%), but U.S. coal demand jumped 10%, and China commissioned almost 80 GW of new coal plants in a single year.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=HLmaumUTqVE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Guardian News: Alok Sharma fights back tears as watered-down deal is agreed (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=E6GDT-7o6DA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: climate deal &quot;falls short&quot; as China and India block end to coal power (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=77IWpUhWhrI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News In-depth (Australia): What did the COP26 climate summit achieve? (in-depth analysis, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Biden and Xi hold a three-and-a-half-hour virtual summit</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the evening of <strong>15 November 2021</strong> (Washington time), Joe Biden and Xi Jinping held their first long one-on-one meeting, by video, with relations near a historic low. Biden said the two sides needed &quot;guardrails&quot; to keep competition from turning into conflict. Xi warned that encouraging Taiwan independence was &quot;playing with fire, and if you play with fire, you will get burned.&quot; There was no joint statement. The concrete results were small: one-year multiple-entry visas for each other&#x27;s journalists and an agreement to look at talks on strategic stability.</p>
+<p>Sources: <a class="inline-link" href="https://www.cfr.org/articles/takeaway-biden-xi-meeting-jaw-jawing-success" target="_blank" rel="noopener noreferrer">Council on Foreign Relations (16 Nov 2021)</a>, <a class="inline-link" href="https://www.brookings.edu/articles/trump-xi-and-putin-what-to-expect-from-the-apec-summit/" target="_blank" rel="noopener noreferrer">Brookings: what to expect at APEC (12 Nov 2026)</a>, <a class="inline-link" href="https://www.fmprc.gov.cn/eng/xw/wsrc/202611/t20261113_12058556.html" target="_blank" rel="noopener noreferrer">China&#x27;s foreign ministry: Xi to attend APEC</a>, <a class="inline-link" href="https://www.nbcnews.com/politics/joe-biden/joe-biden-cancer-health-book-tour-promise-me-america-rcna608260" target="_blank" rel="noopener noreferrer">NBC News: Biden scales back book tour</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Biden left office in January 2025. At 83, he is being treated for metastatic prostate cancer and has scaled back the book tour for his memoir. The &quot;guardrails&quot; approach has carried on under Trump in a more transactional form. Trump and Xi met in Beijing in May and in Washington in September, and they are expected to meet again at the APEC summit in Shenzhen on 18–19 November, with their trade truce due to expire in January and another meeting planned at the G20 in Florida in December. Taiwan, export controls and Chinese support for Russia are still unresolved.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=RAZATvPodFg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: Biden and Xi at loggerheads over Taiwan during lengthy virtual summit (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=E_9lKSG2nxc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Xi and Biden wrap up virtual meeting amid rising tension (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=63hun4Plcxg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNBC Television: Biden–Xi summit key takeaways (analysis, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Austria locks down the unvaccinated, then moves to make vaccines compulsory</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>15 November 2021</strong>, Austria became the first country in Europe to order a lockdown for people not vaccinated against COVID-19, about 2 million people, as Delta-wave infections hit records and intensive-care wards filled. Four days later Chancellor Alexander Schallenberg went further and announced a nationwide lockdown for everyone from 22 November, plus a general vaccine mandate from 1 February 2022, the first in the EU. &quot;We must face reality,&quot; he said, admitting that persuasion had failed. The decision set off large street protests, led in part by the far-right Freedom Party (FPÖ).</p>
+<p>Sources: <a class="inline-link" href="https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2021/11/bundeskanzler-alexander-schallenberg-zu-neuerlichen-einschraenkungen-wir-muessen-der-realitaet-ins-auge-sehen.html" target="_blank" rel="noopener noreferrer">Austrian Federal Chancellery: Schallenberg announcement (19 Nov 2021, German)</a>, <a class="inline-link" href="https://www.vfgh.gv.at/downloads/VfGH_23.06.2022_G_37_2022_EN.pdf" target="_blank" rel="noopener noreferrer">Austrian Constitutional Court ruling, 23 June 2022 (PDF, English)</a>, <a class="inline-link" href="https://www.oe24.at/a/neue-umfrage-fpoe-wieder-bei-40-prozent-900132674" target="_blank" rel="noopener noreferrer">oe24: FPÖ at 40% (12 Nov 2026, German)</a>, <a class="inline-link" href="https://www.derstandard.at/story/3000000345685/die-fpoe-laesst-corona-nicht-ruhen-u-ausschuss-zur-pandemiepolitik-in-vorbereitung" target="_blank" rel="noopener noreferrer">Der Standard: FPÖ prepares Corona inquiry (German)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The mandate was never really enforced. It took effect in February 2022, was suspended in March before any fines were issued, and the government announced in June 2022 that it would scrap the law, even though the Constitutional Court had just rejected a challenge to it. The political effect has lasted longer than the law did. Herbert Kickl&#x27;s FPÖ, which built much of its revival on opposing pandemic measures, came first in the 2024 election but was kept out of government. A Lazarsfeld poll for oe24 published on 12 November 2026 puts the FPÖ at 40%, against a combined 40% for Chancellor Christian Stocker&#x27;s three-party coalition. The FPÖ is preparing a parliamentary inquiry into the government&#x27;s pandemic policy.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=KsCvK4EUBHw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: Austria on lockdown for the unvaccinated (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=wM7Xti_t5UU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">euronews: Austria first in EU to fully lock down and make vaccination mandatory (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=YUDEi2kLe7I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">euronews: the backlash against Austria&#x27;s vaccine law (in-depth report, 2022)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Trump picks Bannon, Priebus, Flynn, Sessions and Pompeo</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Days after his election win, Donald Trump began building his team. On <strong>13 November 2016</strong>, he named Republican National Committee chairman Reince Priebus as chief of staff and Breitbart News chief Steve Bannon as chief strategist and senior counselor, calling them &quot;equal partners.&quot; Bannon&#x27;s appointment drew immediate condemnation from civil rights groups and Democrats because of Breitbart&#x27;s ties to the &quot;alt-right.&quot; On <strong>18 November</strong>, Trump chose retired Lt. Gen. Michael Flynn as national security adviser, Senator Jeff Sessions as attorney general and Representative Mike Pompeo as CIA director.</p>
+<p>Sources: <a class="inline-link" href="https://www.npr.org/sections/thetwo-way/2016/11/13/501937200/trump-taps-reince-priebus-as-chief-of-staff-steve-bannon-as-chief-strategist" target="_blank" rel="noopener noreferrer">NPR (13 Nov 2016)</a>, <a class="inline-link" href="https://www.npr.org/sections/thetwo-way/2016/11/18/502207098/trump-picks-sen-jeff-sessions-for-attorney-general" target="_blank" rel="noopener noreferrer">NPR (18 Nov 2016)</a>, <a class="inline-link" href="https://www.nbcnews.com/politics/justice-department/trump-administration-toss-steve-bannon-conviction-congress-jan-6-rcna607693" target="_blank" rel="noopener noreferrer">NBC News: DOJ moves to toss Bannon conviction (5 Nov 2026)</a>, <a class="inline-link" href="https://www.npr.org/2026/11/11/g-s1-152713/doj-abandons-convictions-trump-allies-no-defense" target="_blank" rel="noopener noreferrer">NPR: DOJ drops past cases against Trump allies (11 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Most of the first team didn&#x27;t last. Flynn quit after 24 days, pleaded guilty to lying to the FBI and was pardoned by Trump in 2020. Priebus was out by July 2017. Sessions was forced out in 2018 after recusing himself from the Russia inquiry. Pompeo went on to become secretary of state. Bannon is still the most influential of them. He was convicted of contempt of Congress in 2022 for defying the January 6 committee and served four months in prison. On 5 November 2026, Trump&#x27;s Justice Department asked the court to throw out that conviction &quot;in the interests of justice,&quot; and Bannon did not oppose. Judge Carl Nichols still has to rule, and legal experts told NPR it fits a pattern of the DOJ wiping the slate clean for Trump allies with no one left to defend the cases.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=2aV00TXfE0U" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: what Bannon and Priebus mean for the Trump administration (analysis, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=hhBwHn90G_g" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC Nightly News: Bannon appointment stirs controversy (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=DZhqo8p2Jqc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Wall Street Journal: Sessions, Pompeo tapped as Trump cabinet picks (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Leonard Cohen dies at 82</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>10 November 2016</strong>, the world learned that Leonard Cohen, the Montreal-born poet and songwriter behind &quot;Suzanne,&quot; &quot;Bird on the Wire&quot; and &quot;Hallelujah,&quot; had died at 82. His manager later said Cohen died in his sleep after a fall at his Los Angeles home on 7 November, three days before the announcement. He was buried in Montreal beside his parents &quot;in an unadorned pine box,&quot; his son Adam wrote. Just weeks earlier he had released his 14th album, &quot;You Want It Darker.&quot; Justin Trudeau led tributes from around the world. The news came out two days after the U.S. election.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-38009307" target="_blank" rel="noopener noreferrer">BBC News (17 Nov 2016)</a>, <a class="inline-link" href="https://www.theguardian.com/music/2016/nov/11/leonard-cohen-dies-aged-82" target="_blank" rel="noopener noreferrer">The Guardian (11 Nov 2016)</a>, <a class="inline-link" href="https://www.cbc.ca/news/canada/montreal/leonard-cohen-death-anniversary-9.7413956" target="_blank" rel="noopener noreferrer">CBC: Montrealers honour Cohen 10 years on (8 Nov 2026)</a>, <a class="inline-link" href="https://www.theglobeandmail.com/culture/article-leonard-cohen-tributes-10-years-after-his-death/" target="_blank" rel="noopener noreferrer">The Globe and Mail: anniversary tributes</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Ten years on, his reputation is still growing. On 7 November 2026, fans covered his grave on Mount Royal with close to 100 roses and visited his home in Montreal&#x27;s Plateau, while Adam Cohen led anniversary tribute concerts. Montreal&#x27;s 22-storey &quot;Tower of Songs&quot; mural, put up in 2017, is a permanent landmark, and dance, theatre and literary tributes are running through November in Quebec and Ontario.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Uv4J7sID3Pk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">National Film Board of Canada: &quot;Ladies and Gentlemen... Mr. Leonard Cohen&quot; (full documentary, 1965; uploaded 2014)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=RZb83Sz8yV8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBC The National: an intimate portrait of Leonard Cohen (TV profile, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=c6ADdRqC1II" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Radio-Canada Info: a tribute in Montreal 10 years after his death (report, French, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Ferdinand Marcos is buried in the Heroes&#x27; Cemetery</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>18 November 2016</strong>, the remains of former dictator Ferdinand Marcos, who died in exile in 1989, were buried at the Libingan ng mga Bayani in Taguig with military honours and a 21-gun salute. The ceremony was kept private and almost secret. Police said they learned the final schedule only the night before, and it happened while President Rodrigo Duterte, who had promised the burial, was away at the APEC summit in Peru. The Supreme Court had cleared the burial on 8 November. Martial-law victims and many young Filipinos protested in Manila and other cities, saying a hero&#x27;s burial whitewashed two decades of killings, torture and plunder.</p>
+<p>Sources: <a class="inline-link" href="https://www.rappler.com/philippines/152813-ferdinand-marcos-heroes-burial/" target="_blank" rel="noopener noreferrer">Rappler (18 Nov 2016)</a>, <a class="inline-link" href="https://www.cnn.com/2016/11/17/asia/philippines-marcos-burial-heroes-cemetery" target="_blank" rel="noopener noreferrer">CNN (2016)</a>, <a class="inline-link" href="https://www.rappler.com/philippines/supreme-court-acquittal-imelda-marcos-graft-september-2026/" target="_blank" rel="noopener noreferrer">Rappler: Imelda Marcos acquitted (Sep 2026)</a>, <a class="inline-link" href="https://www.icc-cpi.int/news/opening-duterte-trial-30-november-2026-practical-information" target="_blank" rel="noopener noreferrer">ICC: opening of the Duterte trial</a>, <a class="inline-link" href="https://www.philstar.com/headlines/2026/11/13/2569823/marcos-calls-patience-amid-asean-summit-disruptions" target="_blank" rel="noopener noreferrer">Philstar: Marcos hosts ASEAN summit (13 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The burial turned out to be an early step in the Marcos family&#x27;s return to power. Ferdinand &quot;Bongbong&quot; Marcos Jr. won the presidency in 2022, and this week he is hosting the 49th ASEAN Summit in Manila. In September 2026, the Supreme Court acquitted his mother Imelda, now 97, of seven graft counts tied to Swiss foundations, overturning her 2018 conviction. The president who allowed the burial is now on trial himself: Rodrigo Duterte&#x27;s trial for crimes against humanity over his drug war opens at the International Criminal Court in The Hague on 30 November.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=L9rNN7u7zy8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: hero&#x27;s burial of former dictator Marcos sparks outrage (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=mRgRv4erlG8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Rappler: martial law victims say burial is &quot;not a way to move on&quot; (testimony, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-13.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 13 de noviembre de 2026, 09:17 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
