@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Martes 17 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Martes 17 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Ebola reaches Kenya for the first time</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>6 October 2026</strong>, Kenya confirmed its first ever case of Ebola: a Kenyan man who had travelled home from the Democratic Republic of the Congo through Uganda, carrying the Bundibugyo strain behind Congo&#x27;s outbreak. Health teams traced all 135 of his close contacts in Kenya and abroad. Over the next two weeks eight of them tested positive, four relatives and four health workers who had cared for him before Ebola was suspected. The last case was confirmed on <strong>19 October</strong>. Two of the nine patients died. Kenya&#x27;s case mattered beyond its size. It showed that the Congo epidemic, declared on 15 May and by then the country&#x27;s worst on record, could reach a major regional air hub. On 20 October Nigeria reported an imported case in Abuja as well. The licensed Ebola vaccine was developed against the Zaire strain, not Bundibugyo, so containment depended on tracing and quarantine.</p>
+<p>Sources: <a class="inline-link" href="https://www.afro.who.int/countries/kenya/news/kenyas-last-ebola-patient-goes-home-42-day-countdown-begins" target="_blank" rel="noopener noreferrer">WHO Africa: Kenya&#x27;s last Ebola patient goes home</a>, <a class="inline-link" href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625" target="_blank" rel="noopener noreferrer">WHO Disease Outbreak News: DRC, Kenya and Nigeria</a>, <a class="inline-link" href="https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-16" target="_blank" rel="noopener noreferrer">ECDC: multi-country update, 16 Nov 2026</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Kenya appears to have contained it. Every secondary case was already in quarantine when symptoms began, so the virus never spread in the community. On 3 November five patients were discharged, &quot;the first Kenyans ever to recover from this disease,&quot; according to Health Cabinet Secretary Aden Duale. The last patient went home on 11 November, and a 42-day countdown began on 12 November. If no new case appears, Kenya will be declared Ebola-free on or about <strong>23 December 2026</strong>. Congo is a different story. As of 15 November it had 11,376 confirmed cases and 5,568 deaths across eight provinces, with North Kivu now driving much of the growth. WHO also reports insecurity and health-worker strikes that hamper the response, and contact follow-up below target.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=dpJ89ojb530" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Kenya races to trace contacts after first Ebola death (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=F1663OWumSs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Ebola outbreak in DR Congo outpaces efforts to contain it (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=MzBOhXaZTuM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera Inside Story: Can the Ebola outbreak in the DRC be contained? (panel, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Pope Leo XIV has surgery for lung cancer</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>13 October 2026</strong>, surgeons at Rome&#x27;s Gemelli hospital removed the lower lobe of Pope Leo XIV&#x27;s right lung after a routine check found a small growth. Tests during the operation confirmed lung adenocarcinoma, the most common type of lung cancer. The video-assisted operation lasted about 90 minutes and the Vatican reported no complications. It was the first major health event of the 71-year-old American pope&#x27;s pontificate, which began in May 2025. The Vatican announced the diagnosis and the plan before the operation. Leo left hospital on <strong>17 October</strong>, four days after surgery. A few days later the Vatican said final tissue and molecular tests showed the cancer was localized and that &quot;no further treatment is necessary.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-surgery-gemelli-hospital-successful.html" target="_blank" rel="noopener noreferrer">Vatican News: surgery successful</a>, <a class="inline-link" href="https://ewtnvatican.com/articles/pope-leo-xiv-needs-no-further-treatment-after-lung-cancer-surgery-vatican-says" target="_blank" rel="noopener noreferrer">EWTN: no further treatment needed</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/16/pope-leo-lung-cancer-surgery-lobectomy" target="_blank" rel="noopener noreferrer">The Guardian: what a lobectomy is</a>, <a class="inline-link" href="https://www.ncronline.org/vatican/vatican-news/weeks-after-surgery-leo-begins-longest-trip-yet-calls-accessible-healthcare" target="_blank" rel="noopener noreferrer">NCR: Leo begins longest trip weeks after surgery</a>, <a class="inline-link" href="https://www.vaticannews.va/en/pope/news/2026-11/pope-leo-xiv-press-conference-latin-america-journey.html" target="_blank" rel="noopener noreferrer">Vatican News: in-flight press conference</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Leo has recovered faster than many expected. He held a general audience in the rain on 21 October and skipped an Assisi peace meeting on 27 October on doctors&#x27; advice. On 6 November, less than four weeks after surgery, he left on the longest trip of his papacy so far: 12 days in Uruguay, Argentina and Peru, including high-altitude Cusco. On the flight home (Vatican News transcript, 17 November) he said: &quot;I&#x27;m not at 100 percent, but I&#x27;m doing quite well.&quot; He said the tumour was &quot;entirely contained&quot; in the part of the lung that was removed and that he would keep up regular check-ups. He also urged people to get screened. Since the operation he has spoken often about access to healthcare as a right.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=qKvBI4_qLdk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Vatican News: Departure from Gemelli Hospital, 17 Oct 2026 (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=KIP3Oa-7JiQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: Medical experts break down Pope Leo XIV&#x27;s lung cancer diagnosis (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=MiM8FGO36nw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: Pope Leo has lung cancer, Vatican says (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Ships sink in Hormuz and Brent hits $110</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>14 October 2026</strong>, the Singapore-flagged container ship GFS Pride sank in the Strait of Hormuz after an unidentified projectile hit it and set it on fire. All 21 crew were evacuated. A sister ship, GFS Giselle, was also hit that day. The International Maritime Organization said the Pride was the third commercial ship sunk since the U.S.-Israeli war on Iran began in late February. More than 20 vessels, mostly tankers, had been attacked in the region that month. Iran&#x27;s Revolutionary Guards claimed mine strikes, and on 17 October said two supertankers had exploded after hitting mines. The maritime security firm Marisks called Iran&#x27;s mine claims part of a psychological operations campaign meant to scare off shipping. Hormuz exports, which had recovered to prewar levels in September under U.S. naval escort, fell about 40% below normal. On <strong>16 October</strong>, Brent briefly touched $110 a barrel and settled at $109.86, its highest since May.</p>
+<p>Sources: <a class="inline-link" href="https://www.cnbc.com/2026/10/14/container-ship-sinks-strait-hormuz-as-iran-war-attacks.html" target="_blank" rel="noopener noreferrer">CNBC: container ship sinks as Iran steps up attacks</a>, <a class="inline-link" href="https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html" target="_blank" rel="noopener noreferrer">CNBC: oil spikes as Iran escalates Hormuz attacks (16 Oct)</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/17/tankers-hit-in-strait-of-hormuz-as-drone-raises-alarm-at-iraq-gas-field" target="_blank" rel="noopener noreferrer">Al Jazeera: tankers hit in Hormuz (17 Nov)</a>, <a class="inline-link" href="https://www.aa.com.tr/en/middle-east/-oil-tanker-struck-twice-in-strait-of-hormuz-catches-fire-uk-maritime-agency/4127562" target="_blank" rel="noopener noreferrer">Anadolu: tanker struck twice</a>, <a class="inline-link" href="https://www.cnbc.com/2026/11/16/oil-prices-brent-wti-latest.html" target="_blank" rel="noopener noreferrer">CNBC: oil falls on recovering exports (16 Nov)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The attacks have continued. On 16 and 17 November Iran said several more tankers and a gas carrier hit mines, and UKMTO reported a tanker struck twice and burning north of Khasab, Oman, with its crew unaccounted for. The IMO counted 136 security incidents involving ships in the region between 1 March and 11 November, 35 of them in October. A third U.S. aircraft carrier has arrived in the region, and a June U.S.-Iran memorandum of understanding remains stalled. Oil markets, however, have adjusted: Brent settled at <strong>$92.44</strong> on 16 November. The IEA now forecasts a supply surplus in the fourth quarter as Middle East exports recover faster than demand.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=ugi9XI8LyS8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Bloomberg Television: Container ship sinks in Strait of Hormuz as attacks escalate (markets coverage, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=-vH3jZZuSfI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">euronews: Another tanker catches fire near Hormuz after two cargo ships sunk (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=tW3degbCJBA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera: How the Strait of Hormuz works and why it matters (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The UN Security Council endorses Trump&#x27;s Gaza plan</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>17 November 2025</strong>, the UN Security Council adopted Resolution 2803 by 13 votes to none, with Russia and China abstaining. It endorsed Donald Trump&#x27;s 20-point &quot;Comprehensive Plan to End the Gaza Conflict,&quot; welcomed a &quot;Board of Peace&quot; as a transitional administration for Gaza, and authorized a temporary International Stabilization Force (ISF) to secure the territory, protect civilians and oversee the demilitarization of Hamas. The mandate runs to the end of 2027. Washington presented the vote as international backing for the October 2025 ceasefire. Hamas rejected any role for the force in disarming it, and Palestinian and Arab critics objected that the resolution set no firm path to statehood.</p>
+<p>Sources: <a class="inline-link" href="https://www.un.org/unispal/document/security-council-meeting-coverage-17nov25/" target="_blank" rel="noopener noreferrer">UN meeting coverage: Resolution 2803 adopted</a>, <a class="inline-link" href="https://www.un.org/unispal/document/security-council-resolution-on-president-donald-j-trumps-comprehensive-plan-to-end-the-gaza-conflict-s-res-2803-2025/" target="_blank" rel="noopener noreferrer">Text of S/RES/2803</a>, <a class="inline-link" href="https://www.un.org/unispal/document/implementation-of-united-nations-security-council-resolution-2803-2025-report-of-the-board-of-peace-through-the-office-of-the-high-representative-for-gaza-s-2026-418/" target="_blank" rel="noopener noreferrer">Board of Peace report to the Council (S/2026/418)</a>, <a class="inline-link" href="https://themedialine.org/top-stories/what-can-250-people-do-gazas-proposed-intl-force-faces-questions-as-us-pressure-on-israel-grows/" target="_blank" rel="noopener noreferrer">The Media Line: &quot;What can 250 people do?&quot;</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>A year later, the force still has not deployed. Albania, Indonesia, Kazakhstan, Kosovo and Morocco have pledged troops, and U.S. Central Command has named Maj. Gen. Jasper Jeffers as commander and set up training and staging areas. On 9 November 2026 the Israeli outlet Walla reported, citing unnamed officials, that Israel had approved an initial deployment of about 250 foreign soldiers, but neither government has confirmed it and no entry date has been set. The core sequence in the resolution is stuck. Hamas has not disarmed, Israel has not fully withdrawn, it resists large-scale reconstruction until Hamas does, and the Palestinian technocratic administration is not yet in place. The Board of Peace is now pressing Israel to let more aid in.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=dyIW56kAEew" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters: UN Security Council adopts US resolution on Trump&#x27;s Gaza plan (vote footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=CnKSejgnBo4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: What is the &quot;international stabilisation force&quot; in the Gaza plan? (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=j6XO4-u7CXM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC Global News Podcast: Why Israel is being urged by Trump&#x27;s Board of Peace to let more aid into Gaza (analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Chile&#x27;s first round sets up Jara versus Kast</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>16 November 2025</strong>, Chile held its first general election since compulsory voting returned. Communist Party candidate Jeannette Jara, running for the governing left, came first with 26.85%. Hard-right Republican José Antonio Kast followed with 23.93%, ahead of populist Franco Parisi on 19.71%. Right-leaning candidates together took about 70% of the vote, so Kast was the clear favourite for the runoff. He had campaigned almost entirely on crime and illegal immigration and avoided his hardline social views. Johannes Kaiser and Evelyn Matthei endorsed him, and on <strong>14 December</strong> he beat Jara with 58%, winning all 16 regions and receiving 7.2 million votes, the highest total in Chilean history.</p>
+<p>Sources: <a class="inline-link" href="https://tribunalcalificador.cl/resultados-oficiales-presidentes-primera-vuelta-2025/" target="_blank" rel="noopener noreferrer">Tribunal Calificador de Elecciones: official first-round results</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/2025_Chilean_general_election" target="_blank" rel="noopener noreferrer">Wikipedia: 2025 Chilean general election</a>, <a class="inline-link" href="https://www.npr.org/2026/11/14/nx-s1-6040144/chile-protests-fuel-kast-students" target="_blank" rel="noopener noreferrer">NPR: Kast faces growing protests as fuel prices soar</a>, <a class="inline-link" href="https://www.latercera.com/politica/noticia/criteria-aprobacion-del-presidente-kast-llega-al-18-y-desaprobacion-se-ubica-en-72/" target="_blank" rel="noopener noreferrer">La Tercera: Criteria poll, 18% approval</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Eight months after taking office in March 2026, Kast is deeply unpopular. Criteria put his approval at 18% in mid-November, and Cadem at 27%. In July his government chose not to use a state mechanism that softens fuel-price rises from the Iran war, and prices jumped. Last month it emerged that his government had signed decrees cutting the sentences of 56 prisoners, including people convicted of child rape and dictatorship-era human-rights crimes. Kast called that an &quot;error.&quot; In November truckers blockaded highways and students marched against cuts to education and science. On 13 November the government backed down and sent Congress a bill reversing planned fuel-price increases.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=mx7uGZW9bFs" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 Español: Jara y Kast pasan a la segunda vuelta (election-night report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Y0kKpyMwXIU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Kast elected Chile&#x27;s next president (runoff report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=AL6pzyucclQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">EL PAÍS: Kast congela el alza de los combustibles tras protestas (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>A bad file at Cloudflare takes down much of the web</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>18 November 2025</strong>, starting at 11:20 UTC (6:20 a.m. Bogotá time), Cloudflare&#x27;s network began returning errors for a large share of the websites it serves. For several hours X, ChatGPT and many other services were patchy or unreachable. The cause was not an attack. A database permissions change made a query produce a Bot Management &quot;feature file&quot; that was twice its normal size. When that file spread across the network, it exceeded a hard limit in Cloudflare&#x27;s proxy software, which crashed instead of handling the error. Core traffic was largely back by 14:30 UTC. Cloudflare&#x27;s own postmortem called it its worst outage since 2019. A shorter global outage followed on <strong>5 December 2025</strong>.</p>
+<p>Sources: <a class="inline-link" href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" rel="noopener noreferrer">Cloudflare blog: postmortem of the 18 November 2025 outage</a>, <a class="inline-link" href="https://arstechnica.com/tech-policy/2025/11/cloudflare-broke-much-of-the-internet-with-a-corrupted-bot-management-file/" target="_blank" rel="noopener noreferrer">Ars Technica: file that doubled in size</a>, <a class="inline-link" href="https://blog.cloudflare.com/code-orange-fail-small-complete/" target="_blank" rel="noopener noreferrer">Cloudflare blog: Code Orange: Fail Small is complete</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The outage became a standard case study in how much of the internet depends on a few infrastructure companies, and it came weeks after a major AWS outage. Cloudflare responded with an engineering programme called &quot;Code Orange: Fail Small&quot; and declared it complete on 1 May 2026. Configuration changes now roll out in stages with health checks and automatic rollback through a new system called Snapstone. Services fall back to the last good configuration or &quot;fail open&quot; rather than crash. Emergency access was widened to 18 key services. New internal rules now ban the kind of Rust `.unwrap()` call that turned a bad file into a global crash. Cloudflare says that if the same Bot Management change were deployed today, it would be caught while it was affecting only a small share of traffic.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=P2BGLB-hQFk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Internet Report (ThousandEyes): Understanding the November 18 Cloudflare outage (technical deep dive, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=oorl92gJCdY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: Cloudflare outage causes delays for X and OpenAI (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Russia blows up its own satellite and endangers the space station</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>15 November 2021</strong>, Russia fired a direct-ascent A-235 &quot;Nudol&quot; missile from Plesetsk and destroyed Kosmos-1408, a dead Soviet spy satellite launched in 1982. The blast created a cloud of debris about 50 km above the International Space Station&#x27;s orbit. The U.S. State Department said it had identified about 1,500 trackable pieces, with hundreds of thousands of smaller fragments. The seven crew on the ISS, including two Russian cosmonauts, sheltered in their Soyuz and SpaceX Crew Dragon capsules as the station passed through the debris. Washington called the test &quot;dangerous and irresponsible.&quot; NASA&#x27;s Bill Nelson said it also threatened China&#x27;s space station. Moscow at first denied any risk, then Defence Minister Sergei Shoigu confirmed the test.</p>
+<p>Sources: <a class="inline-link" href="https://en.wikipedia.org/wiki/Kosmos_1408" target="_blank" rel="noopener noreferrer">Wikipedia: Kosmos 1408 (with linked primary reports)</a>, <a class="inline-link" href="https://celestrak.org/NORAD/elements/table.php?FORMAT=tle&amp;GROUP=cosmos-1408-debris" target="_blank" rel="noopener noreferrer">CelesTrak: Russian ASAT test debris catalogue</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The debris has nearly all burned up, faster than expected because strong solar activity thickened the upper atmosphere. In the meantime the ISS had to dodge a fragment in June 2022, and a piece came within 14.5 m of a Chinese satellite. By February 2023 only about 300 of roughly 1,790 catalogued pieces remained in orbit. Today the CelesTrak catalogue lists just <strong>two</strong> Kosmos-1408 debris objects still in orbit. The political effect has lasted longer. In April 2022 the U.S. announced a moratorium on destructive direct-ascent anti-satellite tests and other countries joined it, but Russia did not. Anti-satellite weapons remain unregulated by any treaty.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=mvdQcDDUV1o" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Scott Manley: Russian anti-satellite weapon causes emergency on the space station (in-depth explainer, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=S2sW1Wa9JsA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters: Russian anti-satellite weapons test &quot;dangerous,&quot; says U.S. (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Steve Bannon is indicted for defying the January 6 committee</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>12 November 2021</strong>, a federal grand jury indicted Steve Bannon, Trump&#x27;s former chief strategist, on two counts of contempt of Congress. He had refused to testify or hand over documents to the House committee investigating the 6 January 2021 attack on the Capitol, citing Trump&#x27;s claim of executive privilege, even though he had left the White House in 2017. He surrendered to the FBI on <strong>15 November</strong>. It was the first contempt-of-Congress prosecution in decades. A jury convicted him in July 2022, and he was sentenced to four months in prison.</p>
+<p>Sources: <a class="inline-link" href="https://www.nbcnews.com/politics/justice-department/trump-administration-toss-steve-bannon-conviction-congress-jan-6-rcna607693" target="_blank" rel="noopener noreferrer">NBC News: DOJ moves to toss Bannon&#x27;s conviction (5 Nov 2026)</a>, <a class="inline-link" href="https://www.scotusblog.com/2026/04/court-allows-steve-bannon-to-move-forward-on-dismissal-of-criminal-charges-against-him/" target="_blank" rel="noopener noreferrer">SCOTUSblog: Court allows Bannon to move forward on dismissal</a>, <a class="inline-link" href="https://www.supremecourt.gov/docket/docketfiles/html/public/25-453.html" target="_blank" rel="noopener noreferrer">Supreme Court docket 25-453</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Bannon served his four months in 2024, but the conviction may now be erased. In April 2026 the Supreme Court vacated the appeals court ruling that had upheld the verdict and sent the case back so the trial judge could consider the Trump Justice Department&#x27;s request to drop it. Judge Carl Nichols refused in August, saying the government had not adequately explained why. On <strong>5 November 2026</strong> the department filed again, saying it &quot;harbors significant doubts&quot; about the fairness of the trial and that defending the conviction was &quot;inconsistent with this Administration&#x27;s enforcement priorities.&quot; Bannon&#x27;s lawyers did not oppose it. A ruling is pending.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=9MibUVU7tAc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: Steve Bannon indicted for contempt of Congress (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Da_FKYP4kiw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: Steve Bannon surrenders to FBI (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Three men are convicted of murdering Ahmaud Arbery</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>24 November 2021</strong>, a jury in Brunswick, Georgia, with 11 white members and one Black member, convicted Travis McMichael, his father Gregory McMichael and their neighbour William &quot;Roddie&quot; Bryan of murdering Ahmaud Arbery. Arbery, a 25-year-old Black man, was chased through the Satilla Shores neighbourhood in pickup trucks and shot while jogging in February 2020. Local prosecutors had not charged anyone for more than two months, until Bryan&#x27;s own phone video leaked and the Georgia Bureau of Investigation took over. The defence argued it was a lawful citizen&#x27;s arrest. The jury rejected that, and in January 2022 all three got life sentences, the McMichaels without parole.</p>
+<p>Sources: <a class="inline-link" href="https://www.ajc.com/news/2025/11/ahmaud-arberys-parents-relieved-after-court-upholds-hate-crime-convictions/" target="_blank" rel="noopener noreferrer">AJC: court upholds hate crime convictions (Nov 2025)</a>, <a class="inline-link" href="https://www.supremecourt.gov/docket/docketfiles/html/public/25-7371.html" target="_blank" rel="noopener noreferrer">Supreme Court docket 25-7371 (cert denied 19 Oct 2026)</a>, <a class="inline-link" href="https://www.wtoc.com/2025/02/05/judge-throws-out-violation-oath-charge-ending-jackie-johnson-trial/" target="_blank" rel="noopener noreferrer">WTOC: judge throws out last charge, ending Jackie Johnson trial</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The convictions have held. In February 2022 a federal jury also found all three guilty of hate crimes. The 11th Circuit upheld those convictions in November 2025, refused a rehearing in February 2026, and on <strong>19 October 2026</strong> the U.S. Supreme Court declined to hear Travis McMichael&#x27;s appeal. The case changed Georgia law: the state passed a hate-crimes statute in 2020 and repealed most of its Civil War-era citizen&#x27;s arrest law in 2021. Accountability for the original handling of the case was limited. In February 2025 a judge threw out the misconduct charges against former District Attorney Jackie Johnson without a jury verdict.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=-nKf0TW-L1M" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The New York Times Visual Investigations: Retracing Ahmaud Arbery&#x27;s final minutes (investigation, 2020)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=gMYsR-7QLNE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Court TV: The Killing of Ahmaud Arbery: Victim to Verdict (documentary, 2023)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=4Q_UJUkK2cc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: Special report on the guilty verdicts (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Trump pays $25 million to settle the Trump University fraud suits</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>18 November 2016</strong>, ten days after winning the presidency, Donald Trump agreed to pay $25 million to settle three lawsuits over Trump University. These were a fraud case brought by New York Attorney General Eric Schneiderman and two class actions in California. Former students said they had paid up to $35,000 for real-estate seminars that promised Trump&#x27;s &quot;secrets&quot; and delivered high-pressure sales pitches. More than 6,000 people were covered. Trump admitted no wrongdoing. During the campaign he had vowed never to settle and attacked the San Diego judge, Gonzalo Curiel, as biased because of his &quot;Mexican heritage.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://ag.ny.gov/press-release/2016/statement-ag-schneiderman-25-million-settlement-agreement-reached-trump" target="_blank" rel="noopener noreferrer">NY Attorney General: statement on the $25M settlement</a>, <a class="inline-link" href="https://www.npr.org/sections/thetwo-way/2016/11/18/502620122/new-york-attorney-general-says-trump-agrees-to-settle-trump-university-lawsuits" target="_blank" rel="noopener noreferrer">NPR: Trump agrees to settle</a>, <a class="inline-link" href="https://www.abajournal.com/news/article/9th_circuit_upholds_25m_trump_university_settlement_that_gives_almost_a_ful" target="_blank" rel="noopener noreferrer">ABA Journal: 9th Circuit upholds the settlement (2018)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The settlement held. Judge Curiel approved it in March 2017, and in February 2018 the 9th Circuit rejected a former student&#x27;s attempt to opt out. Class members were to get back 80 to 90 percent of what they had paid, which the appeals court called &quot;almost a full recovery.&quot; The case was an early example of a pattern: Trump has faced several other suits over his businesses and nonprofits, including New York&#x27;s civil fraud case against the Trump Organization. Trump is now in his second term as president.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=VmNzzAz1_x8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS Evening News: Trump settles Trump University lawsuits for $25 million (news report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=d0mzeGaMDH8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Business Insider: What Trump University was really like, according to a former professor (testimony, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=fnV21RHhhWo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC Nightly News: Judge approves $25 million settlement (news report, 2017)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>&quot;Fake news&quot; outperforms real news on Facebook</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>16 November 2016</strong>, BuzzFeed News published Craig Silverman&#x27;s analysis showing that in the last three months of the U.S. campaign, the 20 best-performing fake election stories on Facebook got about 8.7 million shares, reactions and comments. That was more than the 7.4 million earned by the top 20 stories from 19 major news outlets. Most of the hoaxes favoured Trump or attacked Clinton, such as &quot;Pope Francis endorses Trump.&quot; Many were produced for advertising money, including by teenagers in Veles, Macedonia. Six days earlier, Mark Zuckerberg had called the idea that fake news on Facebook influenced the election &quot;a pretty crazy idea.&quot; Under pressure, Google and Facebook cut fake-news sites from their ad networks, and in December Facebook began working with outside fact-checkers.</p>
+<p>Sources: <a class="inline-link" href="https://www.buzzfeednews.com/article/craigsilverman/viral-fake-election-news-outperformed-real-news-on-facebook" target="_blank" rel="noopener noreferrer">BuzzFeed News: viral fake election news outperformed real news</a>, <a class="inline-link" href="https://www.vox.com/new-money/2016/11/16/13659840/facebook-fake-news-chart" target="_blank" rel="noopener noreferrer">Vox: the top 20 fake news stories chart</a>, <a class="inline-link" href="https://www.rfi.fr/en/international-news/20260911-latin-america-fact-check-group-asks-meta-not-to-replace-verification-practice" target="_blank" rel="noopener noreferrer">RFI/AFP: Latin American fact-checkers ask Meta not to replace them</a>, <a class="inline-link" href="https://www.meta.com/technologies/community-notes/" target="_blank" rel="noopener noreferrer">Meta: Community Notes availability</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The term &quot;fake news&quot; was quickly turned around and used by Trump against mainstream media. Zuckerberg later said he regretted his &quot;crazy idea&quot; comment. The fact-checking programme born in that crisis is being dismantled. In January 2025 Meta ended it in the United States and replaced it with crowdsourced Community Notes modelled on X. In September 2026 Meta began testing Community Notes in 16 Spanish-speaking Latin American countries, Colombia among them, while Brazil was left out. The regional fact-checking network LatamChequea and the International Fact-Checking Network have asked Meta to &quot;complement, not replace&quot; independent verification. Meta has not said when the change will be final.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=I6kD2ErSKwg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Atlantic: The Fake News Teenager (short documentary, 2018)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=0F7BT-mZFTw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WIRED: Inside the fake news factory of Macedonia (report, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=HaiK2RAHIWA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Techonomy: Zuckerberg calls fake-news influence &quot;a crazy idea&quot; (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Chapecoense plane crashes near Medellín</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the night of <strong>28 November 2016</strong>, LaMia Flight 2933, a Bolivian charter carrying Brazil&#x27;s Chapecoense football club to the first leg of the Copa Sudamericana final against Atlético Nacional, crashed into Cerro Gordo near La Unión, Antioquia, as it approached Medellín. Of 77 people aboard, 71 died, including most of the team, club directors and journalists. Six survived: defenders Alan Ruschel and Neto, goalkeeper Jakson Follmann, journalist Rafael Henzel, flight attendant Ximena Suárez and technician Erwin Tumiri. The plane had run out of fuel. Pilot Miguel Quiroga, who co-owned LaMia, flew without the required reserve. Medellín filled the Atanasio Girardot stadium in white for the victims, and at Nacional&#x27;s request CONMEBOL awarded the title to Chapecoense.</p>
+<p>Sources: <a class="inline-link" href="https://placar.com.br/placar/dez-anos-depois-as-marcas-da-injustica-do-acidente-da-chapecoense/" target="_blank" rel="noopener noreferrer">Placar: &quot;Dez anos depois&quot; investigation (Portuguese)</a>, <a class="inline-link" href="https://ge.globo.com/sc/futebol/times/chapecoense/noticia/2026/11/03/chapecoense-e-o-primeiro-time-rebaixado-da-serie-a-2026.ghtml" target="_blank" rel="noopener noreferrer">ge: Chapecoense relegated from Serie A 2026 (Portuguese)</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/LaMia_Flight_2933" target="_blank" rel="noopener noreferrer">Wikipedia: LaMia Flight 2933</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Ten years on, at the 29 November anniversary, families say justice has not been done. No one is serving prison time. Five people in Bolivia, including controller Celia Castedo, who approved the flight plan, and LaMia&#x27;s director Gustavo Vargas Gamboa, are free or on trial while not in custody. A U.S. judgment of about US$884 million for 40 families is held up on appeal. Chapecoense, ordered by a Santa Catarina court to pay damages, entered judicial recovery in 2022, which cut what families could collect by around 80%. Henzel died in 2019, Neto retired and is now a speaker and writer, Follmann (who lost a leg) is a speaker and singer, and Ruschel is retiring this year. On 3 November 2026 Chapecoense was relegated from Serie A for the third time since the crash.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=-3ao75491Jg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Telemedellín: &quot;Hasta el cielo lloró&quot; (feature documentary, Spanish, 2018)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=mqYjSczPJ4E" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Noticias Caracol: The day Medellín&#x27;s Atanasio Girardot dressed in white for Chapecoense (report, Spanish)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=KdBgXP-b08I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">UOL: Chapecoense returns to the crash site ten years later (report, Portuguese, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-17.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 17 de noviembre de 2026, 09:22 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
