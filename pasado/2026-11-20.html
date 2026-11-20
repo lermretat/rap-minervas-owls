@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 20 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 20 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>France&#x27;s protests turn into its worst riots in years</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>17 October 2026</strong>, a nationwide day of protest over the cost of living and the state of France&#x27;s schools turned into one of the most violent days the country had seen in years. The interior ministry counted more than half a million marchers. In many cities, hooded and masked groups looted shops, torched cars and attacked public buildings. Limoges&#x27;s 19th-century town hall burned and its spire collapsed, and city halls in Marseille, Lille and Angers were broken into. Nearly 2,400 people were arrested over the weekend, almost 1,000 police officers and firefighters were injured, and Prime Minister Sébastien Lecornu said about 3,000 businesses had been looted or vandalized. No one was killed, which Lecornu called &quot;a miracle.&quot; Interior Minister Laurent Nuñez admitted police had &quot;lost control&quot; in major cities and offered to resign; Macron refused. On <strong>19 October</strong>, curfews were imposed in parts of Paris, including Place de la République and Les Halles, and in Lyon. Donald Trump posted &quot;France is burning!&quot; and blamed immigration. French officials did not blame immigrants and said most of those arrested had little to do with the student movement. Italy saw looting and hundreds of arrests the same weekend.</p>
+<p>Sources: <a class="inline-link" href="https://www.nbcnews.com/world/europe/france-violence-riots-looting-paris-limoges-curfews-macron-protests-rcna604292" target="_blank" rel="noopener noreferrer">NBC News: France reels from worst violence in years</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/24/hundreds-of-thousands-march-across-france-in-protests-over-schools-and-policing" target="_blank" rel="noopener noreferrer">The Guardian: Hundreds of thousands march a week later</a>, <a class="inline-link" href="https://www.afp.com/en/new-french-protests-bring-more-100000-streets" target="_blank" rel="noopener noreferrer">AFP: New protests, 17 Nov 2026</a>, <a class="inline-link" href="https://www.rfi.fr/en/france/20261118-lower-turnout-at-latest-french-cost-of-living-protests-but-anger-still-raw" target="_blank" rel="noopener noreferrer">RFI: Lower turnout but anger still raw</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The worst violence has not returned, but the anger behind it has not gone away. Macron banned non-union protests he called &quot;illegitimate&quot; and kept marches out of city centres. On 24 October at least 400,000 people still marched, according to the government, watched by more than 70,000 police. There were 1,314 arrests that day but far less looting. Later the Guardian put the 17 October arrest total at about 2,700. Turnout has fallen since then. The ministry counted 575,000 protesters on 5 November and 146,000 on 17 November, when public-sector unions struck over a fourth straight year without a general pay rise in the draft 2027 budget. Complaints that police weapons have maimed teenagers, some of whom lost eyes or hands, keep piling up. The movement has also spread abroad: youth groups called a strike in more than 25 European countries for today, 20 November. Politically, the unrest leaves Macron weaker in his final months. Marine Le Pen leads polls for the April 2027 presidential election with more than 30%.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=leK1U5VB404" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: France wakes from curfews after destructive riots (in-depth report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Wh5X6jYIewk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Targeted curfews help quell violence and rioting across French cities (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=KRXTIT0OU2c" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Guardian News: &#x27;It&#x27;s hell&#x27;: residents reel after violent weekend riots across France (footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Kenya convicts the Shakahola cult leader of murdering 191 people</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 October 2026</strong>, the High Court in Mombasa found self-styled pastor Paul Mackenzie and 28 associates guilty of murdering 190 children and one adult in the Shakahola forest near Malindi. Mackenzie founded the Good News International Church in 2003. He preached that the end of the world was near and told followers to starve themselves, and their children, in order to &quot;meet Jesus.&quot; Prosecutors described a &quot;structured hierarchy of death&quot;: children first, then teenagers, women and finally men. Most victims starved. Others died of asphyxia, neck compression or head injuries, and some children were denied food while their parents watched. Justice Diana Kavedza Mochache delivered the ruling after a hearing of more than eight hours. Mackenzie had been arrested in April 2023 after a rights group tipped off authorities. More than 400 bodies were eventually dug up from shallow graves on his 800-acre ranch. He had been arrested twice before, in 2017 and 2019, and released both times.</p>
+<p>Sources: <a class="inline-link" href="https://www.dw.com/en/kenya-cult-leader-guilty-of-murdering-190-children-1-adult/a-79706279" target="_blank" rel="noopener noreferrer">DW: Cult leader guilty of murdering 190 children, 1 adult</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cm5yne5984l0o" target="_blank" rel="noopener noreferrer">BBC: Mackenzie sentenced to 200 years</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>On <strong>6 November 2026</strong>, the judge sentenced Mackenzie to 200 years in prison: 100 years for the homicides and 100 for the starvation offences, to be served one after the other. His co-accused, including guards who enforced the fasting and gravediggers who hid the bodies, got sentences of up to 160 years. Prosecutors had asked for the death penalty. The judge said the case met the threshold but declined to impose it. Kenya has not carried out an execution since 1987. Mackenzie still faces separate manslaughter and terrorism charges, which he denies. In January 2026 he was also charged over 52 more bodies found in a nearby village. The verdicts cover only 191 of the 400-plus dead. A state human rights commission found that local officials and police had repeatedly ignored the cult, and Francis Wanje, who lost eight relatives, has criticized the police for failing to act when he reported the cult in March 2023. President Ruto&#x27;s commission of inquiry was later ruled unconstitutional.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=TY4QdYYfc9I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NTV Kenya: High Court finds Paul Mackenzie guilty of murder of 191 (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=EqBFhUfmjwg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NTV Kenya: Mackenzie sentenced to 200 years over Shakahola deaths (news report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=N99NWJqYptM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">KTN News Kenya: Court delivers judgment in Paul Mackenzie case (courtroom report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Japan launches MMX to bring back a piece of Mars&#x27;s moon Phobos</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 October 2026</strong> at 19:41 UTC (2:41 p.m. Bogotá time; 04:41 on 20 October in Japan), an H3 rocket lifted off from Tanegashima carrying JAXA&#x27;s Martian Moons eXploration (MMX) probe. The 4,480 kg spacecraft separated about 71 minutes after launch and set off on a ten-month trip to Mars. It was the only Mars launch of the 2026 window, which comes around every 26 months. The plan is to arrive in August 2027, fly around Phobos in a &quot;quasi-satellite orbit,&quot; survey it for more than a year, and drop the French-German rover IDEFIX. That would be the first rover on any moon other than our own. MMX will then land on Phobos twice, no earlier than December 2028, and collect at least 10 g of material. The samples are due to land in Australia in 2031, which would make them the first ever returned from the Martian system. Soviet and Russian Phobos missions failed in 1988–89 and 2011. NASA, CNES, DLR and ESA supply instruments and tracking. Scientists hope the samples will show whether Phobos is a captured asteroid or debris from an ancient impact on Mars. They could also contain Martian material blasted off the planet&#x27;s surface.</p>
+<p>Sources: <a class="inline-link" href="https://global.jaxa.jp/press/2026/10/20261020-1_e.html" target="_blank" rel="noopener noreferrer">JAXA: Launch result of MMX on H3 F10</a>, <a class="inline-link" href="https://www.nasaspaceflight.com/2026/10/mmx-launch/" target="_blank" rel="noopener noreferrer">NASASpaceFlight: Japanese MMX mission launches</a>, <a class="inline-link" href="https://global.jaxa.jp/press/2026/10/20261021-1_e.html" target="_blank" rel="noopener noreferrer">JAXA: Completion of initial critical operations</a>, <a class="inline-link" href="https://news.web.nhk/newsweb/na/nd-20261110de73663" target="_blank" rel="noopener noreferrer">NHK: MMX flying normally 6 million km from Earth (Japanese)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>So far everything is going to plan. JAXA completed the critical first operations on 21 October. On 10 November, the project manager reported that MMX was about 6 million km from Earth and flying normally, with solar power and communications working. The IDEFIX rover has reportedly passed its first full in-flight systems check. The next milestones are the August 2027 arrival and Phobos orbit insertion. MMX is now in a race with China&#x27;s Tianwen-3, which is also aiming to return Martian samples around 2031.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Fn6gzuGa-6c" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">JAXA: Launch live stream of MMX/H3 flight No.10 (original footage, English, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=-a0e8AKOWg0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DLR: MMX mission – The journey to the Martian moon Phobos (explainer)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=4-y0h6QgpEU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">VideoFromSpace: Blastoff! Japan launches MMX mission to Mars&#x27; moon Phobos (launch footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Trump&#x27;s 28-point plan for Ukraine leaks</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>20 November 2025</strong>, Axios published the full text of a 28-point peace plan for Ukraine. Trump envoy Steve Witkoff drafted it with Jared Kushner and Secretary of State Marco Rubio, after talks with Russian envoy Kirill Dmitriev. The same day, U.S. Army Secretary Dan Driscoll handed it to Volodymyr Zelensky in Kyiv. The plan would have treated Crimea, Luhansk and Donetsk as de facto Russian, including by the United States. Ukraine would have pulled its troops out of the part of Donetsk it still held, which would become a demilitarized zone. Other terms: a cap of 600,000 on Ukraine&#x27;s armed forces, a constitutional ban on joining NATO, elections within 100 days, full amnesty for all sides, sanctions relief and a return to the G8 for Russia, and a &quot;Peace Council&quot; chaired by Trump. Ukraine would get security guarantees and reconstruction money, part of it from frozen Russian assets. Dmitriev said &quot;the Russian position is really being heard.&quot; Reuters later reported that the plan drew on a Russian document. After talks with Ukrainian and European officials in Geneva, it was cut to about 19 points.</p>
+<p>Sources: <a class="inline-link" href="https://www.axios.com/2025/11/20/trump-ukraine-peace-plan-28-points-russia" target="_blank" rel="noopener noreferrer">Axios: Trump&#x27;s full 28-point plan</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/ck792we7zrz4o" target="_blank" rel="noopener noreferrer">BBC: Abu Dhabi talks end without breakthrough</a>, <a class="inline-link" href="https://apnews.com/article/trump-xi-putin-china-apec-25e17ec8d9c55fbff960d5631eaba71d" target="_blank" rel="noopener noreferrer">AP: Takeaways from the first China-US-Russia summit</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>A year later there is still no deal and the war continues. The plan&#x27;s core trade (Ukraine leaving the rest of Donetsk in exchange for guarantees) is still the main obstacle. U.S., Russian and Ukrainian delegations met in Abu Dhabi on <strong>10–11 November 2026</strong>, their first three-way talks since February. They agreed in principle on a large prisoner exchange but made no progress on a ceasefire or territory. Kremlin negotiator Vladimir Medinsky said &quot;every inch&quot; of land would be &quot;returned to Russia one way or another.&quot; Witkoff and Kushner then travelled to Moscow and Dublin to meet Putin and Zelensky. Yesterday, <strong>19 November</strong>, Trump, Xi Jinping and Putin held the first ever three-way summit of their countries, in Shenzhen. Their &quot;peace declaration&quot; did not mention Ukraine. In the meantime Trump has eased sanctions on Russian diesel and waived new oil sanctions, which has strained U.S.–Ukrainian relations.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=klCZCe4o51c" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CBS News: Breaking down the 28-point peace plan that appears to heavily favor Russia (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=QODHvDRo-q4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Face the Nation: Is the 28-point plan a win for Russia and a surrender for Ukraine? (analysis, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=nACN2JgF8qA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Sky News: Trump&#x27;s peace plan: Will Ukraine give up 20% of their land? (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Gunmen seize more than 250 pupils and staff from a Catholic school in Nigeria</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Before dawn on <strong>21 November 2025</strong>, gunmen attacked St Mary&#x27;s Catholic boarding school in Papiri, Niger State, and took more than 250 children and staff. It was one of the worst mass kidnappings in Nigeria&#x27;s history. It came days after two others: on 17 November, 25 Muslim schoolgirls were taken from a government school in Kebbi State, and on 18 November, 38 worshippers were abducted from a church in Kwara State. About 50 Papiri pupils escaped in the first days. The number still held stayed unclear for weeks, because the school&#x27;s figures and the authorities&#x27; figures did not match. Northern states closed many schools. The kidnappings came as Donald Trump was accusing Nigeria of failing to protect Christians.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c3d03943zg8o" target="_blank" rel="noopener noreferrer">BBC: All Papiri pupils now free</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cj69j8l918do" target="_blank" rel="noopener noreferrer">BBC: US launches strikes against Islamic State in Nigeria</a>, <a class="inline-link" href="https://saharareporters.com/2026/11/14/amid-tinubu-apc-campaigns-borno-niger-state-children-spend-months-bandits-captivity" target="_blank" rel="noopener noreferrer">Sahara Reporters: Borno and Niger children still in captivity, 14 Nov 2026</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>All of the Papiri captives came home. About 100 were freed on 8 December and the last 130 on 21 December, and they were reunited with their families before Christmas. The government said 230 were freed in total and &quot;not a single pupil is left in captivity.&quot; It has never said how the release was secured or whether a ransom was paid. Most analysts blame criminal gangs that kidnap for ransom. On 25 December 2025, U.S. Africa Command struck Islamic State camps in Sokoto State in coordination with Nigeria. School kidnappings have not stopped. As of 14 November 2026, 78 children taken from schools in Mussa and Lassa, Borno State, in May and June have been held for 213 days. Fifteen Islamiyya schoolgirls kidnapped in Niger State&#x27;s Rafi area on 31 October are still missing, and their kidnappers want ₦100 million. Parents say they have seen little rescue effort as campaigning begins for the 2027 elections.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=zbf6VERgy0I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Global News: 50 children escape Nigerian abduction, but more remain captive (news report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=svQarJA1kig" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP Archive: Remaining students kidnapped in Nigeria are reunited with their families ahead of Christmas (footage, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The G20 meets in Africa for the first time, and the U.S. stays away</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>22–23 November 2025</strong>, Johannesburg hosted the first G20 summit held in Africa, and the United States boycotted it. Trump sent no one, repeating claims that South Africa persecutes white Afrikaners, claims that have been widely discredited. Argentina&#x27;s Javier Milei also stayed home, and Xi Jinping, Vladimir Putin and Claudia Sheinbaum were absent too. Breaking with tradition, South Africa had the leaders adopt their declaration at the start of the summit instead of the end. It was a 122-point text on climate, debt relief, inequality and conflicts from Sudan to Ukraine, adopted despite U.S. objections. Argentina refused to endorse it. Canada&#x27;s Mark Carney said &quot;the world can move on without the United States.&quot; At the close, Cyril Ramaphosa refused to hand the presidency to a junior U.S. embassy official and simply banged the gavel. The White House accused South Africa of &quot;weaponizing&quot; its presidency.</p>
+<p>Sources: <a class="inline-link" href="https://en.wikipedia.org/wiki/2025_G20_Johannesburg_summit" target="_blank" rel="noopener noreferrer">Wikipedia: 2025 G20 Johannesburg summit</a>, <a class="inline-link" href="https://www.theguardian.com/world/2025/nov/23/cyril-ramaphosa-gavel-g20-summit-us-handover" target="_blank" rel="noopener noreferrer">The Guardian: Ramaphosa closes summit after US boycott and handover row</a>, <a class="inline-link" href="https://www.dailymaverick.co.za/article/sa-formally-asks-fellow-g20-members-to-object-to-its-exclusion-by-the-us" target="_blank" rel="noopener noreferrer">Daily Maverick: SA asks G20 members to object to its exclusion</a>, <a class="inline-link" href="https://www.ewn.co.za/2026/10/26/sa-not-losing-sleep-over-g20-snub-as-focus-shifts-to-b20-business-stream-says-roelf-meyer" target="_blank" rel="noopener noreferrer">EWN: SA &quot;not losing sleep&quot; over G20 snub</a>, <a class="inline-link" href="https://www.cbsnews.com/miami/news/g20-summit-trump-national-doral-security-planning-secret-service/" target="_blank" rel="noopener noreferrer">CBS Miami: Doral summit set for 14–15 December</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The split has deepened. On 4 December 2025, Washington told South Africa it would not be invited to any G20 event during the U.S. presidency, including the leaders&#x27; summit, and the U.S. dropped the usual &quot;troika&quot; of past, present and next hosts. South Africa protested that a member can only be removed by consensus. Germany&#x27;s Friedrich Merz is among the leaders who have asked Trump to change his mind. But in October South Africa&#x27;s ambassador, Roelf Meyer, said Pretoria was &quot;not insisting&quot; and would join only the B20 business track. The 2026 summit takes place at Trump National Doral, near Miami, on <strong>14–15 December</strong>. Trump has invited Vladimir Putin. The UK takes over the G20 in 2027.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=m6aXPJyZrHQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: G20 leaders issue declaration without US input after boycott (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=EpT08L30rbU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Associated Press: G20 summit in South Africa ends with absence of US after Trump boycott (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Modi gives in to the farmers and repeals his farm laws</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the morning of <strong>19 November 2021</strong>, Narendra Modi announced in a televised address that his government would repeal the three farm laws passed in September 2020. It was one of the biggest climbdowns of his time in office. The laws loosened rules on how crops are sold, priced and stored, and let farmers sell directly to private buyers outside the state-regulated mandis. Farmers feared this would erode the minimum support price (MSP) that many depend on. For a year, tens of thousands had camped on the highways into Delhi through heat, cold and Covid. Modi chose Guru Nanak&#x27;s birth anniversary, a major Sikh holiday, for the announcement, and apologized that &quot;despite several attempts to explain the benefits to the farmers, we have failed.&quot; Many saw the timing as linked to upcoming elections in Punjab and Uttar Pradesh. Farm leaders said they would stay until Parliament acted and until they got guarantees on crop prices.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-asia-india-59342627" target="_blank" rel="noopener noreferrer">BBC: Modi repeals controversial farm laws</a>, <a class="inline-link" href="https://www.pmindia.gov.in/en/news_updates/pms-address-to-the-nation-9/" target="_blank" rel="noopener noreferrer">PMO India: Text of the PM&#x27;s address to the nation</a>, <a class="inline-link" href="https://www.nationalheraldindia.com/politics/samyukt-kisan-morcha-nationwide-farmers-protests-november-26-modi-government" target="_blank" rel="noopener noreferrer">National Herald: &quot;1,800 days, no promises kept&quot;: SKM calls farmers back to streets</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Parliament repealed the laws on 29 November 2021. The farmers ended their 380-day protest in December after the government gave written assurances on 9 December, including a committee on MSP and the withdrawal of cases against protesters. Five years later, the farmers&#x27; alliance Samyukt Kisan Morcha (SKM) says none of those promises has been kept. The MSP committee set up in July 2022 has not produced a law. The SKM counts 756 farmers who died during the protest. It is calling new protests in Delhi and 100 other places on <strong>26 November 2026</strong>, the sixth anniversary of the original sit-in. Its demands include a legal MSP guarantee, a loan waiver and rejection of an India–U.S. trade deal. The episode showed that a determined, organized protest could force Modi to back down. It also left Indian farm reform largely stuck.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=o_nBovjt2fo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW Documentary: Onwards to New Delhi – a farmer&#x27;s protest (documentary)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=iHpZV7ro7lU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Vox: India&#x27;s huge farmer protests, explained (explainer)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=xU-n-2EuD9M" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: India PM Narendra Modi repeals controversial farm laws (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>An SUV ploughs through the Waukesha Christmas parade</h3>
+<p class="summary-label">Qué pasó</p>
+<p>At 4:39 p.m. on <strong>21 November 2021</strong>, Darrell Brooks Jr. drove a red SUV through barriers and down the route of the Christmas parade in Waukesha, Wisconsin, a Milwaukee suburb. He killed six people and injured 62. The dead were aged 8 to 81. They included 8-year-old Jackson Sparks, and four of them were with the Milwaukee Dancing Grannies, a dance troupe of grandmothers. The parade was being live-streamed, and the footage shocked the country. It soon emerged that two days earlier Brooks had been released on $1,000 bail after being charged with running over his former girlfriend with his vehicle. That set off a national backlash against low-bail policies. Investigators believed he acted alone and knew no one at the parade.</p>
+<p>Sources: <a class="inline-link" href="https://spectrumnews1.com/wi/milwaukee/news/2026/11/19/waukesha-christmas-parade-remembrance-ceremony" target="_blank" rel="noopener noreferrer">Spectrum News: Waukesha to hold final remembrance ceremony</a>, <a class="inline-link" href="https://www.fox6now.com/news/darrell-brooks-extension-appeal-denied" target="_blank" rel="noopener noreferrer">FOX6 Milwaukee: Brooks appeal extension denied</a>, <a class="inline-link" href="https://www.gmtoday.com/brookstrial/" target="_blank" rel="noopener noreferrer">The Freeman (gmtoday): Brooks trial and appeal coverage</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/Waukesha_Christmas_parade_attack" target="_blank" rel="noopener noreferrer">Wikipedia: Waukesha Christmas parade attack</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Brooks represented himself at a chaotic trial. On 26 October 2022 he was convicted on all 76 counts. On 16 November 2022, Judge Jennifer Dorow gave him six consecutive life sentences without parole, plus 762½ years. He is serving the sentence in a South Dakota prison. After at least 11 requests for more time, the Wisconsin Court of Appeals refused in January 2026 to extend his deadline to appeal, and in April it rejected his request for reconsideration. For now, that closes off his appeal. Tomorrow, <strong>Saturday 21 November 2026</strong>, at 4:39 p.m., Waukesha will hold its fifth and final annual remembrance ceremony at the parade memorial in Grede Park. The city says it will mark future milestone anniversaries instead.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Ka98OCfllgY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">NBC News: Suspect charged with 5 counts of intentional homicide in Waukesha parade incident (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=DhIFdPUhhxc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WISN 12 News: Judge sentences Darrell Brooks to six consecutive life sentences (court report, 2022)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The House passes Build Back Better, and the Senate kills it</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 November 2021</strong>, the House passed Joe Biden&#x27;s Build Back Better Act by 220 votes to 213. Every Republican voted no, and so did one Democrat, Jared Golden of Maine. The roughly $2 trillion package was the core of Biden&#x27;s domestic agenda. It included universal pre-kindergarten, a one-year extension of the expanded child tax credit, four weeks of paid family and medical leave, Medicare negotiation of drug prices, and about $555 billion for clean energy and climate. It passed two weeks after the bipartisan infrastructure bill. Everyone knew the real test was the 50–50 Senate, and in particular Joe Manchin of West Virginia.</p>
+<p>Sources: <a class="inline-link" href="https://clerk.house.gov/Votes/2021385" target="_blank" rel="noopener noreferrer">Clerk of the House: Roll call 385, 19 Nov 2021</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/Build_Back_Better_Act" target="_blank" rel="noopener noreferrer">Wikipedia: Build Back Better Act</a>, <a class="inline-link" href="https://www.congress.gov/crs-product/IN12719" target="_blank" rel="noopener noreferrer">Congressional Research Service: Clean electricity credits under the IRA and the OBBBA (July 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The bill never became law. On 19 December 2021, Manchin said on Fox News Sunday that he would not vote for it, citing inflation, the national debt and the bill&#x27;s structure. The expanded child tax credit ran out at the end of 2021. In August 2022 parts of the bill came back in a smaller form as the Inflation Reduction Act: climate tax credits, Medicare drug-price negotiation and a minimum corporate tax. Pre-K, paid leave and the child credit were left out. Medicare&#x27;s first negotiated drug prices took effect on 1 January 2026. Much of the climate section has since been undone. Trump&#x27;s One Big Beautiful Bill Act of July 2025 ended the EV tax credits and cut wind and solar off from the main electricity credits unless projects began construction by 4 July 2026 or are in service by the end of 2027. Manchin left the Senate in January 2025.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=RhMy2EYTdG8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: With House on the cusp of passing Build Back Better bill, big Senate fight expected (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=stN_ATGEooU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: House passes $1.7 trillion &#x27;Build Back Better&#x27; bill (news report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Fillon crushes Sarkozy and Juppé in the French right&#x27;s primary</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>20 November 2016</strong>, former prime minister François Fillon came from behind to win the first round of the French right&#x27;s first open presidential primary. He took 44.1% of the vote, ahead of the long-time favourite Alain Juppé (28.6%). His former boss, ex-president Nicolas Sarkozy, finished third with 20.7% and was knocked out. More than 4.2 million people voted. Fillon, a social conservative running on deep cuts to public spending, won 87 departments. Sarkozy, who carried just four, conceded and backed him. A week later, on 27 November, Fillon beat Juppé in the runoff and became the clear favourite for the 2017 presidency.</p>
+<p>Sources: <a class="inline-link" href="https://www.nouvelobs.com/politique/presidentielle-primaire-droite/20161122.OBS1583/les-resultats-definitifs-de-la-primaire-de-la-droite-fillon-44-1-juppe-28-6-sarkozy-20-7.html" target="_blank" rel="noopener noreferrer">L&#x27;Obs: Final primary results (French)</a>, <a class="inline-link" href="https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html" target="_blank" rel="noopener noreferrer">franceinfo: Fillon suspended from the Légion d&#x27;honneur (French)</a>, <a class="inline-link" href="https://www.france24.com/fr/info-en-continu/20261017-pr%C3%A9sidentielle-fran%C3%A7ois-fillon-apporte-son-soutien-%C3%A0-bruno-retailleau" target="_blank" rel="noopener noreferrer">France 24/AFP: Fillon backs Retailleau (French)</a>, <a class="inline-link" href="https://fr.euronews.com/2026/05/27/fin-du-proces-en-appel-de-nicolas-sarkozy-dans-laffaire-libyenne-verdict-attendu-le-30-nov" target="_blank" rel="noopener noreferrer">Euronews: Sarkozy appeal verdict due 30 November (French)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>He never got there. In January 2017, Le Canard enchaîné revealed that his wife Penelope had been paid with public money for parliamentary work she apparently never did. Fillon finished third in the first round, and Emmanuel Macron went on to win. After three trials, the Paris appeals court sentenced Fillon on 17 June 2025 to four years in prison, all suspended, a €375,000 fine and five years&#x27; ineligibility. He dropped his final appeal, making the sentence definitive. In August 2026 he was suspended from the Légion d&#x27;honneur for ten years. He is back on stage anyway. On 17 October 2026 he endorsed Les Républicains&#x27; Bruno Retailleau for the 2027 election, calling him &quot;the only credible candidate who is clearly on the right.&quot; Sarkozy served 20 days in La Santé prison in 2025 after his conviction in the Libyan-financing case, and the appeal verdict is due on <strong>30 November 2026</strong>. Juppé now sits on the Constitutional Council.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=-A_zCkGedjQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 English: The right stuff? Conservative Fillon triumphs in French presidential primary (debate, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=iam7zQd1K4w" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24: Discours de François Fillon, large vainqueur du 1er tour (original footage, French, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=OL76tC0HO7A" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 English: France&#x27;s PenelopeGate: Presidential race upended by scandal (debate, 2017)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Trump vows to quit the Trans-Pacific Partnership on day one</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>21 November 2016</strong>, President-elect Donald Trump posted a YouTube video laying out his plans for his first 100 days. He promised to issue a notice of intent to withdraw from the Trans-Pacific Partnership on his first day, calling the 12-nation trade pact &quot;a potential disaster for our country.&quot; He said he would negotiate &quot;fair bilateral trade deals&quot; instead. The TPP took seven years to negotiate and was a centrepiece of Barack Obama&#x27;s strategy in Asia. Its members made up about 40% of the world economy, and China was deliberately left out. Hours earlier Japan&#x27;s Shinzo Abe had warned that the deal would be &quot;meaningless&quot; without the United States. He predicted a pivot to a China-inclusive Asian pact (RCEP) if TPP collapsed.</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/us-news/2016/nov/21/donald-trump-100-days-plans-video-trans-pacific-partnership-withdraw" target="_blank" rel="noopener noreferrer">The Guardian: Trump to withdraw from TPP on first day in office</a>, <a class="inline-link" href="https://www.presidency.ucsb.edu/documents/video-message-from-president-elect-donald-j-trump" target="_blank" rel="noopener noreferrer">The American Presidency Project: Trump&#x27;s video message</a>, <a class="inline-link" href="https://www.nacion.com/economia/esta-es-la-carta-con-la-que-costa-rica-comunico/IQBJLELG7JBZXGAZE3T3CZQLXM/story/" target="_blank" rel="noopener noreferrer">La Nación (Costa Rica): Letter declining to sign the CPTPP (Spanish)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Trump signed the withdrawal on 23 January 2017. Instead of letting the deal die, the other 11 members, led by Japan, saved most of it as the CPTPP, which took effect at the end of 2018. China signed RCEP in 2020. China and Taiwan have both applied to join the CPTPP. Britain became the first new member in December 2024, bringing the total to 12. Expanding further has proved slow. Costa Rica finished its accession talks in May 2026, but on 28 October President Laura Fernández shelved the deal, and on 13 November her government told members it would not sign. CPTPP ministers meet in Vietnam from 23 to 27 November, with an EU–CPTPP dialogue on 26 November. The United States, meanwhile, has moved even further from free trade, with Trump&#x27;s second-term tariffs.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=pOLAWV0HTW0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Donald Trump vows to quit TPP on first day in office (news report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=avAyVcoEv_c" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Foreign Policy Association: Was the U.S. withdrawal from TPP a mistake? (analysis)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=uHl3d_Ve8eQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TLDR News: Britain joins the CPTPP: Brexit&#x27;s biggest trade deal yet? (explainer)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>&quot;Hail Trump!&quot;: the alt-right celebrates in Washington</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>19 November 2016</strong>, white nationalist Richard Spencer spoke to more than 200 people at the National Policy Institute&#x27;s annual conference in the Ronald Reagan Building in Washington. After most journalists had left, he called the media &quot;Lügenpresse,&quot; a Nazi-era term, and said America &quot;was until this past generation a white country designed for ourselves and our posterity.&quot; He ended with &quot;Hail Trump, hail our people, hail victory!&quot; Some in the audience raised their arms in Nazi salutes. The Atlantic published its footage on 21 November, and the &quot;alt-right,&quot; a label Spencer had popularized, became national news. On 22 November, Trump told The New York Times: &quot;Of course… I disavow and condemn them.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://www.theatlantic.com/politics/archive/2016/11/richard-spencer-speech-npi/508379/" target="_blank" rel="noopener noreferrer">The Atlantic: &#x27;Hail Trump!&#x27;: White nationalists salute the president-elect</a>, <a class="inline-link" href="https://www.independent.co.uk/news/world/americas/donald-trump-disavows-altright-neonazi-supporters-new-york-times-a7432746.html" target="_blank" rel="noopener noreferrer">The Independent: Trump disavows alt-right supporters in New York Times meeting</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/Sines_v._Kessler" target="_blank" rel="noopener noreferrer">Wikipedia: Sines v. Kessler</a>, <a class="inline-link" href="https://www.mediamatters.org/nick-fuentes/white-nationalists-richard-spencer-and-nick-fuentes-highlight-failures-trump-and-gop" target="_blank" rel="noopener noreferrer">Media Matters: Spencer and Fuentes livestream, Dec 2025</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The moment proved to be the peak of Spencer&#x27;s movement. In August 2017 he was a headline figure at the Unite the Right rally in Charlottesville, where a rally-goer drove into counter-protesters and killed Heather Heyer. In November 2021 a federal jury in the Sines v. Kessler case found Spencer and other organizers liable for civil conspiracy, with total damages of more than $25 million, later reduced. Spencer stopped being an effective leader of the movement after 2018, and his National Policy Institute has been inactive since 2020. He voted for Biden and endorsed Kamala Harris in 2024. But the ideas he promoted did not go away. Nick Fuentes&#x27;s &quot;groyper&quot; movement now carries them to a much larger young online audience. In their joint livestream in December 2025, Spencer told Fuentes &quot;the kids are on your side.&quot;</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=kVeZ0_Lhazw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Atlantic: Rebranding White Nationalism: Inside Richard Spencer&#x27;s Alt-Right (documentary, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=1o6-bi3jlxk" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Atlantic: &#x27;Hail Trump!&#x27;: Richard Spencer speech excerpts (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-20.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 20 de noviembre de 2026, 09:18 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
