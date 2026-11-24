@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Martes 24 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Martes 24 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Serbia&#x27;s student movement ends Vučić&#x27;s 14-year grip on power</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>25 October 2026</strong>, Serbia&#x27;s Student List won a snap parliamentary election outright, ending the rule of Aleksandar Vučić&#x27;s Serbian Progressive Party (SNS), which had been in power since 2012. The movement grew out of the November 2024 collapse of a station canopy in Novi Sad that killed 16 people, a disaster protesters blamed on corruption and negligence. After nearly two years of street protests, Vučić dissolved parliament on 9 September and resigned as president on 27 September so he could lead the SNS list and try to return as prime minister. It did not work. Final results from the electoral commission gave the Student List 53.69% and 140 of 250 seats, against 39.48% and 103 seats for Vučić&#x27;s &quot;United Serbia&quot; list. Turnout was 68.89%, about ten points higher than in 2023. Vučić conceded on election night: &quot;It is clear we have lost these elections.&quot; Crowds celebrated in Belgrade, Novi Sad and other cities. The Student List had no formal leader. It ran doctors, actors, academics and athletes, headed by Ilija Srdanović, on a programme of purging officials who cracked down on protesters and freeing the public broadcaster from political control.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo" target="_blank" rel="noopener noreferrer">BBC: Vučić concedes election to student-led protest movement</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/2026_Serbian_parliamentary_election" target="_blank" rel="noopener noreferrer">Wikipedia: 2026 Serbian parliamentary election (final RIK results)</a>, <a class="inline-link" href="https://srpske.rs/en/news/politika/2026/11/23/cupic-says-presidential-election-december-27" target="_blank" rel="noopener noreferrer">Srpske Novine: Čupić sets presidential election for 27 December</a>, <a class="inline-link" href="https://srpske.rs/en/news/politika/2026/11/21/vucic-sees-no-point-in-sns-running-for-president" target="_blank" rel="noopener noreferrer">Srpske Novine: Vučić sees no point in SNS running for president</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The result has held, but the new majority is moving slowly. The new parliament elected Aleksandar Čupić of the Student List as speaker with 140 votes, which also makes him acting president. He says he will call the presidential election by 26 November for a vote on <strong>27 December</strong>. The Student List has still not named a candidate for president or for prime minister, and Čupić says a good choice matters more than a fast one. He also plans to cut the number of ministries. Vučić now sits in parliament as head of the SNS group. He calls himself &quot;an ordinary citizen&quot; and says it is &quot;pointless&quot; for the SNS to run in the presidential race. Since the vote, managers at the public broadcasters have resigned and officials and businesspeople linked to the SNS have been arrested. The EU&#x27;s enlargement commissioner said &quot;the door to the EU is open.&quot; The Kremlin praised Vučić and reminded the newcomers that &quot;it takes two to tango.&quot; The student movement has said Serbia will still not sanction Russia.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=I-4xx0hp5lI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Guardian News: How students rocked Serbia&#x27;s parliamentary election (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=8nWECs7q4pc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Joy and disbelief on Serbian streets as Vučić concedes election defeat (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=qaA-oTojVqA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Serbia&#x27;s Vučić concedes defeat after student-led election victory (live coverage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Netanyahu loses his majority in Israel&#x27;s election</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Israelis voted on <strong>27 October 2026</strong> in the first general election since the 7 October 2023 attack and the Gaza war. Benjamin Netanyahu&#x27;s Likud stayed the largest party with 27 of 120 seats, ahead of former army chief Gadi Eisenkot&#x27;s new Yashar party with 21. But the blocs were what mattered. Netanyahu&#x27;s camp won 53 seats, eight short of a majority. The Zionist opposition led by Eisenkot won 48, and the Arab-led parties, Ra&#x27;am and the Joint List, won a record 19. Turnout was 77.98%, the highest since 1999. As the final results came in, Likud claimed without evidence that the Arab-led parties had &quot;stolen&quot; the election, possibly with foreign help. The opposition accused Netanyahu of trying to undermine the vote. On 4 November the Central Elections Committee certified the results. It said a review of 9,069 polling stations found no irregularities that changed the outcome. Its chairman, Supreme Court Justice Noam Sohlberg, said those casting doubt on the results posed &quot;a real danger&quot; to Israeli democracy.</p>
+<p>Sources: <a class="inline-link" href="https://votes26.bechirot.gov.il/" target="_blank" rel="noopener noreferrer">Israel Central Elections Committee: final results</a>, <a class="inline-link" href="https://apnews.com/article/israel-elections-netanyahu-eisenkot-arab-results-9a0620a1314fdc127245ba1a7f0aa762" target="_blank" rel="noopener noreferrer">AP: Netanyahu&#x27;s party claims election &quot;stolen&quot; as results show him losing majority</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/4/israel-vote-results-confirmed-as-election-commission-rejects-fraud-claims" target="_blank" rel="noopener noreferrer">Al Jazeera: Results confirmed as election commission rejects fraud claims</a>, <a class="inline-link" href="https://www.jta.org/israel-votes-2026" target="_blank" rel="noopener noreferrer">JTA: Final results and who will form the government</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/22/netanyahus-likud-eisenkots-yashar-end-coalition-talks-without-deal" target="_blank" rel="noopener noreferrer">Al Jazeera: Likud and Yashar end coalition talks without deal (22 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Israel still has no new government, and Netanyahu remains caretaker prime minister. On 8 November President Isaac Herzog gave Eisenkot the first chance to form a coalition after 67 lawmakers, including the Arab parties, recommended him. United Torah Judaism, which ran inside Netanyahu&#x27;s bloc, recommended no one. Eisenkot has until <strong>6 December</strong>, and Herzog can extend that to 20 December. On 22 November, Likud and Yashar negotiators talked about a unity government for more than four hours in Herzliya and ended without a deal. The sticking points are who serves as prime minister first and whether far-right minister Itamar Ben-Gvir is included. Eisenkot opposes a rotation, and Avigdor Lieberman refuses to sit with Netanyahu at all. If unity talks fail, Yashar plans to seek a confidence vote for a minority government backed from outside by the Arab parties. That would be a first in Israel. If nobody succeeds, Israel heads to another election early next year.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=qLXSvxal-m4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Netanyahu loses majority in Israel, but no clear election winner. What now? (analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=d6Hjw5QOc8I" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: Netanyahu and Eisenkot deadlocked as Arab-led parties surge (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Lc_tz-za0U4" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: Netanyahu officially loses his majority: what&#x27;s next (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>North Korean hackers steal $6.3 billion from Binance</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>29 October 2026</strong>, attackers drained about $6.3–6.4 billion in crypto from hot wallets at Binance, the world&#x27;s largest crypto exchange. It is the largest crypto theft on record, roughly four times the $1.5 billion stolen from Bybit in February 2025. According to blockchain analysts at TRM Labs, most of the money left across ten blockchains in about 20 minutes, starting at 20:05 UTC. Binance co-CEO Richard Teng said the attack started with a DevOps engineer&#x27;s compromised laptop, which gave the attacker access to a service container. From there the attacker submitted unauthorized withdrawals. Binance said it found no evidence that wallet private keys had leaked, and it later reported &quot;additional points of breach.&quot; TRM Labs and Chainalysis attributed the theft to TraderTraitor, the North Korean state hacking unit also known as Lazarus Group. Chainalysis said it watched Binance funds mix on-chain with money stolen from Bitget in September. The attacker raced to swap freezable stablecoins for ether and bitcoin before issuers could block them. Tether, Circle and others froze about $2.7 billion within days. Binance halted withdrawals, and bitcoin fell more than 4%.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/cwg7xp8kx4v5o" target="_blank" rel="noopener noreferrer">BBC: Binance hit by $6.3bn hack suspected to be largest in history</a>, <a class="inline-link" href="https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/" target="_blank" rel="noopener noreferrer">BleepingComputer: Binance links theft to compromised DevOps laptop</a>, <a class="inline-link" href="https://www.chainalysis.com/blog/binance-exploit-latest-findings-and-response/" target="_blank" rel="noopener noreferrer">Chainalysis: Tracing the North Korea link</a>, <a class="inline-link" href="https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft" target="_blank" rel="noopener noreferrer">CoinDesk: Binance wins $6.5 billion freezing order (19 Nov 2026)</a>, <a class="inline-link" href="https://www.cryptotimes.io/2026/11/21/binance-hack-recovery-reaches-32m-after-three-weeks/" target="_blank" rel="noopener noreferrer">The Crypto Times: Recovery reaches just $32M after three weeks</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Binance says customers will not lose money. It has committed more than $6.34 billion from its user emergency fund (SAFU), futures insurance fund and corporate treasury, and on 12 November said every affected asset had been replaced. Withdrawals reopened in phases from 1 November, and the full post-mortem it promised has not yet been published. Getting the stolen money back is a separate and slower effort. By early November about $2.8 billion was frozen. On 19 November an Abu Dhabi court gave Binance a worldwide order freezing up to $6.5 billion in proceeds, and on 1 December it will consider whether 18 firms must hand over what they hold. The U.S. Justice Department says it has court authorization to seize or restrain more than $1.2 billion. Even so, an on-chain investigator estimated on 21 November that only $32 million had actually been recovered, while about $2.67 billion remained in wallets the attackers control. That money is being moved through THORChain and CoinJoin mixing. Western agencies say thefts like this help pay for North Korea&#x27;s weapons programmes. Pyongyang has denied involvement in past hacks.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=k4DtiH9gArw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News, The Global Story: How North Korea pulled off the $6bn Binance hack (in-depth podcast, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=3tmPCylnuKE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: How crypto hackers drained Binance of $6.3 billion in 20 minutes (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=LfUvBfkrmlA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Why is North Korea being blamed over the $6.3bn Binance hack? (analysis, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Fire tears through Hong Kong&#x27;s Wang Fuk Court and kills 168 people</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the afternoon of <strong>26 November 2025</strong>, a fire broke out at Wang Fuk Court, a housing estate of eight high-rise towers in Tai Po, Hong Kong, home to nearly 4,800 people. The estate was under major renovation and wrapped in bamboo scaffolding, green mesh and foam boards over the windows. Flames raced up the facades and jumped from tower to tower until seven of the eight were burning. It was the city&#x27;s deadliest fire in decades. Early tests found that some of the mesh failed fire-retardant standards. Residents had complained about the netting for almost a year, and the Labour Department admitted it had carried out 16 inspections and issued warnings to contractors since July 2024. Police arrested 13 people on suspicion of manslaughter within days, and the anti-corruption commission (ICAC) opened its own inquiry into the renovation contract. The government also took a harder line on criticism. National-security officials warned of &quot;evil schemes&quot; to exploit the disaster, and police arrested at least three people, including a petition organizer, on suspicion of sedition.</p>
+<p>Sources: <a class="inline-link" href="https://www.independent.co.uk/asia/china/hong-kong-fire-cause-bamboo-scaffolding-mesh-polystyrene-b2876104.html" target="_blank" rel="noopener noreferrer">The Independent: Mesh and polystyrene helped spread the fire (Dec 2025)</a>, <a class="inline-link" href="https://www.info.gov.hk/gia/general/202606/10/P2026061000683.htm" target="_blank" rel="noopener noreferrer">HK Government: Seven individuals and two companies charged (10 Jun 2026)</a>, <a class="inline-link" href="https://www.gov.hk/en/residents/government/policy/government_reports/docs/IC-Report-Volume1_en.pdf" target="_blank" rel="noopener noreferrer">Independent Committee report, Volume 1</a>, <a class="inline-link" href="https://www.news.gov.hk/eng/2026/10/20261029/20261029_160028_023.html" target="_blank" rel="noopener noreferrer">news.gov.hk: Wang Fuk Court fire report released (29 Oct 2026)</a>, <a class="inline-link" href="https://www.chinadailyhk.com/hk/article/643144" target="_blank" rel="noopener noreferrer">China Daily HK: Post-fire support and reform progress (24 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The final death toll is <strong>168</strong>, including one firefighter. Nearly 2,000 families lost their homes. A judge-led independent committee reported in October 2026. It found the fire was most likely started by a glowing source, probably a cigarette, on a flat roof. It said nets were swapped for non-fire-retardant ones, flammable foam boards were used, and openings were cut into escape staircases, and that this is why the fire spread so fast and killed so many. It also described bid-rigging syndicates linked to triads and made 120 recommendations. On 29 October Chief Executive John Lee and his officials bowed in apology, and Housing Secretary Winnie Ho resigned. In June, seven people and two companies, the consultant Will Power and the contractor Prestige, were charged with 25 offences, including five counts of manslaughter and fraud over how the contract was won. Their trials are pending. A new anti-bid-rigging task force has arrested 163 people. About 84% of owners have now sold their flats to the government, but only 15 households have the keys to new homes. The anniversary is the day after tomorrow.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=iq8GWPlAJww" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">South China Morning Post: The Wang Fuk Court fire Part 1: the tragedy in Tai Po (documentary, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=yd-v8T3VFns" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">South China Morning Post: The Wang Fuk Court fire Part 2: the blame game (documentary, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=WsIHv56KEVw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNA Insider: Hong Kong Inferno: How Safety Lapses Turned Homes Into Death Traps (documentary, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Bolsonaro is jailed after taking a soldering iron to his ankle monitor</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Early on <strong>22 November 2025</strong>, Brazil&#x27;s Federal Police arrested former president Jair Bolsonaro at his home in Brasília. He had been under house arrest while appealing his September conviction for plotting a coup after losing the 2022 election. Supreme Court Justice Alexandre de Moraes ordered the arrest because the ankle monitor had been tampered with overnight, and because his son, Senator Flávio Bolsonaro, had called supporters to a vigil outside the house. The court said that meant a &quot;high possibility of an attempted escape.&quot; In a video released by the court, Bolsonaro admits using a &quot;hot iron&quot; on the device. He said he did it out of &quot;curiosity,&quot; and later blamed medication-induced &quot;paranoia.&quot; On <strong>25 November</strong>, Moraes declared the case closed with no appeals left and ordered him to begin serving his sentence of 27 years and three months in a Federal Police cell. Generals Augusto Heleno and Paulo Sérgio Nogueira, both former ministers, were also sent to prison. The Trump administration called the arrest &quot;provocative and unnecessary.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://www.cnn.com/2025/11/22/americas/brazil-jair-bolsonaro-arrested-intl" target="_blank" rel="noopener noreferrer">CNN: Bolsonaro arrested to prevent &quot;attempted escape&quot; (22 Nov 2025)</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cr4dl19npv5o" target="_blank" rel="noopener noreferrer">BBC: Bolsonaro ordered to start serving 27-year sentence</a>, <a class="inline-link" href="https://www.euronews.com/2026/11/21/jair-bolsonaro-hospitalised-with-abdominal-pain-while-under-house-arrest" target="_blank" rel="noopener noreferrer">Euronews: Bolsonaro in intensive care (21 Nov 2026)</a>, <a class="inline-link" href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/bolsonaro-e-diagnosticado-com-pneumonia-e-continuara-internado" target="_blank" rel="noopener noreferrer">Agência Brasil: Bolsonaro diagnosed with pneumonia (23 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Bolsonaro, 71, is still serving his sentence, but at home. In March 2026 Moraes granted him &quot;humanitarian&quot; house arrest after a bout of bronchopneumonia. On <strong>20 November 2026</strong> he was taken to hospital with an intestinal obstruction, and on 23 November doctors at DF Star hospital in Brasília said he had bilateral aspiration pneumonia. He is stable in intensive care with no discharge date. His son Carlos says his health is &quot;deteriorating day by day.&quot; The Supreme Court is due to rule in December on a law that would cut the sentences of Bolsonaro and the others convicted over the coup plot. The family&#x27;s political comeback also failed. Flávio lost the presidential runoff to Lula on 25 October, Moraes then ordered his passports seized in a money-laundering investigation, and he is now in the United States and still refuses to concede. Bolsonaro remains barred from public office until 2060.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=OefeKvo0GHI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Brazil&#x27;s Bolsonaro detained for damaging ankle monitor (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=n_kA-7svZq0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters: Bolsonaro blames medication for ankle monitor tampering (court video and report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=S_2QQm6_Jes" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 English: Bolsonaro begins 27-year prison sentence for coup attempt (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Two National Guard members are shot near the White House</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>26 November 2025</strong>, the day before Thanksgiving, a gunman ambushed West Virginia National Guard members outside the Farragut West metro station, two blocks from the White House. They were in Washington as part of Trump&#x27;s deployment of troops to the capital. Specialist Sarah Beckstrom, 20, and Air Force Staff Sergeant Andrew Wolfe, 24, were both shot in the head. Two Guard majors subdued and wounded the attacker. Beckstrom died the next day. The suspect was Rahmanullah Lakanwal, 29, an Afghan who had served in a CIA-backed &quot;Zero Unit&quot; strike force in Kandahar. He came to the U.S. in 2021 under Operation Allies Welcome and was granted asylum in April 2025. Investigators say he drove across the country from Bellingham, Washington, with a revolver stolen in Seattle. The administration blamed Biden-era vetting and responded within hours. It ordered 500 more troops to Washington and halted all immigration applications from Afghans. USCIS stopped all asylum decisions and ordered a review of green cards issued to people from 19 &quot;countries of concern.&quot; Trump promised to &quot;permanently pause migration from all Third World Countries.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://en.wikipedia.org/wiki/2025_Washington,_D.C.,_National_Guard_shooting" target="_blank" rel="noopener noreferrer">Wikipedia: 2025 Washington, D.C., National Guard shooting</a>, <a class="inline-link" href="https://apnews.com/article/asylum-decisions-paused-national-guard-shooting-3459a0a773cfa40c90751b43e38f5db6" target="_blank" rel="noopener noreferrer">AP: US halts all asylum decisions after the shooting</a>, <a class="inline-link" href="https://www.fox5dc.com/news/national-guard-shooting-suspect-pleads-not-guilty-faces-death-penalty" target="_blank" rel="noopener noreferrer">FOX 5 DC: Suspect pleads not guilty, faces death penalty (Jun 2026)</a>, <a class="inline-link" href="https://www.nbcnews.com/politics/trump-administration/federal-judge-strikes-trump-administration-policy-freezing-immigration-rcna348559" target="_blank" rel="noopener noreferrer">NBC News/AP: Judge strikes down policy freezing immigration from 39 countries (Jun 2026)</a>, <a class="inline-link" href="https://www.reuters.com/world/us/us-citizenship-immigration-services-resumes-asylum-claims-after-halt-2026-03-30/" target="_blank" rel="noopener noreferrer">Reuters: USCIS resumes asylum claims after halt (Mar 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Wolfe survived and learned to stand and breathe on his own again. At the February 2026 State of the Union, Trump awarded him the Purple Heart, and gave one posthumously to Beckstrom. Lakanwal has pleaded not guilty to a 17-count federal indictment, some of whose charges carry the death penalty. The Justice Department has not said whether it will seek execution, and no trial date has been set. During a hunger strike this year, a federal judge allowed him to be force-fed. Many of the immigration measures did not survive in their original form. USCIS began resuming asylum decisions in March 2026, according to Reuters. On 5 June a federal judge in Boston struck down the policy that had frozen benefit decisions for immigrants from 39 countries, calling the national-security reasons &quot;pretextual.&quot; The shooting still shaped policy, though: it was the starting point for a wider travel ban and for re-reviews of green cards and asylum grants already approved.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=dAXyogw-Vz0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: Investigations reveal suspect worked for CIA in Afghanistan (in-depth report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=wjcVd-N_qTE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Afghan immigrant community fears reprisals (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ca-s95kVFeQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">C-SPAN: Andrew Wolfe and the late Sarah Beckstrom awarded the Purple Heart at the State of the Union (original footage, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>South Africa flags a new variant, and the world meets Omicron</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>25 November 2021</strong>, South African scientists announced that they had found a heavily mutated coronavirus variant, B.1.1.529. It had first been detected in Botswana on 11 November, carried 32 mutations in its spike protein (about twice as many as Delta) and was spreading fast in Gauteng province. Genomics expert Tulio de Oliveira&#x27;s team moved quickly and shared the data openly. On <strong>26 November</strong>, the World Health Organization declared it a &quot;variant of concern&quot; and named it Omicron. The world reacted fast and harshly. Britain, the EU, the United States and others banned travel from South Africa and its neighbours, even though the WHO warned against knee-jerk travel restrictions. Markets fell sharply. The Dow lost 905 points on 26 November, its worst day of the year. South African officials said they were being &quot;punished&quot; for doing good science, and scientists warned that the bans would discourage other countries from reporting new variants.</p>
+<p>Sources: <a class="inline-link" href="https://www.who.int/news/item/26-11-2021-classification-of-omicron-%28b.1.1.529%29-sars-cov-2-variant-of-concern" target="_blank" rel="noopener noreferrer">WHO: Classification of Omicron as a variant of concern (26 Nov 2021)</a>, <a class="inline-link" href="https://www.cnbc.com/2021/11/26/stock-futures-open-to-close-market-news.html" target="_blank" rel="noopener noreferrer">CNBC: Dow falls 900 points for worst day of year</a>, <a class="inline-link" href="https://www.nytimes.com/2021/11/26/world/africa/south-africa-omicron-travel-ban.html" target="_blank" rel="noopener noreferrer">NYT: South Africa feels &quot;punished&quot; by travel bans</a>, <a class="inline-link" href="https://www.theguardian.com/world/2021/nov/24/scientists-warn-of-new-covid-variant-with-high-number-of-mutations" target="_blank" rel="noopener noreferrer">The Guardian: Scientists warn of new variant with high number of mutations (24 Nov 2021)</a>, <a class="inline-link" href="https://www.gavi.org/vaccineswork/everything-you-need-know-about-so-called-american-covid-variant" target="_blank" rel="noopener noreferrer">Gavi VaccinesWork: The XFG variant (Oct 2026)</a>, <a class="inline-link" href="https://www1.folha.uol.com.br/internacional/en/scienceandhealth/2026/11/covid-cases-rise-in-brazil-as-more-transmissible-xfg-variant-becomes-dominant.shtml" target="_blank" rel="noopener noreferrer">Folha: XFG becomes dominant in Brazil (Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The early alarm was justified on transmission and immune escape, and less so on severity. Omicron spread around the world within weeks and set record case numbers in early 2022. It was generally milder than Delta, but it still killed many people because so many were infected. Its descendants have caused almost every COVID infection since 2022. The variant most common worldwide today, XFG (&quot;Stratus&quot;), is an Omicron sub-lineage. It made up about 49% of shared sequences in September 2026, and it is behind a current rise in cases in Brazil. The WHO lists it only as a &quot;variant under monitoring,&quot; with no evidence of more severe disease. Vaccines are now updated for Omicron sub-lineages: the WHO&#x27;s advisers recommended LP.8.1 in May 2026. South Africa&#x27;s lesson still stands: scientists warned at the time that punishing a country for sharing data would make others think twice about reporting the next variant.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=qAKfXdwx-HQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Bloomberg: How a missing gene led South African scientists to find Omicron (in-depth report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=364TKKwk_WU" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">The Conversation: The inside story of discovering Omicron: South African scientists on the lessons (long-form panel, 2022)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=zwBumLtaIBw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">VICE News: South African scientists say they were punished for Omicron discovery (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>The deadliest small-boat sinking in the Channel</h3>
+<p class="summary-label">Qué pasó</p>
+<p>In the early hours of <strong>24 November 2021</strong>, an overloaded inflatable dinghy that had left northern France for England sank in the Channel. At least 27 people died and four were never found. Only two men survived. Most of the victims were Iraqi Kurds. Others came from Afghanistan, Ethiopia, Iran, Somalia, Vietnam and Egypt, and the youngest known victim was a seven-year-old girl. Over several hours the passengers made about a dozen calls for help to French and British rescue services as the boat deflated. Nearly 12 hours after the first call, a French fishing boat found the bodies. It was the worst loss of life in the Channel since small-boat crossings began. Britain and France blamed each other. Boris Johnson published a letter to Emmanuel Macron, and France responded by withdrawing Home Secretary Priti Patel&#x27;s invitation to a migration meeting in Calais.</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/uk-news/2026/feb/05/cranston-inquiry-worst-small-boat-disaster-channel-report" target="_blank" rel="noopener noreferrer">The Guardian: Loss of life was avoidable, Cranston inquiry finds (Feb 2026)</a>, <a class="inline-link" href="https://www.gov.uk/government/publications/the-report-of-the-cranston-inquiry" target="_blank" rel="noopener noreferrer">GOV.UK: The Report of the Cranston Inquiry</a>, <a class="inline-link" href="https://www.theguardian.com/uk-news/2021/nov/26/channel-deaths-priti-patel-disinvited-to-meeting-with-france" target="_blank" rel="noopener noreferrer">The Guardian: Priti Patel disinvited from meeting with France (Nov 2021)</a>, <a class="inline-link" href="https://www.theguardian.com/world/2026/sep/30/french-court-jails-six-manslaughter-mass-drowning-channel" target="_blank" rel="noopener noreferrer">The Guardian: French court jails six men for manslaughter (Sep 2026)</a>, <a class="inline-link" href="https://www.eurojust.europa.eu/news/thirteen-convicted-migrant-smuggling-operation-led-31-deaths-english-channel" target="_blank" rel="noopener noreferrer">Eurojust: Thirteen convicted for smuggling operation</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The two investigations ended this year, and both found that the deaths were avoidable. In February 2026, the UK&#x27;s Cranston Inquiry concluded that at least 33 people had been aboard. It found that a chronically understaffed HM Coastguard had confused the dinghy with another boat and called off the search, while people were still alive in the water. As many as 15 victims were probably still alive at sunrise. It also found that the French naval vessel <em>Flamant</em>, the closest ship, never responded to the mayday: &quot;If the Flamant had attended… many more and possibly all lives would have been saved.&quot; On 30 September 2026 a Paris court jailed six smugglers for manslaughter, for six to ten years, and convicted seven others of lesser offences. Seven French military personnel remain under investigation for failing to help people in danger, which they deny. The crossings continue. Families are still waiting for the bodies of the four missing.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=Co7GieNWhEE" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Sky News: Channel deaths: how the tragedy unfolded (reconstruction, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=43DVmL_AwgA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: French rescuers failed to help sinking migrant boat, evidence suggests (investigation, 2022)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=I3Hw6WCCbY0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Channel 4 News: Lives could have been saved in deadliest small boat crossing, inquiry finds (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Germany&#x27;s &quot;traffic light&quot; coalition is born</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>24 November 2021</strong>, after a month of negotiations, Olaf Scholz&#x27;s Social Democrats, the Greens and the liberal Free Democrats (FDP) presented a 177-page coalition agreement titled &quot;Dare more progress.&quot; It was Germany&#x27;s first three-party &quot;traffic light&quot; government at federal level, and it ended 16 years of Angela Merkel. The deal promised to raise the minimum wage to €12, bring the coal exit forward &quot;ideally&quot; to 2030, put 15 million electric cars on the road by 2030, build 400,000 homes a year, legalize cannabis sales to adults, lower the voting age to 16, and return to the constitutional debt brake from 2023. &quot;The traffic light is on,&quot; Scholz said. Greens leader Robert Habeck admitted the talks had been &quot;sometimes quite exhausting.&quot; FDP leader Christian Lindner presented it as a change of course. Scholz was elected chancellor on 8 December 2021.</p>
+<p>Sources: <a class="inline-link" href="https://www.tagesschau.de/inland/innenpolitik/ampel-koalitionsvertrag-103.html" target="_blank" rel="noopener noreferrer">tagesschau: &quot;Die Ampel steht&quot; (24 Nov 2021)</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/Scholz_cabinet" target="_blank" rel="noopener noreferrer">Wikipedia: Scholz cabinet</a>, <a class="inline-link" href="https://www.abgeordnetenwatch.de/recherchen/politisches-leben/die-neuen-jobs-der-ampel-ministerinnen" target="_blank" rel="noopener noreferrer">abgeordnetenwatch: What the traffic-light ministers do now</a>, <a class="inline-link" href="https://www.tagesschau.de/inland/scholz-neuer-job-100.html" target="_blank" rel="noopener noreferrer">tagesschau: Scholz to chair the North–South Commission (Jun 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The coalition delivered some of its promises: the €12 minimum wage in October 2022, partial cannabis legalization in 2024 and a new citizenship law. But Russia&#x27;s invasion of Ukraine, the energy crisis and constant fights over money wore it down. On 6 November 2024 Scholz fired Lindner as finance minister over the budget, and the FDP left the government. Scholz lost a confidence vote on 16 December. In the snap election of 23 February 2025, the SPD fell to its worst result in its post-war history and the FDP dropped out of the Bundestag. Friedrich Merz of the CDU became chancellor on 6 May 2025, leading a coalition with the SPD. All three leaders are alive. Scholz, 68, is a backbench MP for Potsdam and a partner in a Hamburg law firm, and since June 2026 he has co-chaired a new government-appointed North–South Commission on development. Habeck works as a foreign-policy analyst in Copenhagen. Lindner has gone into business: since January 2026 he has been deputy chair of the management board of car dealer Autoland AG.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=cLndNXDed4w" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP Archive: German parties say deal ready for new coalition government (original footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=GiiYzWQ0Q94" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TLDR News EU: Germany&#x27;s new coalition: the traffic light coalition explained (explainer, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=wf8tgNP_7Vo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Germany&#x27;s coalition collapses after chancellor fires minister (report, 2024)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Jill Stein forces recounts in Wisconsin, Michigan and Pennsylvania</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>23 November 2016</strong>, Green Party candidate Jill Stein started raising money for recounts in Wisconsin, Michigan and Pennsylvania. Donald Trump had won the three states by fewer than 80,000 votes combined. Some computer scientists had urged audits to rule out hacking or machine errors, though they offered no evidence that either had happened. Stein raised more than $7 million in days, far more than her own campaign had. She filed in Wisconsin on 25 November, and on 26 November the Clinton campaign said it would take part, while stressing that it had found no evidence of tampering. Trump called the effort &quot;a scam&quot; and claimed, without evidence, that he had lost the popular vote only because &quot;millions of people&quot; voted illegally.</p>
+<p>Sources: <a class="inline-link" href="https://apnews.com/article/322db08ce6eb49fb910d5a84de3cccb8" target="_blank" rel="noopener noreferrer">AP: Recount efforts end: Trump wins in Wisconsin, Pennsylvania</a>, <a class="inline-link" href="https://www.npr.org/sections/thetwo-way/2016/11/26/503432822/clinton-campaign-supports-recount-efforts-in-battleground-states" target="_blank" rel="noopener noreferrer">NPR: Clinton campaign says it will participate in recount efforts</a>, <a class="inline-link" href="https://www.cbsnews.com/news/donald-trump-jill-steins-recount-efforts-are-a-green-party-scam/" target="_blank" rel="noopener noreferrer">CBS News: Trump calls recount a Green Party &quot;scam&quot;</a>, <a class="inline-link" href="https://apnews.com/united-states-presidential-election-general-news-events-66b80958dfda4b329989200b1b8bff46" target="_blank" rel="noopener noreferrer">AP: Trump celebrates adding 131 votes in Wisconsin</a>, <a class="inline-link" href="https://www.nytimes.com/2016/12/13/us/stein-ends-recount-bid-but-says-it-revealed-flaws-in-voting-system.html" target="_blank" rel="noopener noreferrer">NYT: Stein ends recount bid but says it revealed flaws</a>, <a class="inline-link" href="https://www.stlmag.com/news/jill-stein-demands-jury-trial-assault/" target="_blank" rel="noopener noreferrer">St. Louis Magazine: Stein demands jury trial (Sep 2026)</a>, <a class="inline-link" href="https://www.counterpunch.org/2026/11/12/jill-stein-committing-the-crime-of-being-the-victim/" target="_blank" rel="noopener noreferrer">CounterPunch: trial date to be set 25 January 2027 (Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The recounts confirmed Trump&#x27;s wins. Wisconsin&#x27;s full recount ended on 12 December 2016 and added 131 votes to Trump&#x27;s margin, which stood at 22,748. A federal judge stopped Michigan&#x27;s recount after three days, and Pennsylvania&#x27;s request was rejected. Stein raised about $7.33 million from roughly 161,000 donors and said the effort had exposed weaknesses in voting systems, such as unbalanced precinct counts in Detroit. The episode was an early sign of how losing sides now fight elections after the fact. In 2020 it was Trump who paid for a partial Wisconsin recount, which added to Biden&#x27;s lead, and who went on to make false fraud claims much larger than Stein&#x27;s. Stein, 76, ran for president again in 2024. She now faces a misdemeanour assault and trespass case over a 2024 pro-Palestinian protest at Washington University in St. Louis. She rejected a deal to drop the charges in exchange for community service and is asking for a jury trial, and a trial date is expected to be set on 25 January 2027.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=m4C7qD3XRxQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: With recount efforts brewing in three states, what now? (analysis, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=SXJuvu1KZXM" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">AP Archive: Jill Stein files recount request in Wisconsin (original footage, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=TyK3f6FvhlA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Fox News: Michigan judge calls off recount effort (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Wildfire sweeps out of the Smokies into Gatlinburg</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the evening of <strong>23 November 2016</strong>, a small fire was reported on the Chimney Tops in Great Smoky Mountains National Park, during the worst drought East Tennessee had seen in years. For five days it smouldered on cliffs that crews could not safely reach, and park officials judged it no threat to nearby towns. On <strong>28 November</strong>, winds gusting up to 87 mph threw embers miles ahead and brought down power lines. The fire left the park at 6:08 p.m. and swept into Gatlinburg and the rest of Sevier County, where it merged with other fires. Thousands of people fled down mountain roads through the flames. Some never got evacuation alerts because cell towers were down, and the state emergency agency did not send a mass alert. Fourteen people died, about 190 were injured and nearly 2,500 buildings were destroyed, with damage of around $2 billion. It was Tennessee&#x27;s largest documented wildfire. Two teenagers were charged with aggravated arson.</p>
+<p>Sources: <a class="inline-link" href="https://www.wvlt.tv/2026/04/01/federal-judge-dismisses-gatlinburg-wildfire-lawsuits-against-us-government/" target="_blank" rel="noopener noreferrer">WVLT: Federal judge dismisses Gatlinburg wildfire lawsuits (Apr 2026)</a>, <a class="inline-link" href="https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4" target="_blank" rel="noopener noreferrer">WBIR: 10 years later, remembering the 2016 Gatlinburg wildfires</a>, <a class="inline-link" href="https://visitgatlinburgpigeonforge.com/events/gatlinburg-wildfires-10-years-november-23-2026/" target="_blank" rel="noopener noreferrer">Visit Gatlinburg &amp; Pigeon Forge: Timeline and 10th-anniversary remembrance</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Prosecutors dropped the charges against the two teenagers in June 2017. They cited the hurricane-force winds and other ignition points, such as downed power lines. The park later spent about $2.5 million upgrading its communications. Dolly Parton, who grew up in Sevier County, set up the My People Fund, which gave more than 900 families who lost their homes $10,000 each. Her telethon raised $9 million. The victims&#x27; lawsuits against the federal government have gone nowhere. On 31 March 2026 a federal judge dismissed 11 consolidated cases. He ruled that the park&#x27;s warning decisions, &quot;while far from perfect,&quot; were protected judgment calls. Gatlinburg has been rebuilt and the forests are green again, but the last section of the Chimney Tops Trail is still closed because the burned summit is unstable. A ceremony at the memorial in Mynatt Park will mark the 10th anniversary this Saturday, 28 November.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=vSKVx1q1emw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WBIR Channel 10: Trial By Fire: The Story of the Gatlinburg Wildfire (documentary, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=sJL_2qfH7BY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Knoxville News Sentinel: Mountain firestorm: the story of the Gatlinburg wildfires (documentary, 2017)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=Rnsi-d7RL8M" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">WATE 6: Sevier County Wildfires: Stories from the Ashes (documentary, 2017)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The European Parliament votes to freeze Turkey&#x27;s EU membership talks</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>24 November 2016</strong>, the European Parliament voted by 479 to 37, with 107 abstentions, to urge a &quot;temporary freeze&quot; of Turkey&#x27;s EU accession talks. The reason was President Recep Tayyip Erdoğan&#x27;s crackdown after the failed coup in July. By then about 120,000 people had been dismissed or suspended from public jobs and some 40,000 arrested, journalists had been rounded up and pro-Kurdish MPs detained. The resolution was non-binding, and EU foreign-policy chief Federica Mogherini warned against it. The EU depended on Turkey&#x27;s March 2016 deal to hold back migrants. Erdoğan called the vote &quot;worthless.&quot; The next day he threatened Europe directly: &quot;If you go any further, these border gates will be opened.&quot; Talks had started in 2005, but only one of 35 negotiating chapters had been closed.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-europe-38090121" target="_blank" rel="noopener noreferrer">BBC: Euro MPs vote to freeze Turkey EU membership talks</a>, <a class="inline-link" href="https://www.europarl.europa.eu/news/en/press-room/20161117IPR51549/freeze-eu-accession-talks-with-turkey-until-it-halts-repression-urge-meps" target="_blank" rel="noopener noreferrer">European Parliament press release (24 Nov 2016)</a>, <a class="inline-link" href="https://www.reuters.com/article/us-turkey-europe-erdogan-idUSKBN13K0R6/" target="_blank" rel="noopener noreferrer">Reuters: Erdoğan warns Europe Turkey could open migrant gates</a>, <a class="inline-link" href="https://enlargement.ec.europa.eu/document/download/652406c3-b824-42f0-b3ab-43da43c243d5_en?filename=turkiye-report-2026.pdf" target="_blank" rel="noopener noreferrer">European Commission: Türkiye 2026 Report</a>, <a class="inline-link" href="https://www.aa.com.tr/en/europe/eus-turkiye-report-highlights-strategic-importance-amid-stalled-accession-talks/4111747" target="_blank" rel="noopener noreferrer">Anadolu: EU&#x27;s Türkiye report amid stalled talks (Nov 2026)</a>, <a class="inline-link" href="https://www.bbc.com/turkce/articles/c98rz6e7z6exo" target="_blank" rel="noopener noreferrer">BBC Türkçe: What is in the EU&#x27;s Turkey report? (Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The vote was a sign of where things were heading. EU governments never formally suspended talks, but no new chapter has been opened since 2016, and accession negotiations have been &quot;at a standstill&quot; since June 2018. The Commission repeated that in its 4 November 2026 report on Turkey. In 2017 Turks voted to create an executive presidency, and in 2020 Erdoğan briefly carried out his threat by waving migrants toward the Greek border. The report says the gap between Turkey&#x27;s EU ambitions and its democratic record has widened. It points out that Istanbul mayor Ekrem İmamoğlu, the opposition&#x27;s strongest presidential hopeful, remains in detention, and that his corruption trial, which began on 9 March 2026, carries a possible sentence of up to 2,430 years. Ankara called the report &quot;biased.&quot; The relationship now runs on interests, not membership: the EU has spent about €12.5 billion on refugees in Turkey since 2011 and treats Turkey, with NATO&#x27;s second-largest army, as a key security and defence partner. Erdoğan, 72, is still president.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=U2L2PHE_wZg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">FRANCE 24 English: European Parliament votes to suspend Turkey membership talks (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=QKHiWSSwz8E" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Erdoğan threatens EU with new refugee surge (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=widSABLS5E8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TLDR News EU: Could Turkey actually join the EU? (explainer, 2023)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-24.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 24 de noviembre de 2026, 09:18 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
