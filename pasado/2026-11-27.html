@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<title>Noticias del pasado — Viernes 27 de noviembre de 2026</title>
+<style>
+:root{
+  --paper:#f6f3ec; --card:#ffffff; --ink:#1c1a17; --ink-2:#3b3731; --muted:#6f695f;
+  --rule:#e3ddd1; --rule-strong:#1c1a17; --accent:#a3161b; --accent-soft:#f7e4e1;
+  --pill:#f3efe6; --pill-ink:#36322b; --pill-border:#e1dacb; --nav-bg:rgba(246,243,236,.92);
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 6px 20px rgba(28,26,23,.05);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131211; --card:#1c1b19; --ink:#efebe3; --ink-2:#d6d0c5; --muted:#a39c90;
+    --rule:#2f2c28; --rule-strong:#efebe3; --accent:#ff7a6b; --accent-soft:#3a201d;
+    --pill:#262421; --pill-ink:#e6e0d5; --pill-border:#38342f; --nav-bg:rgba(19,18,17,.9);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* masthead */
+.masthead{padding:34px 0 18px;text-align:center}
+.masthead .kicker{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.masthead h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;margin:0;
+  font-weight:700;letter-spacing:-.01em}
+.masthead .dek{max-width:720px;margin:14px auto 0;color:var(--ink-2);font-style:italic;font-size:1.06rem}
+.masthead .meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.02em}
+.masthead .meta span+span::before{content:"·";margin:0 .55em;color:var(--rule)}
+.rule-double{border:0;border-top:3px double var(--rule-strong);margin:0;opacity:.85}
+/* table of contents */
+.toc{position:sticky;top:0;z-index:10;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px;
+  overflow-x:auto;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;margin-right:4px;white-space:nowrap}
+.toc a{font-family:var(--sans);font-size:.85rem;text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);transition:border-color .15s,color .15s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.toc .count{font-size:.72rem;font-weight:700;min-width:1.5em;text-align:center;padding:1px 6px;
+  border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (min-width:900px){.toc .wrap{flex-wrap:wrap;justify-content:center}}
+/* sections */
+main{padding:26px 0 10px}
+.section{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
+  padding:22px 22px 24px;margin:0 0 26px;scroll-margin-top:70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:2px solid var(--rule-strong);padding-bottom:10px;margin-bottom:18px}
+.section-head h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.005em;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2::before{content:"";display:inline-block;width:10px;height:10px;
+  background:var(--accent);border-radius:2px;transform:translateY(-2px)}
+.section-head .sub{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:.02em}
+.section-head .top{font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.section-head .top:hover{color:var(--accent)}
+.stories{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .stories{grid-template-columns:1fr 1fr}
+  .story.lead,.story.span{grid-column:1/-1}
+}
+.story{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  border:1px solid var(--rule);border-radius:10px;padding:16px 18px 16px 14px;
+  background:var(--card);scroll-margin-top:80px;transition:border-color .15s,box-shadow .15s}
+.story:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.story .num{font-size:2rem;line-height:1;font-weight:700;color:var(--accent);min-width:1.3em;
+  text-align:right;font-variant-numeric:lining-nums tabular-nums;padding-top:2px}
+.story .body{min-width:0}
+.story h3{margin:0 0 6px;font-size:1.16rem;line-height:1.3;font-weight:700}
+.story.lead{background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--card)}
+.story.lead .num{font-size:2.8rem}
+.story.lead h3{font-size:1.5rem;line-height:1.22}
+.story p{margin:0 0 8px;color:var(--ink-2)}
+.story.lead p{font-size:1.04rem}
+.story p:last-child{margin-bottom:0}
+.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.pill{font-family:var(--sans);font-size:.74rem;font-weight:600;line-height:1.2;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;
+  background:var(--pill);color:var(--pill-ink);border:1px solid var(--pill-border);
+  transition:background .15s,color .15s,border-color .15s}
+.pill::after{content:"↗";font-size:.85em;opacity:.55}
+.pill:hover,.pill:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent);outline:none}
+.pill:hover::after{opacity:.9}
+.inline-link{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a.xref{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px dotted var(--accent)}
+/* tracked / un-numbered items */
+.items{display:grid;gap:12px}
+.item{border-left:3px solid var(--accent);padding:6px 4px 6px 16px}
+.item h3{margin:0 0 4px;font-size:1.1rem;line-height:1.3}
+.item p{margin:0 0 6px;color:var(--ink-2)}
+.item p:last-child{margin-bottom:0}
+.section .note,.section .para{color:var(--ink-2);margin:0 0 12px}
+.section .note{font-style:italic;color:var(--muted)}
+.section h4.sub-h{font-size:1.05rem;margin:18px 0 10px;font-family:var(--sans);
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.section blockquote{margin:0 0 12px;padding:4px 14px;border-left:3px solid var(--rule);color:var(--ink-2);font-style:italic}
+.section hr{border:0;border-top:1px solid var(--rule);margin:16px 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.section table{border-collapse:collapse;margin:0 0 12px;font-family:var(--sans);font-size:.85rem;display:block;overflow-x:auto}
+.section th,.section td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+.section th{background:var(--pill)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--pill);padding:1px 5px;border-radius:4px}
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding:18px 0 34px;text-align:center;
+  font-family:var(--sans);font-size:.76rem;color:var(--muted);line-height:1.7}
+footer code{font-size:.95em}
+/* small screens */
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  .masthead{padding:24px 0 14px}
+  .section{padding:16px 14px 18px;border-radius:12px;margin-bottom:18px}
+  .section-head h2{font-size:1.4rem}
+  .story{padding:14px 14px 14px 10px;gap:2px 10px}
+  .story .num{font-size:1.6rem}
+  .story.lead .num{font-size:2.1rem}
+  .story.lead h3{font-size:1.28rem}
+}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px}
+.foot .sources{margin:0}
+@media print{
+  .toc,.section-head .top{display:none}
+  body{background:#fff;color:#000}
+  .section,.story{box-shadow:none;break-inside:avoid}
+  .pill::after{content:" (" attr(href) ")";opacity:1}
+}/* design-review: review.css applied */
+/* design-review: iPhone readability + tap targets */
+@media (max-width:560px){
+  .story{display:block;padding:14px}
+  .story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+  .story h3{font-size:1.12rem}
+  .story.lead h3{font-size:1.3rem}
+  .story p{font-size:1.02rem;line-height:1.55}
+  .masthead h1{font-size:1.9rem}
+  .masthead .dek{font-size:1rem}
+}
+@media (pointer:coarse){
+  .pill{min-height:44px;padding:10px 14px;font-size:.82rem}
+  .toc a{min-height:44px}
+  .section-head .top{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+  a.xref{padding:6px 0}
+}
+.toc{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+@media (min-width:900px){.toc{-webkit-mask-image:none;mask-image:none}}
+.story{scroll-margin-top:72px}
+
+/* past-news additions */
+.era{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story .orig-date{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.story .orig-date time{color:var(--accent)}
+.story h3{overflow-wrap:anywhere}
+.today{margin:12px 0 4px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.today .today-label{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-family:var(--sans);font-size:.72rem;
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.today .today-label::before{content:"↻";font-size:1rem;letter-spacing:0}
+.today p{margin:0;color:var(--ink)}
+.story .today p.today-label{font-size:.72rem;line-height:1.3;margin:0 0 4px;color:var(--accent)}
+.story .orig-date{font-size:.78rem!important}
+.story p.summary-label,.story.lead p.summary-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.foot .src-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%}
+.placeholder{outline:2px dashed #c08a00;outline-offset:2px;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(192,138,0,.08) 8px 16px)}
+.ph-banner{font-family:var(--sans);font-size:.8rem;text-align:center;padding:8px 12px;background:#fff3cd;color:#5c4300;border-bottom:1px solid #e6cf7a}
+@media (prefers-color-scheme:dark){.ph-banner{background:#3a2f0f;color:#f5dd94;border-color:#5c4a18}}
+.empty{font-family:var(--sans);color:var(--muted);font-style:italic;margin:0}
+/* index */
+.days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (min-width:860px){.days{grid-template-columns:1fr 1fr}}
+.day a{display:block;min-height:44px;text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card);transition:border-color .15s}
+.day a:hover,.day a:focus-visible{border-color:var(--accent);outline:none}
+.day .d{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.day .lead{display:block;color:var(--ink-2);font-size:.98rem;margin-top:4px}
+.day .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.day .chip{font-family:var(--sans);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--pill);border:1px solid var(--pill-border);color:var(--pill-ink)}
+.day.latest a{background:linear-gradient(180deg,var(--accent-soft),transparent 80%),var(--card)}
+.day .new{font-family:var(--sans);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+</style>
+<style>
+.videos{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-family:var(--sans)}
+.videos-label{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.videos-label svg{width:14px;height:14px;flex:none;fill:currentColor}
+.videos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.videos li{min-width:0;max-width:100%}
+.vchip{display:flex;align-items:center;gap:10px;min-height:44pt;max-width:100%;padding:6px 14px 6px 8px;
+  border-radius:12px;text-decoration:none;background:var(--pill);color:var(--pill-ink);
+  border:1px solid var(--pill-border);transition:background .15s,color .15s,border-color .15s}
+.vchip .vplay{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+  display:inline-flex;align-items:center;justify-content:center}
+.vchip .vplay svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+.vchip .vtxt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vchip .vtitle{font-size:.86rem;font-weight:600;overflow-wrap:anywhere}
+.vchip .vhost{font-size:.7rem;color:var(--muted)}
+.vchip:hover,.vchip:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+@media (prefers-color-scheme:dark){.vchip .vplay svg{fill:var(--card)}}
+</style>
+<style>
+/* periodico: newspaper look */
+:root{--paper:#f2ebda;--nav-bg:rgba(242,235,218,.94);--np-rule:#c9bda4;--np-name:"Old English Text MT","Goudy Text MT",Didot,"Bodoni 72","Bodoni MT","Big Caslon",Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--paper:#131211;--nav-bg:rgba(19,18,17,.94);--np-rule:#3b3732}}
+.masthead{padding:20px 0 0}
+.masthead .wrap{display:flex;flex-direction:column}
+.masthead .kicker{order:0;font:900 clamp(2.1rem,8.6vw,4.4rem)/1.05 var(--np-name);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:0 0 12px}
+.masthead h1{order:1;font-size:1.05rem;line-height:1.3;font-weight:700;border-top:1px solid var(--ink);padding:8px 0 0}
+.masthead .dek+.meta{order:2;margin:4px 0 0;padding:0 0 8px;border-bottom:3px double var(--ink)}
+.masthead .dek{order:3;margin-top:10px;font-size:1rem}
+.masthead .meta+.meta{order:4;margin-top:4px}
+.rule-double{display:none}
+.toc{border-bottom:1px solid var(--np-rule)}
+.toc a,.pill,.today,.smap,.story,.section,.vchip{border-radius:3px}
+.toc a{background:none}
+main{padding-top:16px}
+.section{background:none;border:0;box-shadow:none;padding:0;margin:0 0 30px}
+.section-head{border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:14px}
+.section-head h2{text-transform:uppercase;letter-spacing:.06em;font-size:1.35rem}
+.section-head h2::before{display:none}
+.story{display:block;background:none;border:0;border-bottom:1px solid var(--np-rule);padding:0 0 14px}
+.story:last-child{border-bottom:0}
+.story.lead{background:none}
+.story:target{box-shadow:none;outline:2px solid var(--accent);outline-offset:4px}
+.story .num,.story.lead .num{float:left;font-size:1.25rem;min-width:0;margin:3px 8px 0 0;text-align:left}
+.story h3{font-weight:800;letter-spacing:-.005em}
+.story.lead h3{font-size:clamp(1.35rem,3.4vw,2.1rem);line-height:1.15}
+main>.section:first-child .lead h3+p:not([class])::first-letter,main>.section:first-child .lead .summary-label+p::first-letter{float:left;font-size:3.3em;line-height:.8;margin:.07em .07em 0 0;font-weight:700;color:var(--ink)}
+footer{border-top:3px double var(--ink)}
+@media (min-width:860px){
+.stories{display:block;columns:2;column-gap:34px;column-rule:1px solid var(--np-rule)}
+.story{break-inside:avoid;margin:0 0 14px}
+.story.lead,.story.span{column-span:all;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:16px}
+.story.lead p:not([class]){columns:2 19em;column-gap:34px;column-rule:1px solid var(--np-rule)}
+}
+@media (min-width:1200px){.wrap{max-width:1240px}.stories{columns:3}.stories:not(:has(>:nth-child(3))){columns:2}}
+</style>
+</head>
+<body id="top">
+<header class="masthead">
+<div class="wrap">
+<p class="kicker">Noticias del pasado</p>
+<h1>Viernes 27 de noviembre de 2026</h1>
+<p class="dek">Lo que importaba hace 1 mes, 1 año, 5 y 10 años, y cómo se conecta con hoy.</p>
+<p class="meta"><span>12 noticias</span><span>4 épocas</span><span>0 fuentes enlazadas</span></p>
+<p class="meta"><span><a href="../index.html" style="display:inline-flex;align-items:center;min-height:44px">← Volver al inicio</a></span></p>
+</div>
+</header>
+<hr class="rule-double">
+<nav class="toc" id="indice" aria-label="Índice de secciones">
+<div class="wrap"><span class="label">Índice</span><a href="#hace-1-mes">Hace 1 mes<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-1-ano">Hace 1 año<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-5-anos">Hace 5 años<span class="count" aria-label="3 noticias">3</span></a><a href="#hace-10-anos">Hace 10 años<span class="count" aria-label="3 noticias">3</span></a></div>
+</nav>
+<main class="wrap">
+<section class="section" id="hace-1-mes" data-section="Hace 1 mes" aria-labelledby="h-hace-1-mes">
+<header class="section-head">
+<h2 id="h-hace-1-mes">Hace 1 mes<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-mes-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Two high-speed trains collide near Toledo, killing 69</h3>
+<p class="summary-label">Qué pasó</p>
+<p>At <strong>8:53 a.m. on 28 October 2026</strong>, a Renfe AVE train from Madrid to Seville (service 2080) ran into the back of an Iryo train (service 6076) that was stopped at the entry signal of Urda station, in Toledo province, on the Madrid–Seville high-speed line. The two trains were carrying 544 people. Sixty-nine people died and more than 200 were injured. It was Spain&#x27;s deadliest rail disaster since the Santiago de Compostela derailment in 2013, which killed 80. It came nine months after the Adamuz crash on the same line, which killed 46 in January 2026. According to the rail accident investigator AITAT, the line&#x27;s LZB signalling system lost transmission at 8:31. Trains then had to run under the backup BSL system. El País reported that at 8:36 Adif&#x27;s control centre in Madrid-Atocha sent the AVE an &quot;LZB4&quot; instruction that let it run at normal speed, up to 200 km/h, even though the Iryo was still occupying the block ahead. Reporting says the regulations did not allow that instruction in this situation. The AVE hit the Iryo 17 minutes later.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/mundo/articles/c8vgx72kz764o" target="_blank" rel="noopener noreferrer">BBC Mundo: Spain&#x27;s transport minister resigns after the crash</a>, <a class="inline-link" href="https://www.transportes.gob.es/recursos_mfom/recomendacion_previa_informe_de_urda.pdf" target="_blank" rel="noopener noreferrer">AITAT: interim safety recommendation on Urda (PDF)</a>, <a class="inline-link" href="https://elpais.com/espana/2026-11-02/la-investigacion-del-siniestro-de-urda-analiza-si-adif-uso-el-protocolo-erroneo-mas-veces.html" target="_blank" rel="noopener noreferrer">El País: investigators examine whether Adif used the wrong protocol before</a>, <a class="inline-link" href="https://www.lasexta.com/noticias/sociedad/choque-trenes-directo_202610286ae1b2e502501232156a9847.html" target="_blank" rel="noopener noreferrer">laSexta: the days after Urda, from the crash to the resignations</a>, <a class="inline-link" href="https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Castilla-La-Mancha/Oficina-de-Comunicacion/Notas-de-prensa/La-jueza-instructora-del-accidente-ferroviario-de-Urda--Toledo--acuerda-la-prorroga-del-secreto-de-sumario-del-procedimiento-judicial-que-investiga-el-siniestro" target="_blank" rel="noopener noreferrer">CGPJ: judge extends secrecy of the Urda case</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Transport Minister Óscar Puente resigned on 3 November, saying a transport minister &quot;cannot continue in his post after two accidents in a year&quot;. Adif&#x27;s president, Luis Pedro Marco de la Peña, resigned the next day. The government approved €30 million in aid for victims. On 7 November AITAT issued interim safety recommendations without waiting for its final report: trains must run &quot;on sight&quot; after a switch to the backup system, control-centre protocols must be revised, and the risks of moving from LZB to BSL must be assessed. Investigators are also looking at whether the wrong protocol was used routinely during earlier LZB failures, which El País counts at 169. The investigating judge in Orgaz has extended the secrecy of the judicial file to 28 December, so no one has been charged in public yet. The crash has also changed Spain&#x27;s snap general election campaign. The vote is on 29 November.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=PfkEVP2ZQkw" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Spain rail disaster: 68 dead after &quot;inexplicable&quot; instruction to train driver (report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=ADPHmp2Bnrg" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News Mundo: How the collision of two high-speed trains that killed at least 69 in Spain happened (explainer, Spanish, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=mtV4jtXuA04" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Reuters: Spain&#x27;s deadly train crash: what we know so far (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Iliana Iotova becomes Bulgaria&#x27;s first elected female president</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>1 November 2026</strong>, acting president Iliana Iotova (also spelled Yotova) won Bulgaria&#x27;s presidential runoff. Final results from the Central Election Commission gave her and running mate Kiril Valchev 57.57% (1,093,852 votes), against 39.48% for Andrey Gyurov, a banker and former caretaker prime minister backed by the pro-Western opposition. Another 2.95% chose &quot;I do not support anyone&quot;. Iotova, 62, is an ally of Prime Minister Rumen Radev. She became acting head of state in January, when Radev resigned the presidency to run for parliament. She ran as a &quot;president of peace&quot;, opposing military aid to Ukraine and favouring dialogue with Moscow. Gyurov had signed a security agreement with Kyiv as premier. The first round on 25 October was much closer (34.8% to 32.0%) than polls had predicted. Turnout was very low: the commission reported 19.3% by 4 p.m., and polling agencies estimated about 27–29%. The war was the central issue. Drone attacks on commercial ships off Bulgaria&#x27;s Black Sea coast in October had left 21 people missing.</p>
+<p>Sources: <a class="inline-link" href="https://www.dw.com/en/bulgarias-yotova-wins-presidential-runoff/a-79820449" target="_blank" rel="noopener noreferrer">DW: Yotova wins runoff, becoming first woman elected president in Bulgaria</a>, <a class="inline-link" href="https://www.novinite.com/articles/241393/Final+Results+Confirm+Yotova%27s+57.5+Victory+Over+Gyurov" target="_blank" rel="noopener noreferrer">Novinite: final results confirm Yotova&#x27;s 57.5% victory</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2026/11/1/bulgarian-president-yotova-leads-runoff-exit-polls-show" target="_blank" rel="noopener noreferrer">Al Jazeera: initial results indicate victory for Iotova</a>, <a class="inline-link" href="https://www.novinite.com/articles/241772/President+Iotova%3A+I+Earned+Voters%27+Trust+and+Will+Prove+It+Every+Day" target="_blank" rel="noopener noreferrer">Novinite: Iotova receives her certificate (24 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Gyurov conceded on election night, and Ursula von der Leyen congratulated the winner. The handover of the official certificates was put off from 11 November because of national mourning for deadly pile-ups on the Trakia motorway. It took place in parliament on 24 November. Iotova said she had &quot;never been &#x27;appointed&#x27;&quot; in a 30-year career and promised to seek national consensus. Her five-year term starts on 22 January 2027, and she stays acting president until then. Her win puts both the presidency and the government under Radev&#x27;s camp, which wants Bulgaria to stay in the EU while pushing for a negotiated end to the war and the lifting of sanctions. Abroad, the results split sharply: Bulgarians voting in the United States backed Gyurov, while those in Russia backed Iotova by 84%.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2026/11/2/bulgaria-has-its-first-elected-female-president" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Bulgaria has its first elected female president (report, 2026)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-mes-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Poland&#x27;s president forces his way into the Constitutional Tribunal</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On the evening of <strong>30 October 2026</strong>, Anna Korwin-Piotrowska suspended the president of Poland&#x27;s Constitutional Tribunal, Bogdan Święczkowski, and his deputy, Bartłomiej Sochański, for one month and took charge of the court herself. She is one of eight judges elected this year by Donald Tusk&#x27;s parliamentary majority. President Karol Nawrocki had refused to swear in five of them, including her. She claimed authority as the judge with the longest judicial service. That same day, Justice Minister and Prosecutor General Waldemar Żurek asked the court to lift the two men&#x27;s immunity. Police surrounded the building, and hundreds of protesters, including opposition MPs, gathered outside. Nawrocki, who is allied with the Law and Justice party (PiS), turned his plane around on the way to Senegal. Shortly before 1 a.m. on 31 October he pushed through the cordon and the judges at the door, and video shows him tussling at the entrance. Inside, he told the new judges, &quot;You are not judges.&quot; His office called it a forcible takeover of a constitutional body, while PiS called it a coup. Tusk said &quot;restoring the rule of law is our duty.&quot;</p>
+<p>Sources: <a class="inline-link" href="https://www.theguardian.com/world/2026/oct/31/riot-police-deployed-to-polands-constitutional-court-after-judge-suspended" target="_blank" rel="noopener noreferrer">Guardian: riot police deployed to Poland&#x27;s constitutional court</a>, <a class="inline-link" href="https://www.politico.eu/article/poland-president-karol-nawrocki-rule-of-law-crisis/" target="_blank" rel="noopener noreferrer">Politico Europe: Nawrocki pushes his way into top court</a>, <a class="inline-link" href="https://www.icj.org/poland-the-constitutional-crisis-must-be-resolved-through-the-rule-of-law/" target="_blank" rel="noopener noreferrer">ICJ: the crisis must be resolved by law, not by force</a>, <a class="inline-link" href="https://notesfrompoland.com/2026/11/27/disputed-polish-constitutional-court-announces-12-month-suspension-of-chief-justice/" target="_blank" rel="noopener noreferrer">Notes from Poland: 12-month suspension of the chief justice (27 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Poland now has two rival groups claiming to be the Tribunal. On 3 November the eight government-backed judges held a general assembly, which the seven PiS-era judges boycotted, and approved disciplinary proceedings against Święczkowski. Last week they lifted his and Sochański&#x27;s immunity. On 26 November their disciplinary court suspended Święczkowski for 12 months. Żurek welcomed the decision, and Święczkowski called his opponents &quot;usurpers dressed in robes&quot;. The Supreme Court, whose own legitimacy the government disputes, has ruled that only judges sworn in by the president are legitimate. The International Commission of Jurists criticised both the takeover and Nawrocki&#x27;s refusal to swear in the judges. The fight is likely to be a central issue in the 2027 parliamentary election.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=obZMqydt1rQ" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">TVP World: Poland&#x27;s political standoff: the fight over the courts explained (explainer, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.dw.com/en/standoff-over-polands-constitutional-court-escalates/video-79817574" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Standoff over Poland&#x27;s constitutional court escalates (report, 2026)</span><span class="vhost">dw.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-1-ano" data-section="Hace 1 año" aria-labelledby="h-hace-1-ano">
+<header class="section-head">
+<h2 id="h-hace-1-ano">Hace 1 año<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-1-ano-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Soldiers seize power in Guinea-Bissau days after an election</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>26 November 2025</strong>, three days after a presidential election and a day before provisional results were due, military officers in Guinea-Bissau announced on state TV that they had taken control. They suspended the electoral process, closed the borders and imposed a curfew. President Umaro Sissoco Embaló told France 24, &quot;I have been deposed.&quot; His main challenger, Fernando Dias, and opposition leader Domingos Pereira were also reported detained. The officers, calling themselves the &quot;High Military Command for the Restoration of Order&quot;, said they were stopping a plot backed by &quot;a well-known drug baron&quot;. Both Embaló and Dias had claimed victory. African Union and ECOWAS observers said the vote had been &quot;orderly and peaceful&quot;. The next day, Gen. Horta N&#x27;Tam (Inta-a) was sworn in as transitional president and promised a return to civilian rule within a year. Critics suggested the coup was staged to stop Dias from taking power. The BBC examined that claim, and it has not been proven.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c0edww3qgq2o" target="_blank" rel="noopener noreferrer">BBC: Soldiers seize power in Guinea-Bissau and detain the president</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/c1m8nm22785o" target="_blank" rel="noopener noreferrer">BBC: Was the coup real or a &quot;sham&quot;?</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cm879e5yxjq5o" target="_blank" rel="noopener noreferrer">BBC: military leaders delay return to civilian rule until 2028</a>, <a class="inline-link" href="https://www.reuters.com/5f374b32b07b/world/africa/guinea-bissau-delays-elections-extending-military-led-transition-year-after-coup-2026-11-26/" target="_blank" rel="noopener noreferrer">Reuters: Guinea-Bissau delays elections a year after coup</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The one-year promise has been broken. On <strong>26 November 2026</strong>, exactly a year after the coup, N&#x27;Tam decreed that the presidential and legislative elections planned for 6 December would be pushed back to <strong>26 November 2028</strong>. The decree cited a lack of &quot;technical, material and financial conditions&quot;. In August, voters had approved a constitutional change that gives the president more powers. ECOWAS had called for a short and transparent transition. Embaló lives in exile in Morocco and was barred last month from returning, although he had said he wanted to run. The results of the 2025 vote were never announced.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2025/11/27/what-was-behind-the-coup-in-guinea-bissau-days-after-the-election" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: What was behind the coup in Guinea-Bissau days after the election? (Inside Story discussion, 2025)</span><span class="vhost">aljazeera.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/newsfeed/2025/11/27/military-seizes-power-in-guinea-bissau-and-detains-president" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Military seizes power in Guinea-Bissau and detains president (report, 2025)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Cyclone Ditwah brings Sri Lanka&#x27;s worst disaster since the tsunami</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Cyclone Ditwah brushed Sri Lanka&#x27;s east coast on <strong>28 November 2025</strong>. Its winds were not unusually strong, peaking at about 75 km/h, but its rain set off the worst floods and landslides in decades. More than 1,200 severe landslides struck the central hills, and Kandy and Badulla were the hardest hit. The government declared a nationwide state of emergency and appealed for international aid. By 30 November the BBC was reporting more than 330 dead, over 200 missing, 20,000 homes destroyed and 108,000 people in shelters, with about a third of the country without power or running water. President Anura Kumara Dissanayake called it the &quot;most challenging natural disaster&quot; in the country&#x27;s history. Indonesia, Malaysia and Thailand were hit by severe floods at the same time.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/c5yq26x0dd6o" target="_blank" rel="noopener noreferrer">BBC: Sri Lanka declares state of emergency after floods and mudslides (Nov 2025)</a>, <a class="inline-link" href="https://www.dw.com/en/sri-lanka-declares-emergency-as-floods-kill-more-than-150/a-74952338" target="_blank" rel="noopener noreferrer">DW: Sri Lanka declares emergency as floods kill more than 150</a>, <a class="inline-link" href="https://english.newsfirst.lk/2026/11/26/the-night-ditwah-struck-one-year-later-how-far-has-sri-lanka-recovered" target="_blank" rel="noopener noreferrer">News 1st: one year later, how far has Sri Lanka recovered? (26 Nov 2026)</a>, <a class="inline-link" href="https://climatefactchecks.org/one-year-after-cyclone-ditwah-sri-lanka-is-still-counting-the-cost/" target="_blank" rel="noopener noreferrer">Climate Fact Checks: one year after Ditwah (27 Nov 2026)</a>, <a class="inline-link" href="https://www.dmc.gov.lk/images/pdfs/PDNA_Full_Report_Final%20Updated.pdf" target="_blank" rel="noopener noreferrer">Sri Lanka DMC: Post Disaster Needs Assessment (PDF)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The official toll is 646 dead and 173 missing, with about 2.2 million people affected in all 25 districts. The World Bank put the damage at about $4.1 billion. The government&#x27;s needs assessment estimates recovery at about LKR 1.02 trillion (around $3.4 billion) over three years, a heavy bill for a country still coming out of its 2022 economic crisis. One year on, almost all emergency allowances have been paid. But of 29,983 families who need resettling, only 1,615 have been permanently rehoused. Trains on the hill-country line run again as far as Peradeniya, while repairs continue towards Kandy and Gampola. A World Weather Attribution study found that downpours like Ditwah&#x27;s have become 28% to 160% heavier, though it could not pin down climate change&#x27;s exact share. Survivors also say official warnings did not reach them in time.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=s0WwpwH25V8" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: Sri Lanka floods: residents ask why the government wasn&#x27;t better prepared (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=N5FgHtzqLsc" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News (Australia): More rainfall forecast after deadly Cyclone Ditwah slams Sri Lanka (report, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-1-ano-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>Honduras votes, and Trump puts his thumb on the scale</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Honduras held its general election on <strong>30 November 2025</strong>. In the days before the vote, Donald Trump endorsed the National Party&#x27;s Nasry &quot;Tito&quot; Asfura. He threatened to withdraw U.S. financial support if Asfura lost and later warned of &quot;hell to pay&quot; if Asfura&#x27;s narrow lead was overturned. He also pardoned former president Juan Orlando Hernández, a National Party member serving 45 years in a U.S. prison on drug and weapons charges. The count was a mess. The live results portal crashed, tabulation stopped twice because of what officials called &quot;inexcusable&quot; technical outages, and about 15% of tally sheets had to be counted by hand. On <strong>24 December</strong>, the electoral council declared Asfura the winner with 40.3%, against 39.5% for the Liberal Party&#x27;s Salvador Nasralla. Nasralla said he would &quot;not accept a result built on omissions&quot; and blamed Trump&#x27;s comments for hurting his chances. Outgoing president Xiomara Castro spoke of an &quot;electoral coup&quot;.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/articles/cyvgz1jn368o" target="_blank" rel="noopener noreferrer">BBC: Trump-backed candidate wins knife-edge Honduran election</a>, <a class="inline-link" href="https://www.dw.com/en/honduras-trump-ally-asfura-wins-presidential-election/a-75298566" target="_blank" rel="noopener noreferrer">DW: Trump ally Asfura wins presidential election</a>, <a class="inline-link" href="https://efe.com/latest-news/2026-01-27/conservative-nasry-tito-asfura-sworn-in-as-president-of-honduras/" target="_blank" rel="noopener noreferrer">EFE: Asfura sworn in as president of Honduras</a>, <a class="inline-link" href="https://www.infobae.com/honduras/2026/11/25/asfura-anuncia-llegada-de-helicopteros-fusiles-y-vehiculos-blindados-para-reforzar-la-seguridad-en-honduras/" target="_blank" rel="noopener noreferrer">Infobae: Asfura announces helicopters and armoured vehicles for security forces (25 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Asfura was sworn in on 27 January 2026 for a 2026–2030 term. He has governed as a close U.S. ally, with security at the top of his agenda. On 25 November he announced helicopters, armoured vehicles and rifles for the police and military police, as well as tougher laws against gangs and organised crime. The election is still remembered for how openly Washington weighed in before and during the count.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=-5c8C1zWwV0" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">DW News: Why Trump supported Asfura, Honduras&#x27; presidential election winner (explainer, 2025)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-5-anos" data-section="Hace 5 años" aria-labelledby="h-hace-5-anos">
+<header class="section-head">
+<h2 id="h-hace-5-anos">Hace 5 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-5-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>Barbados removes the Queen and becomes a republic</h3>
+<p class="summary-label">Qué pasó</p>
+<p>At midnight on <strong>30 November 2021</strong>, the 55th anniversary of independence, Barbados removed Queen Elizabeth II as head of state and became the world&#x27;s newest republic. At a ceremony in Bridgetown, the Royal Standard was lowered, and Dame Sandra Mason, the governor-general, was sworn in as the first president. Prince Charles attended and spoke of the &quot;appalling atrocity of slavery&quot;. Barbados had been a hub of the transatlantic slave trade for more than 200 years. Prime Minister Mia Mottley named the singer Rihanna a National Hero. Barbados stayed in the Commonwealth.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-latin-america-59470843" target="_blank" rel="noopener noreferrer">BBC: Barbados becomes a republic and parts ways with the Queen</a>, <a class="inline-link" href="https://library.barbadosparliament-laws.com/president-of-barbados.html" target="_blank" rel="noopener noreferrer">Barbados Parliament Library: The President of Barbados</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/2026_Barbadian_general_election" target="_blank" rel="noopener noreferrer">Wikipedia: 2026 Barbadian general election</a>, <a class="inline-link" href="https://www.cbc.bb/news/politics/full-republican-constitution-to-be-tabled-within-two-months/" target="_blank" rel="noopener noreferrer">CBC Barbados: full republican constitution to be tabled within two months (Feb 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The republic is settled, but it is still waiting for its new constitution. Mason served one term, until 29 November 2025. Parliament elected Jeffrey Bostic, a former army officer and health minister, unopposed, and he was sworn in on 30 November 2025. Mottley&#x27;s Barbados Labour Party won all 30 seats for a third election running on 11 February 2026. Parliament has passed separate constitutional amendments. In February Mottley said the full republican constitution would come before Parliament &quot;within the next two months&quot;. I found no report that it has been adopted, and the republic still runs on the amended independence constitution. The fifth anniversary falls on Monday.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/news/av/world-59472695" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Caribbean island Barbados becomes world&#x27;s newest republic (report, 2021)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=gwU2mkPsUvo" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Barbados removes Queen as head of state to become republic (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=_Ey5vNwlvNY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PMO Barbados: Pride of Nationhood: Declaration of the Republic and Installation of the President (original ceremony footage, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Ghislaine Maxwell goes on trial</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>29 November 2021</strong>, Ghislaine Maxwell&#x27;s sex-trafficking trial opened in federal court in Manhattan. Prosecutors told the jury that the British socialite and Jeffrey Epstein were &quot;partners in crime&quot;. They said she won the trust of girls as young as 14, groomed them and &quot;served them up&quot; for Epstein to abuse between 1994 and 2004. The defence said she was a scapegoat for Epstein, who had died in jail in 2019, and questioned the accusers&#x27; memories and motives. Maxwell had been in jail since her arrest in July 2020 and faced up to 80 years. On 29 December 2021 the jury convicted her on five of six counts. She was later sentenced to 20 years.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-us-canada-59455605" target="_blank" rel="noopener noreferrer">BBC: Maxwell accused of preying on young girls for Epstein (29 Nov 2021)</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cy0zrey17qno" target="_blank" rel="noopener noreferrer">BBC: US judge rejects Maxwell&#x27;s &quot;frivolous&quot; appeal (Aug 2026)</a>, <a class="inline-link" href="https://www.nbcnews.com/politics/justice-department/ghislaine-maxwell-moved-federal-prison-texas-rcna222497" target="_blank" rel="noopener noreferrer">NBC News: Maxwell moved to federal prison camp in Texas</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Every appeal has failed. The Supreme Court declined to hear her case in October 2025. In August 2026, Judge Paul Engelmayer rejected her habeas petition as &quot;frivolous&quot; and &quot;demonstrably meritless&quot;. He found that the Epstein files released by the Justice Department &quot;far from exculpating her&quot; actually incriminate her. Since a nine-hour interview with Deputy Attorney General Todd Blanche in July 2025, she has been held at a minimum-security camp in Bryan, Texas. Victims&#x27; families called the move &quot;preferential treatment&quot;. She pleaded the Fifth before the House Oversight Committee in February 2026. She has sought clemency from Trump, and in July the Senate passed a resolution opposing a pardon. As of late November no pardon or commutation has been granted.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.bbc.com/video/docs/episode/p0ld3g6m" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC: House of Maxwell: Downfall and Disgrace (documentary, 2022)</span><span class="vhost">bbc.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/maxwell-verdict-1640818392/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: How evidence proved Maxwell was Epstein&#x27;s &quot;enabler-in-chief&quot; (in-depth report, 2021)</span><span class="vhost">pbs.org</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=0WqQk5ExmMA" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News: Guilty: Ghislaine Maxwell faces life in jail for sex trafficking (report, 2021)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-5-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>A 15-year-old kills four students at Oxford High School</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>30 November 2021</strong>, Ethan Crumbley, a 15-year-old sophomore, opened fire at Oxford High School in Michigan, about 35 miles north of Detroit. He used a 9mm handgun his parents had bought for him four days earlier. He killed four students, Tate Myre, Hana St. Juliana, Madisyn Baldwin and Justin Shilling, and wounded seven others, including a teacher. That morning, a teacher had found his math worksheet with a drawing of a handgun and the words &quot;The thoughts won&#x27;t stop. Help me.&quot; Staff called his parents in and told them to get him counselling within 48 hours. The parents resisted taking him home, did not mention the new gun, and left. The school never searched his backpack. On 3 December, prosecutors took the rare step of charging his parents, James and Jennifer Crumbley, with four counts each of involuntary manslaughter. They were accused of making the gun available and ignoring warning signs.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-us-canada-59523682" target="_blank" rel="noopener noreferrer">BBC: Parents of gunman charged with manslaughter (Dec 2021)</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/Oxford_High_School_shooting" target="_blank" rel="noopener noreferrer">Wikipedia: 2021 Oxford High School shooting</a>, <a class="inline-link" href="https://www.cbsnews.com/detroit/news/jennifer-crumbley-oxford-shooting-michigan-appeals-court/" target="_blank" rel="noopener noreferrer">CBS Detroit: Jennifer Crumbley asks appeals court to throw out convictions</a>, <a class="inline-link" href="https://www.michiganpublic.org/criminal-justice-legal-system/2026-09-18/michigan-court-of-appeals-directed-to-review-convicted-school-shooter-ethan-crumbleys-appeal-of-life-without-parole-sentence" target="_blank" rel="noopener noreferrer">Michigan Public: Supreme Court orders review of shooter&#x27;s sentence (Sept 2026)</a>, <a class="inline-link" href="https://oxfordhigh.oxfordschools.org/o/ohs/live_feeds/13726261/" target="_blank" rel="noopener noreferrer">Oxford Community Schools: Wildcat Remembrance Day</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Ethan Crumbley pleaded guilty to 24 counts, including terrorism and first-degree murder, and was sentenced in 2023 to life without parole. In 2024 his parents, among the first U.S. parents convicted over a mass shooting by their child, were found guilty in separate trials. Each got 10 to 15 years. A judge denied them new trials in 2025. As far as I could find, the Court of Appeals has not yet ruled on their appeals. In September 2026, the Michigan Supreme Court sent parts of Ethan&#x27;s challenge to his life sentence back to the Court of Appeals, including his claim that his trial lawyer mishandled expert testimony. The case is now cited as a precedent for holding parents responsible. On Monday, the fifth anniversary, Oxford schools will close for Wildcat Remembrance Day and hold a moment of silence at 12:51 p.m.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=0NKqkKZb49A" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">60 Minutes: How parents are being held responsible after school shootings (investigative report, 2026)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=S7X7GkxHp6w" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC News: &quot;Sins of the Parents: The Crumbley Trials&quot; official trailer (documentary trailer, 2024)</span><span class="vhost">youtube.com</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+<section class="section" id="hace-10-anos" data-section="Hace 10 años" aria-labelledby="h-hace-10-anos">
+<header class="section-head">
+<h2 id="h-hace-10-anos">Hace 10 años<span class="sub">— · 3 noticias</span></h2>
+<a class="top" href="#top">↑ Índice</a>
+</header>
+<div class="stories">
+<article class="story lead" id="hace-10-anos-1" data-number="1"><div class="num" aria-hidden="true">1</div><div class="body">
+<h3><span class="vh">1. </span>The Gambia votes out Yahya Jammeh</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>1 December 2016</strong>, Gambians voted out Yahya Jammeh, who had ruled since a 1994 coup. Adama Barrow, a property developer, won 43.3%, against 39.6% for Jammeh and 17.1% for Mama Kandeh, according to the electoral commission&#x27;s revised count. The next day Jammeh shocked the country by conceding on state TV: &quot;You are the elected president of The Gambia, and I wish you all the best.&quot; Banjul celebrated. On 9 December he reversed himself, citing &quot;abnormalities&quot; and demanding a new election. The U.S., Senegal and the African Union condemned the move, and ECOWAS said it would take &quot;necessary actions&quot;. In January 2017, ECOWAS troops entered the country, and on 21 January Jammeh flew into exile in Equatorial Guinea.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-africa-38271480" target="_blank" rel="noopener noreferrer">BBC: Jammeh rejects election result (Dec 2016)</a>, <a class="inline-link" href="https://www.aljazeera.com/news/2016/12/3/gambia-yahya-jammeh-concedes-loss-to-adama-barrow" target="_blank" rel="noopener noreferrer">Al Jazeera: Jammeh concedes loss to Adama Barrow (Dec 2016)</a>, <a class="inline-link" href="https://en.wikipedia.org/wiki/2016_Gambian_presidential_election" target="_blank" rel="noopener noreferrer">Wikipedia: 2016 Gambian presidential election</a>, <a class="inline-link" href="https://www.bbc.com/news/articles/cjr90wyw09wo" target="_blank" rel="noopener noreferrer">BBC: Gambia appoints special prosecutor for Jammeh-era crimes (Apr 2026)</a>, <a class="inline-link" href="https://www.aljazeera.com/features/2026/2/20/gambian-jammeh-era-victims-seek-real-justice-beyond-reparations" target="_blank" rel="noopener noreferrer">Al Jazeera: Jammeh-era victims seek &quot;real justice&quot; (Feb 2026)</a>, <a class="inline-link" href="https://www.cnbcafrica.com/2026/gambia-clears-barrow-to-run-for-third-presidential-term-approves-eight-other-candidates" target="_blank" rel="noopener noreferrer">Reuters via CNBC Africa: Barrow cleared to run for a third term (Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Jammeh is still in Equatorial Guinea, which has no extradition treaty with The Gambia. A truth commission documented killings, torture and disappearances under his rule and recommended his prosecution. In April 2026, the British barrister Martin Hackett was appointed the country&#x27;s first special prosecutor, and an ECOWAS-backed hybrid tribunal is being set up. Reparations payments began in January 2026, but many victims say money is not justice. Barrow promised term limits in a new constitution that never passed. Gambians vote on <strong>5 December</strong>, and he is running for a third term against Ousainou Darboe, Talib Ahmed Bensouda, Isatou Touray and five others.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=DpBEy9Jm31w" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">BBC News Africa: Bringing Down Jammeh (BBC Africa Eye documentary, 2019)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.aljazeera.com/video/inside-story/2016/12/11/the-gambia-is-it-on-a-path-to-turmoil" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">Al Jazeera English: The Gambia: Is it on a path to turmoil? (Inside Story discussion, 2016)</span><span class="vhost">aljazeera.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-2" data-number="2"><div class="num" aria-hidden="true">2</div><div class="body">
+<h3><span class="vh">2. </span>Trump takes a call from Taiwan&#x27;s president</h3>
+<p class="summary-label">Qué pasó</p>
+<p>On <strong>2 December 2016</strong>, President-elect Donald Trump spoke by phone with Taiwan&#x27;s president, Tsai Ing-wen. It was the first such publicly known contact since Washington cut formal ties with Taipei in 1979, and it broke nearly four decades of diplomatic protocol. Trump called it a courtesy call and said Tsai had phoned him. He followed it with tweets criticising China&#x27;s monetary policy and its operations in the South China Sea. Beijing lodged a formal diplomatic protest and reaffirmed that Taiwan is part of China. The outgoing Obama White House reassured China of its &quot;continued commitment to a one-China policy&quot;.</p>
+<p>Sources: <a class="inline-link" href="https://www.npr.org/2016/12/02/504279612/trump-talks-with-taiwan-in-a-move-that-may-spell-friction-with-china" target="_blank" rel="noopener noreferrer">NPR: Trump talks with Taiwan (Dec 2016)</a>, <a class="inline-link" href="https://www.bbc.com/news/world-asia-china-38218202" target="_blank" rel="noopener noreferrer">BBC: White House looks to reassure China after Trump-Taiwan call</a>, <a class="inline-link" href="https://www.cnn.com/2016/12/02/politics/donald-trump-taiwan" target="_blank" rel="noopener noreferrer">CNN: China lodges complaint over Trump-Taiwan call</a>, <a class="inline-link" href="https://www.taiwanplus.com/news/world-news/international-news/261120017/taiwan-watches-closely-after-trump-xi-meeting-amid-us-arms-sale-delay" target="_blank" rel="noopener noreferrer">TaiwanPlus: Taiwan watches closely after Trump-Xi meeting amid arms sale delay (20 Nov 2026)</a>, <a class="inline-link" href="https://www.hoover.org/news/little-boring-may-actually-be-useful-taiwan-ex-president-tells-hoover-gathering" target="_blank" rel="noopener noreferrer">Hoover Institution: Taiwan&#x27;s ex-president at Hoover (Oct 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>The call did not change formal U.S. policy, but it was the first sign that Trump sees Taiwan as something to bargain with. In his second term that worry is growing in Taipei. A $14 billion arms package cleared by Congress has been waiting for his approval since May. After Trump met Xi Jinping on 19 November, alongside the first U.S.–China–Russia leaders&#x27; meeting, Chinese state media said Xi had urged him to &quot;do the right thing&quot; on Taiwan and that Trump had said he does not support Taiwanese independence. Taiwan&#x27;s Mainland Affairs Council disputes that account. The two leaders are expected to meet again at the G20 in Miami next month. Tsai left office in 2024. In October 2026, on her first U.S. trip since then, she spoke at Stanford, arguing that Taiwan is essential to global supply chains and security.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.pbs.org/video/invisible-nation-JtfAWf/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS POV: Invisible Nation (documentary on Tsai Ing-wen&#x27;s presidency, PBS broadcast 2026)</span><span class="vhost">pbs.org</span></span></a></li><li><a class="vchip" href="https://www.cnn.com/2016/12/02/politics/donald-trump-taiwan" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">CNN: Trump makes call to Taiwan&#x27;s president (report with video, 2016)</span><span class="vhost">cnn.com</span></span></a></li></ul></div>
+</div></article>
+<article class="story" id="hace-10-anos-3" data-number="3"><div class="num" aria-hidden="true">3</div><div class="body">
+<h3><span class="vh">3. </span>The Ghost Ship warehouse fire kills 36 in Oakland</h3>
+<p class="summary-label">Qué pasó</p>
+<p>Late on <strong>2 December 2016</strong>, fire swept through the Ghost Ship, a cluttered artists&#x27; live-work warehouse in Oakland, California, during an electronic-music party. Thirty-six people died, aged 17 to 61, most of them musicians, artists and fans. It was the deadliest fire in the city&#x27;s history. An estimated 50 to 100 people were inside. Investigators ruled out arson and a refrigerator as the cause, and the official origin-and-cause report left the cause undetermined. Artists and housing advocates said the fire was a product of the Bay Area&#x27;s housing crisis: many artists lived in converted warehouses like the Ghost Ship because they could not afford anything else.</p>
+<p>Sources: <a class="inline-link" href="https://www.bbc.com/news/world-us-canada-38211691" target="_blank" rel="noopener noreferrer">BBC: Oakland fire death toll rises to 36 (Dec 2016)</a>, <a class="inline-link" href="https://www.theguardian.com/us-news/2016/dec/05/oakland-warehouse-fire-ghost-ship-housing-crisis" target="_blank" rel="noopener noreferrer">Guardian: fire is product of housing crisis, say artists (Dec 2016)</a>, <a class="inline-link" href="https://www.latimes.com/local/lanow/la-me-ln-ghostship-oakland-warehouse-fire-20161209-story.html" target="_blank" rel="noopener noreferrer">Los Angeles Times: refrigerator ruled out; no evidence of arson</a>, <a class="inline-link" href="https://www.kqed.org/arts/13995820/ghost-ship-fire-10-year-anniversary-oakland-memorial" target="_blank" rel="noopener noreferrer">KQED: families build a memorial, 10 years on (Nov 2026)</a>, <a class="inline-link" href="https://sfist.com/2026/11/24/ghost-ship-memorial-to-be-unveiled-as-oakland-marks-10-years-since-deadly-fire/" target="_blank" rel="noopener noreferrer">SFist: Ghost Ship memorial to be unveiled (24 Nov 2026)</a></p>
+<aside class="today" aria-label="Conexión con hoy"><p class="today-label">Conexión con hoy</p><p>Master tenant Derick Almena and events director Max Harris were charged with involuntary manslaughter. Harris was acquitted in 2019. Almena was sentenced to 12 years but ended up serving about 18 months under house arrest. Oakland settled the families&#x27; lawsuits for nearly $33 million without admitting liability. After the fire, a wave of evictions from converted warehouses pushed many artists out of Oakland. The warehouse was demolished in 2023. The nonprofit Unity Council plans 58 affordable apartments on the site, with 10% reserved for artists, though construction is not expected before 2028. For the tenth anniversary, families will dedicate a temporary dandelion memorial with the victims&#x27; names on <strong>5 December</strong>. A &quot;Ghost Ship Symphony&quot; by a survivor will be performed at Grace Cathedral on 4 December.</p></aside>
+<div class="foot"><span class="src-label">Fuentes</span><ul class="sources" aria-label="Fuentes"></ul></div>
+<div class="videos"><div class="videos-label"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg>Videos</div><ul aria-label="Videos"><li><a class="vchip" href="https://www.youtube.com/watch?v=EDuromzpkqI" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">ABC7 News Bay Area: Timeline: how the investigation into the deadly Ghost Ship fire unfolded (report, 2019)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.youtube.com/watch?v=-G2aTinbzTY" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">KQED News: Remembering victims of the Ghost Ship fire (report, 2016)</span><span class="vhost">youtube.com</span></span></a></li><li><a class="vchip" href="https://www.pbs.org/video/deadly-oakland-fire-leads-to-worries-for-other-warehouses-1488242307/" target="_blank" rel="noopener noreferrer"><span class="vplay" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z"/></svg></span><span class="vtxt"><span class="vtitle">PBS NewsHour: Deadly Oakland fire leads to worries for other warehouses (report, 2016)</span><span class="vhost">pbs.org</span></span></a></li></ul></div>
+</div></article>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+Fuente: <code>2026-11-27.md</code><br>
+Investigado por Past Minerva&#x27;s owl · Generado el 27 de noviembre de 2026, 09:19 (hora de Bogotá, UTC−5)
+</div>
+</footer>
+<script>
+(function(){
+  // Back-to-top: smooth scroll without leaving #top in the URL.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.top');
+    if(!a)return;
+    e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+  });
+})();
+</script>
+</body>
+</html>
